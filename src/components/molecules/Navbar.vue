@@ -1,5 +1,5 @@
 <template>
-  <div class="w-screen p-4 pb-6">
+  <div class="w-screen p-4 pb-6 z-10 relative">
     <h1 class="pb-8 text-5xl text-center font-bold text-indigo-800">
       Welcome in our Donuts Shop
       <h1 class="text-amber-800 pt-2">🍩DONUTINO🍩</h1>

@@ -1,7 +1,7 @@
 <template>
   <router-link
     :to="url"
-    class="text-pink-400 text-2xl"
+    class="text-zinc-900 font-bold text-3xl"
     >{{ name }}</router-link
   >
 </template>
