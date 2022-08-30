@@ -1,24 +1,12 @@
 <template>
-  <div class="w-screen h-screen p-4 pb-6 ">
-    <h1 class="pb-8 text-5xl text-center font-bold text-indigo-800">
-      Welcome in our Donuts Shop <h1 class="text-amber-800 pt-2">🍩DONUTINO🍩</h1>
-    </h1>
-    <div class="flex items-center justify-center space-x-16">
-      <CustomLink name="Shop" url="/DonutShop"></CustomLink>
-      <CustomLink name="About Donuts" url="/AboutDonuts"></CustomLink>
-      <CustomLink name="Donuts World" url="/DonutsWorld"></CustomLink>
-      <CustomLink name="About Us" url="/AboutUs"></CustomLink>
-    </div>
-  </div>
+    <p class="text-xl text-purple-700">Our company has been operating since 1992, when the idea of creating Donutino was born.</p>
 </template>
 
 <script>
-import CustomLink from "../components/atoms/CustomLink.vue";
 
 export default {
   name: "HomePage",
   components: {
-    CustomLink,
   },
 };
 </script>
