@@ -1,18 +1,24 @@
 <template>
-<div class="p-4 pb-6 bg-gradient-to-r from-pink-600 to-orange-300">
-  <h1 class="pb-4 text-3xl text-center font-bold text-indigo-800">Welcome in our Donut Shop "Donutino"</h1>
-    <div class="text-indigo-900 font-medium flex justify-center">Shop</div>
-    <div class="text-indigo-900 font-medium flex justify-center">About Donuts</div>
-    <div class="text-indigo-900 font-medium flex justify-center">Donuts World</div>
-    <div class="text-indigo-900 font-medium flex justify-center">About Us</div>
-</div>
+  <div class="w-screen h-screen p-4 pb-6 ">
+    <h1 class="pb-8 text-5xl text-center font-bold text-indigo-800">
+      Welcome in our Donuts Shop <h1 class="text-amber-800 pt-2">🍩DONUTINO🍩</h1>
+    </h1>
+    <div class="flex items-center justify-center space-x-16">
+      <CustomLink name="Shop" url="/DonutShop"></CustomLink>
+      <CustomLink name="About Donuts" url="/AboutDonuts"></CustomLink>
+      <CustomLink name="Donuts World" url="/DonutsWorld"></CustomLink>
+      <CustomLink name="About Us" url="/AboutUs"></CustomLink>
+    </div>
+  </div>
 </template>
 
 <script>
+import CustomLink from "../components/atoms/CustomLink.vue";
+
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
-}
+  name: "HomePage",
+  components: {
+    CustomLink,
+  },
+};
 </script>

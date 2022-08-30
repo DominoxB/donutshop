@@ -1,6 +1,6 @@
 <template>
   <router-view></router-view>
-  <router-link to="/DonutShop"></router-link>
+  <!-- <router-link to="/DonutShop"></router-link> -->
 </template>
 
 <script>
