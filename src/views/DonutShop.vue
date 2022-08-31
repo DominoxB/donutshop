@@ -1,5 +1,5 @@
 <template>
-    <div>You will love our delicious donuts!</div>
+    <p>{{ $t("message.shop") }}</p>
 </template>
 
 <script>

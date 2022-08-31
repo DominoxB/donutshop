@@ -1,7 +1,5 @@
 <template>
-    <div>
-        We love donuts!
-    </div>
+    <p>{{ $t("message.about") }}</p>
 </template>
 
 <script>
