@@ -6,7 +6,6 @@ const en = {
         company: "Company",
         hello: "Hello",
         header: "If you love donuts, you found the right place FOR YOU!",
-        shop: "You will love our delicious donuts!",
         ingredients: "Our methods and ingredients",
         about: "Our company has been operating since 1992, when the idea of creating Donutino was born."
       },
