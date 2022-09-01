@@ -1,7 +1,6 @@
 <template>
-    <div>
-        <h1>Our tastes and ingredients</h1>
-    </div>
+      <p>{{ $t("message.ingredients") }}</p>
+
 </template>
 
 <script>
