@@ -3,6 +3,7 @@ import Home from "../views/Home.vue";
 import DonutShop from "../views/DonutShop.vue";
 import AboutDonuts from "../views/AboutDonuts.vue";
 import AboutUs from '../views/AboutUs.vue'
+import SingleDonut from '../views/SingleDonut.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -10,7 +11,8 @@ const router = createRouter({
     { path: "/", component: Home },
     { path: "/DonutShop", component: DonutShop },
     { path: "/AboutDonuts", component: AboutDonuts },
-    { path: "/AboutUs", component: AboutUs }
+    { path: "/AboutUs", component: AboutUs },
+    { path: "/donut/:id", component: SingleDonut },
   ],
 });
 
