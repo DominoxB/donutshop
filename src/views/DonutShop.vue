@@ -23,7 +23,7 @@ export default {
         price: "5.00",
         diet: "bc, v",
         describe:
-          "Czekoladowe ciasto zatopione w polewie z gorzkiej czekolady i posypane orzechami laskowmi. Donut wegański, bez dodatku cukru.",
+          "Czekoladowe ciasto zatopione w polewie z gorzkiej czekolady i posypane orzechami laskowymi. Donut wegański, bez dodatku cukru.",
       },
       {
         id: "2",
