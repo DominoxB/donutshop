@@ -14,7 +14,7 @@
   </div>
   <Navbar></Navbar>
   <router-view
-    class="text-3xl text-pink-800 font-sans z-10 relative mt-12 ml-12"
+    class="text-3xl text-pink-800 font-sans z-10 relative mt-12"
   ></router-view>
   <!-- <router-link to="/DonutShop"></router-link> -->
 </template>
