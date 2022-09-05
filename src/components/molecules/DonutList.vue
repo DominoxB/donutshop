@@ -1,7 +1,9 @@
 <template>
-  <div class="grid grid-cols-4 grid-rows-2 container mx-auto">
+  <div class="container mx-auto">
+  <div class="grid grid-cols-1 md:grid-cols-2 md:gap-4 lg:grid-cols-4 lg:gap-6">
     <DonutItem v-for="item in donuts" :donut="item" :key="item.id"></DonutItem>
   </div>
+</div>
 </template>
 
 <script>
