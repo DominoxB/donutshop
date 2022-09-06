@@ -17,8 +17,7 @@
 
 <script>
 export default {
-  name: 'InfoDonut',
-
+  name: 'DonutItem',
   props: {
     donut: {
       type: Object

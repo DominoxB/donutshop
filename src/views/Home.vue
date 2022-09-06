@@ -1,11 +1,11 @@
 <template>
-    <p>{{ $t("message.header") }}</p>
-
+  <div class="ml-8">
+  <p>{{ $t("message.header") }}</p>
+</div>
 </template>
 
 <script>
 export default {
   name: "HomePage",
-  components: {},
 };
 </script>
