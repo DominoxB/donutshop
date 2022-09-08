@@ -6,7 +6,7 @@
       <div class="text-center mb-1">1 szt./{{ donut.price }}</div>
       <input v-model="ilość" type="number" placeholder="Wybierz ilość" class="w-26 h-6 text-center mb-1" />
       <button
-        class="bg-purple-200 hover:bg-gray-400 text-gray-800 block w-44 h-10 font-bold text-base rounded  my-auto mx-auto"
+        class="bg-purple-200 hover:bg-purple-300 text-gray-800 block w-44 h-10 font-bold text-base rounded  my-auto mx-auto"
       >
         <span>Do koszyka 🍩</span>
       </button>
@@ -14,8 +14,15 @@
     </div>
     </div>
   <div class="text-zinc-800 text-center mt-6">
-    <div class="text-xl font-bold">{{ donut.diet }}</div>
+    <div class="flex justify-center items-center">
+      <div v-if="donut.glutenFree"><img src="../icons/gluten.png" class="w-24 h-18"></div>
+      <div v-if="donut.sugarFree"><img src="../icons/sugar.png" class="w-24 h-18"></div>
+      <div v-if="donut.lactoseFree"><img src="../icons/lactose.png" class="w-24 h-18"></div>
+      <div v-if="donut.vegan"><img src="../icons/vegan.jpg" class="w-24 h-18"></div>
+    </div>
     <div class="text-xl mt-4">{{ donut.describe }}</div>
+
+
   </div>
 </template>
 
