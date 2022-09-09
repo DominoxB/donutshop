@@ -1,7 +1,7 @@
 <template>
-  <div class="ml-8">
-  <p>{{ $t("message.header") }}</p>
-</div>
+  <div class="container mx-auto">
+    <p>{{ $t("message.header") }}</p>
+  </div>
 </template>
 
 <script>

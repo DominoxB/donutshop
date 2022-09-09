@@ -1,5 +1,5 @@
 <template>
-  <div class="ml-8">
+  <div class="container mx-auto">
     <p>{{ $t("message.ingredients") }}</p>
   </div>
 </template>
