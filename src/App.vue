@@ -12,9 +12,7 @@
     </select>
   </div>
   <Navbar></Navbar>
-  <router-view
-    class="text-3xl mt-5"
-  ></router-view>
+  <router-view class="text-3xl mt-5"></router-view>
 </template>
 
 <script>

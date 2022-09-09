@@ -66,7 +66,7 @@ export const useProductStore = defineStore("ProductStore", {
       {
         id: "5",
         image:
-          "https://minskmazowiecki.topaz24.pl/userdata/public/gfx/323209.png",
+          "https://www.jestemfit.pl/upload/gallery/2016/04/id_11863_1460718459_328x328.jpg",
         taste: "Z CUKREM",
         price: "2.50",
         glutenFree: true,

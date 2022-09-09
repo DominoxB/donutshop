@@ -1,18 +1,17 @@
 <template>
   <div class="sticky top-0 bg-white w-screen pt-4 z-10 md:relative lg:relative">
     <div
-      class="flex pr-4 md:block justify-between text-2xl md:text-4xl md:text-center md:pb-4 lg:text-6xl lg:text-center lg:pb-4 font-bold text-indigo-800"
+      class="flex pr-4 md:block justify-between text-2xl md:text-4xl md:text-center md:pb-4 lg:text-6xl lg:pb-4 font-bold text-indigo-800"
     >
-      <span class="block my-auto">🍩DONUTINO🍩</span>
-      <NavbarHamburger
-        class="flex my-auto md:hidden"
-      ></NavbarHamburger>
+      <router-link to="/">
+        <span class="block my-auto mb-3">🍩DONUTINO🍩</span>
+      </router-link>
+      <NavbarHamburger class="flex my-auto md:hidden"></NavbarHamburger>
     </div>
   </div>
   <div
     class="sticky hidden md:block lg:block top-0 bg-white text-l text-center py-2 md:text-2xl lg:text-4xl items-center justify-center space-x-8"
   >
-    <CustomLink :name="$t('message.home')" url="/"></CustomLink>
     <CustomLink :name="$t('message.shopping')" url="/DonutShop"></CustomLink>
     <CustomLink
       :name="$t('message.aboutdonuts')"
