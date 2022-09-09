@@ -8,8 +8,6 @@
       class="text-xl text-center text-blue-900 font-medium group-hover:text-blue-500"
     >
       <div>{{ donut.taste }}</div>
-      <div>{{ donut.price }}</div>
-      <div>{{ donut.diet }}</div>
     </div>
   </div>
 </router-link>
