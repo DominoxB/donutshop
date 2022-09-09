@@ -1,11 +1,14 @@
 <template>
-    <div class="container mx-auto">
+    <div class="container mx-auto min-h-[500px]">
     <p>{{ $t("message.about") }}</p>
 </div>
+<Footer></Footer>
 </template>
 
 <script>
+import Footer from '@/components/atoms/Footer.vue';
 export default {
-    name: 'AboutUs'
+    name: "AboutUs",
+    components: { Footer }
 }
 </script>

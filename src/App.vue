@@ -13,7 +13,7 @@
   </div>
   <Navbar></Navbar>
   <router-view
-    class="text-3xl text-pink-800 font-sans mt-12"
+    class="text-3xl mt-5"
   ></router-view>
 </template>
 

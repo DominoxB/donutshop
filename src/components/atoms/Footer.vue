@@ -1,16 +1,21 @@
 <template>
-    <footer>
-        <div class="bg-gray-400 relative bottom-0 left-0 right-0 h-52 mt-10">
-            <div class="block text-xl text-purple-800 text-center py-2">DONUTINO - nasze wypieki tworzymy z pasją już od 30 lat!</div>
-            <div class="justify-start items-center pl-4">Donata Pączkowska<br>
-            ul. Czekoladowa 17<br>
-            88-888 Pączkowice Wielkie</div>
-        </div>
-    </footer>
+  <footer>
+    <div class="bg-gray-200 border-t-zinc-400 border-t-2 h-46 mt-10 items-end">
+      <div class="block text-xl font-semibold pl-4 py-2">
+        🍩DONUTINO🍩 - nasze wypieki tworzymy z pasją już od 30 lat!
+      </div>
+      <div class="text-center font-thin font-serif">
+        <p>Donata Pączkowska</p>
+        <p>ul. Czekoladowa 17</p>
+        <p>88-888 Pączkosławice Wielkie</p>
+      </div>
+      <div class="text-end font-medium">&copy; 2022 Domino IT Polska</div>
+    </div>
+  </footer>
 </template>
 
 <script>
 export default {
-    name: 'FooterSection',
-}
+  name: "FooterSection",
+};
 </script>
