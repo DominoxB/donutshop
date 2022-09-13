@@ -6,7 +6,7 @@
       <router-link to="/">
         <span class="block my-auto mb-1">🍩DONUTINO🍩</span>
       </router-link>
-      <NavbarHamburger class="flex my-auto md:hidden"></NavbarHamburger>
+      <NavbarHamburger @mobileMenu="showMenu($event)" class="flex my-auto md:hidden"></NavbarHamburger>
     </div>
   </div>
   <div
@@ -30,5 +30,13 @@ export default {
     CustomLink,
     NavbarHamburger,
   },
+  setup() {
+    const showMenu = (event) => {
+      console.log(event)
+    }
+    return {
+      showMenu
+    }
+  }
 };
 </script>
