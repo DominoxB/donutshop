@@ -1,7 +1,7 @@
 <template>
   <div class="sticky top-0 bg-white w-screen pt-4 z-10 md:relative lg:relative">
     <div
-      class="flex pr-4 md:block justify-between text-2xl md:text-4xl md:text-center md:pb-4 lg:text-6xl lg:pb-4 font-bold text-indigo-800"
+      class="flex md:block justify-between text-2xl md:text-4xl md:text-center md:pb-4 lg:text-6xl lg:pb-4 font-bold text-indigo-800"
     >
       <router-link to="/">
         <span class="block my-auto mb-1">🍩DONUTINO🍩</span>
