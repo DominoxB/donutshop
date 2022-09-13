@@ -1,16 +1,15 @@
 <template>
-  <div class="container mx-auto min-h-[500px]">
-    <p>{{ $t("message.ingredients") }} </p>
-  </div>
+  <AboutContent></AboutContent>
   <Footer></Footer>
 </template>
 
 <script>
 import Footer from '@/components/atoms/Footer.vue';
+import AboutContent from '@/components/atoms/AboutContent.vue';
 
 export default {
     name: "AboutDonuts",
-    components: { Footer }
+    components: { Footer, AboutContent }
 }
 ;
 </script>
