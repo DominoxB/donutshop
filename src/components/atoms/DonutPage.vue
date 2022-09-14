@@ -4,11 +4,12 @@
     <img :src="donut.image" class="w-68 h-72 object-contain mx-auto mt-2" />
     <div class="text-purple-500 text-xl m-auto">
       <div class="text-center mb-1">1 szt./{{ donut.price }}</div>
-      <input v-model="ilość" type="number" placeholder="Wybierz ilość" class="w-26 h-6 text-center mb-1" />
+      <input v-model="quantity" type="number" placeholder="Wybierz ilość" class="w-26 h-6 text-center mb-1" />
       <button
-        class="bg-purple-200 hover:bg-purple-300 text-gray-800 block w-44 h-10 font-bold text-base rounded  my-auto mx-auto"
+        @click="add"
+        class="bg-purple-200 hover:bg-purple-300 text-gray-800 block w-44 h-10 font-bold text-base rounded my-auto mx-auto"
       >
-        <span>Do koszyka 🍩</span>
+        <span>Do koszyka 🍩</span> 
       </button>
 
     </div>
@@ -27,12 +28,25 @@
 </template>
 
 <script>
+import { ref } from "vue";
+import { useBasketStore } from '@/stores/basket';
+
 export default {
   name: "DonutPage",
   props: {
     donut: {
       type: Object,
     },
+  },
+    setup(props) {
+    const quantity = ref(0)
+    const store = useBasketStore();
+
+    const add = () => store.addProduct({id: props.donut.id, quantity: quantity.value});
+    return {
+      quantity,
+      add,
+    };
   },
 };
 </script>
