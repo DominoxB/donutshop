@@ -2,7 +2,6 @@
   <div class="mr-6">
     <button @click="clickHamburger" class="relative group">
       <div
-        :class="{ 'isTrue': show, 'isFalse': !show }"
         class="relative flex overflow-hidden items-center justify-center"
       >
         <div
@@ -44,11 +43,11 @@ import { ref } from "vue";
 export default {
   name: "NavbarHamburger",
   setup(props, context) {
-    const show = ref(false);
+    const show = ref(false)
     const clickHamburger = () => {
       show.value = !show.value;
       context.emit("mobileMenu", show.value)
-    };
+    }
     return {
       clickHamburger,
       show
