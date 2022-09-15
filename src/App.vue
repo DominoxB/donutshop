@@ -10,6 +10,8 @@
         {{ locale }}
       </option>
     </select>
+    {{ basket }}
+
   </div>
   <Navbar></Navbar>
   <router-view class="text-3xl mt-5"></router-view>
@@ -17,11 +19,19 @@
 
 <script>
 import Navbar from "./components/molecules/Navbar.vue";
-
+import { useBasketStore } from '@/stores/basket';
 export default {
   name: "App",
   components: {
     Navbar,
   },
+  setup() {
+    const store = useBasketStore();
+    const { basket } = store
+    return {
+      basket
+    }
+
+  }
 };
 </script>
