@@ -61,6 +61,9 @@
         Wyślij
       </button>
     </div>
+    <div class="w-1/3 text-xl text-center my-auto bg-gray-100 p-6">
+      <span>Jeżeli macie Państwo jakieś pytania, chcecie zapytać o nasze składniki, nawiązać współpracę, przygotować słodki stół na ważnej dla Was uroczystości, zapraszamy do kontaktu poprzez formularz. Wystarczy wysłać do nas wiadomość, a my na pewno skontaktujemy się Państwem. Na wszystkie wiadomośći odpowiada Donata, a więc informacje będą z najpewniejszego źródła :)</span>
+    </div>
   </div>
 </template>
 
