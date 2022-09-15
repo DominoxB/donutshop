@@ -18,6 +18,7 @@
       url="/AboutDonuts"
     ></CustomLink>
     <CustomLink :name="$t('message.company')" url="/AboutUs"></CustomLink>
+    <CustomLink :name="$t('message.contact')" url="/Contact"></CustomLink>
   </div>
 </template>
 
@@ -29,7 +30,7 @@ export default {
   components: {
     CustomLink,
     NavbarHamburger,
-  },
+},
   setup() {
     const showMenu = (event) => {
       console.log(event)

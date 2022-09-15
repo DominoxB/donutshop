@@ -4,6 +4,7 @@ const en = {
     shopping: "Shop",
     aboutdonuts: "About Donuts",
     company: "Company",
+    contact: "Contact",
     hello: "Hello",
     header: "If you love donuts, you found the right place FOR YOU!",
     ingredients: "Our methods and ingredients",
