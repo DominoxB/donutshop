@@ -1,16 +1,16 @@
 <template>
   <div class="sticky top-0 bg-white w-screen pt-4 z-10 md:relative lg:relative">
     <div
-      class="flex md:block justify-between text-2xl md:text-4xl md:text-center md:pb-4 lg:text-6xl lg:pb-4 font-bold text-indigo-800"
+      class="flex md:block justify-between text-2xl md:text-4xl md:text-center md:pb-4 lg:text-6xl lg:pb-4 text-indigo-800"
     >
       <router-link to="/">
-        <span>🍩DONUTINO🍩</span>
+        <span class="font-pacifico">🍩DONUTINO🍩</span>
       </router-link>
       <NavbarHamburger @mobileMenu="showMenu($event)" class="flex my-auto md:hidden"></NavbarHamburger>
     </div>
   </div>
   <div
-    class="sticky hidden md:block lg:block top-0 bg-white text-l text-center py-2 md:text-2xl lg:text-4xl items-center justify-center space-x-8"
+    class="sticky hidden font-pacifico md:block lg:block top-0 bg-white text-l text-center py-2 md:text-2xl lg:text-4xl items-center justify-center space-x-8"
   >
     <CustomLink :name="$t('message.shopping')" url="/DonutShop"></CustomLink>
     <CustomLink

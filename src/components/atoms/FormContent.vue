@@ -29,8 +29,8 @@
         >E-mail</label
       >
       <input
-        v-model="company"
-        type="text"
+        v-model="email"
+        type="email"
         class="form-control block w-1/2 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
         placeholder="wpisz adres e-mail"
       />
@@ -39,7 +39,7 @@
         >Numer telefonu</label
       >
       <input
-        v-model="company"
+        v-model="number"
         type="number"
         class="form-control block w-1/2 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
         placeholder="wpisz swój numer"
@@ -61,8 +61,8 @@
         Wyślij
       </button>
     </div>
-    <div class="w-1/3 text-xl text-center my-auto bg-gray-100 p-6">
-      <span>Jeżeli macie Państwo jakieś pytania, chcecie zapytać o nasze składniki, nawiązać współpracę, przygotować słodki stół na ważnej dla Was uroczystości, zapraszamy do kontaktu poprzez formularz. Wystarczy wysłać do nas wiadomość, a my na pewno skontaktujemy się Państwem. Na wszystkie wiadomośći odpowiada Donata, a więc informacje będą z najpewniejszego źródła :)</span>
+    <div class="w-1/3 font-garamond font-semibold text-xl text-center my-auto bg-gray-100 p-6">
+      <span>Jeżeli macie Państwo jakieś pytania, chcecie zapytać o nasze składniki, nawiązać współpracę, przygotować słodki stół na ważnej dla Was uroczystości, zapraszamy do kontaktu. Wystarczy wysłać do nas wiadomość, a my skontaktujemy się Państwem. Na wszystkie wiadomośći odpowiada Donata, a więc informacje będą z najpewniejszego źródła :)</span>
     </div>
   </div>
 </template>

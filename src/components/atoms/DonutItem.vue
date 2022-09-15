@@ -5,7 +5,7 @@
   >
     <img :src="donut.image" class="w-64 h-72 object-contain"/>
     <div
-      class="text-xl text-center text-blue-900 font-medium group-hover:text-blue-500"
+      class="text-xl text-center text-blue-900 group-hover:text-blue-500 font-garamond font-semibold"
     >
       <div>{{ donut.taste }}</div>
     </div>

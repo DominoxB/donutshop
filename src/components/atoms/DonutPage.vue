@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center text-zinc-800 text-3xl mt-6">{{ donut.taste }}</div>
+  <div class="text-center text-zinc-800 text-3xl font-garamond font-semibold mt-6">{{ donut.taste }}</div>
   <div class="grid grid-cols-2">
     <img :src="donut.image" class="w-68 h-72 object-contain mx-auto mt-2" />
     <div class="text-purple-500 text-xl m-auto">
@@ -21,7 +21,7 @@
       <div v-if="donut.lactoseFree"><img src="../icons/lactose.png" class="w-24 h-18"></div>
       <div v-if="donut.vegan"><img src="../icons/vegan.jpg" class="w-24 h-18"></div>
     </div>
-    <div class="text-xl mt-4">{{ donut.describe }}</div>
+    <div class="text-xl mt-4 font-garamond font-semibold">{{ donut.describe }}</div>
 
 
   </div>
