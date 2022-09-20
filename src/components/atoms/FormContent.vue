@@ -14,13 +14,26 @@
             v-model="state.name"
             type="text"
             class="form-control block w-1/2 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-            :class="v$.name.$error ? 'border-red-600' : 'border-gray-300'" 
+            :class="v$.name.$error ? 'border-red-600' : 'border-gray-300'"
             placeholder="Wpisz swoje dane"
             @blur="v$.name.$touch"
-            
           />
-          <span v-if="v$.name.$error" class="text-xl text-red-600">
-           imię i nazwisko jest wymagane (min. 2 znaki)
+          <span
+            v-if="
+              v$.name.$errors[0] && v$.name.$errors[0].$validator === 'required'
+            "
+            class="text-xl text-red-600"
+          >
+            {{ v$.name.required.$message }}
+          </span>
+          <span
+            v-if="
+              v$.name.$errors[0] &&
+              v$.name.$errors[0].$validator === 'minLength'
+            "
+            class="text-xl text-red-600"
+          >
+            {{ v$.name.minLength.$message }}
           </span>
           <div>
             <label
@@ -40,15 +53,32 @@
               >E-mail</label
             >
             <input
-              v-model="state.email"
+              v-model="state.emailAdress"
               type="email"
               class="form-control block w-1/2 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-              :class="v$.email.$error ? 'border-red-600' : 'border-gray-300'" 
+              :class="
+                v$.emailAdress.$error ? 'border-red-600' : 'border-gray-300'
+              "
               placeholder="wpisz adres e-mail"
-              @blur="v$.email.$touch"
+              @blur="v$.emailAdress.$touch"
             />
-            <span v-if="v$.email.$error" class="text-xl text-red-600">
-              email jest wymagany
+            <span
+              v-if="
+                v$.emailAdress.$errors[0] &&
+                v$.emailAdress.$errors[0].$validator === 'required'
+              "
+              class="text-xl text-red-600"
+            >
+              {{ v$.emailAdress.required.$message }}
+            </span>
+            <span
+              v-if="
+                v$.emailAdress.$errors[0] &&
+                v$.emailAdress.$errors[0].$validator === 'email'
+              "
+              class="text-xl text-red-600"
+            >
+              {{ v$.emailAdress.email.$message }}
             </span>
           </div>
           <div>
@@ -60,12 +90,29 @@
               v-model="state.telephone"
               type="text"
               class="form-control block w-1/2 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-              :class="v$.telephone.$error ? 'border-red-600' : 'border-gray-300'" 
+              :class="
+                v$.telephone.$error ? 'border-red-600' : 'border-gray-300'
+              "
               placeholder="wpisz swój numer"
               @blur="v$.telephone.$touch"
             />
-            <span v-if="v$.telephone.$error" class="text-xl text-red-600">
-              nr telefonu jest wymagany (tylko cyfry)
+            <span
+              v-if="
+                v$.telephone.$errors[0] &&
+                v$.telephone.$errors[0].$validator === 'required'
+              "
+              class="text-xl text-red-600"
+            >
+              {{ v$.telephone.required.$message }}
+            </span>
+            <span
+              v-if="
+                v$.telephone.$errors[0] &&
+                v$.telephone.$errors[0].$validator === 'num'
+              "
+              class="text-xl text-red-600"
+            >
+              {{ v$.telephone.num.$message }}
             </span>
           </div>
           <div>
@@ -77,13 +124,30 @@
               v-model="state.yourMessage"
               type="text"
               class="form-control block w-1/2 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-              :class="v$.yourMessage.$error ? 'border-red-600' : 'border-gray-300'" 
+              :class="
+                v$.yourMessage.$error ? 'border-red-600' : 'border-gray-300'
+              "
               placeholder="wpisz swoją wiadomość"
               @blur="v$.yourMessage.$touch"
             >
             </textarea>
-            <span v-if="v$.yourMessage.$error" class="text-xl text-red-600">
-              wpisz swoją wiadomość (min. 10 znaków)
+            <span
+              v-if="
+                v$.yourMessage.$errors[0] &&
+                v$.yourMessage.$errors[0].$validator === 'required'
+              "
+              class="text-xl text-red-600"
+            >
+              {{ v$.yourMessage.required.$message }}
+            </span>
+            <span
+              v-if="
+                v$.yourMessage.$errors[0] &&
+                v$.yourMessage.$errors[0].$validator === 'minLength'
+              "
+              class="text-xl text-red-600"
+            >
+              {{ v$.yourMessage.minLength.$message }}
             </span>
           </div>
           <button
@@ -113,7 +177,7 @@
 
 <script>
 import { useVuelidate } from "@vuelidate/core";
-import { required, email, minLength, numeric } from "@vuelidate/validators";
+import { required, email, minLength, helpers } from "@vuelidate/validators";
 import { reactive, computed } from "vue";
 export default {
   name: "FormContent",
@@ -121,18 +185,54 @@ export default {
     const state = reactive({
       name: "",
       company: "",
-      email: "",
+      emailAdress: "",
       telephone: "",
       yourMessage: "",
     });
 
     const rules = computed(() => {
       return {
-        name: { required, minLength: minLength(2) },
+        name: {
+          required: helpers.withMessage(
+            "To pole musi być wypełnione.",
+            required
+          ),
+          minLength: helpers.withMessage(
+            "To pole musi zawierać min. 2 znaki.",
+            minLength(2)
+          ),
+        },
         // company: { required },
-        email: { required, email },
-        telephone: { required, numeric },
-        yourMessage: { required, minLength: minLength(10) },
+        emailAdress: {
+          required: helpers.withMessage(
+            "To pole musi być wypełnione.",
+            required
+          ),
+          email: helpers.withMessage(
+            "To pole musi zawierać poprawny adres email.",
+            email
+          ),
+        },
+        telephone: {
+          required: helpers.withMessage(
+            "To pole musi być wypełnione.",
+            required
+          ),
+          num: helpers.withMessage(
+            "To pole może zawierać tylko cyfry.",
+            helpers.regex(/^[0-9]*$/)
+          ),
+        },
+        yourMessage: {
+          required: helpers.withMessage(
+            "To pole musi być wypełnione.",
+            required
+          ),
+          minLength: helpers.withMessage(
+            "To pole musi zawierać min. 10 znaków.",
+            minLength(10)
+          ),
+        },
       };
     });
 
