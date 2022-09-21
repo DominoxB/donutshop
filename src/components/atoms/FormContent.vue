@@ -166,8 +166,8 @@
           >Jeżeli macie Państwo jakieś pytania, chcecie zapytać o nasze
           składniki, nawiązać współpracę, przygotować słodki stół na ważnej dla
           Was uroczystości, zapraszamy do kontaktu. Wystarczy wysłać do nas
-          wiadomość, a my skontaktujemy się Państwem. Na wszystkie wiadomośći
-          odpowiada Donata, a więc informacje będą z najpewniejszego źródła
+          wiadomość, a my skontaktujemy się Wami. Na wszystkie wiadomości
+          odpowiada Donata, dlatego informacje będą z najpewniejszego źródła
           :)</span
         >
       </div>

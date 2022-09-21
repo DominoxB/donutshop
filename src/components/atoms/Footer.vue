@@ -15,7 +15,7 @@
         <p>ul. Czekoladowa 17</p>
         <p>88-888 Pączkosławice Wielkie</p>
       </div>
-      <div class="text-end font-medium mr-3">&copy; 2022 Domino IT Polska</div>
+      <div class="text-end text-lg mr-3">&copy; 2022 Domino IT Polska</div>
     </div>
   </footer>
 </template>
