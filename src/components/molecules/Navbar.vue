@@ -4,7 +4,9 @@
       class="flex justify-between items-center text-2xl md:text-4xl md:block md:text-center md:pb-4 lg:text-6xl lg:pb-4 text-amber-600"
     >
       <div>
+        <router-link to="/">
         <span class="font-pacifico visible md:invisible ml-4">DONUTINO</span>
+      </router-link>
       </div>
 
       <div>
