@@ -5,7 +5,7 @@
     </div>
     <div class="flex">
       <div class="block w-1/2 ml-16 border bg-orange-100 rounded-2xl">
-        <div class="">
+        <div class="ml-4">
           <label
             class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
             >Imię i nazwisko</label
@@ -151,7 +151,7 @@
             </span>
           </div>
           <button
-            class="bg-orange-300 hover:bg-orange-400 text-gray-800 w-44 h-10 font-bold text-base rounded mt-3"
+            class="bg-orange-300 hover:bg-orange-400 text-gray-800 w-44 h-10 mb-3 font-bold text-base rounded mt-3"
             @click="submitForm"
           >
             Wyślij
