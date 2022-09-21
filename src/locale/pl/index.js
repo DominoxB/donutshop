@@ -4,6 +4,7 @@ const pl = {
     shopping: "Zakupy",
     aboutdonuts: "Nasze donuty",
     company: "O firmie",
+    contact: "Kontakt",
     hello: "Witaj",
     header: "Donutino to miejsce tworzone z pasją. Nasze autorskie przepisy pozwolą Ci odkryć świat pysznych wypieków bez obawy o niekorzystny wpływ na Twoje zdrowie. Nasze donuty posiadają certyfikaty, dzięki którym spożywać je mogą także osoby na dietach bezglutenowej, unikające laktozy i cukru, a także weganie. Zapraszamy do zapoznania się z naszą ofertą. Jeśli kochasz donuty to znalazłes miejsce idealne dla Ciebie!",
     ingredients: "Nasza cukiernia powstała z myślą o słodkiej uczcie dla Was oraz uśmiechu Waszych najbliższych. Nasze donuty wyrabiamy ręcznie, nie zawierają sztucznych dodatków i konserwantów. Codziennie nasi cukiernicy dbają o ich najwyższą jakość, dzięki czemu są zawsze ciepłe i świeże. Smakowi i zapachowi donutów z Donutino trudno się oprzeć. Przekonaj się sam! Przez cały rok zapewniamy Wam duży wybór naszych słodkich specjałów, zarówno o smakach tradycyjnych, owocowych, jak i oryginalnych. Konfitura, nadzienie owocowe czy krem? Decyzja należy do Was. Nasza oferta wciąż wzbogacana jest o nowe inspiracje smakowe.",

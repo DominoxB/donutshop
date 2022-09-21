@@ -1,7 +1,7 @@
 <template>
   <router-link
     :to="url"
-    class="text-zinc-900 hover:text-zinc-600 font-semibold"
+    class="text-zinc-700 hover:text-zinc-600"
     >{{ name }}</router-link
   >
 </template>
