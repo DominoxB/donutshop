@@ -2,7 +2,7 @@
   <footer>
     <div class="bg-gray-200 border-t-zinc-400 border-t-2 h-46 mt-10 items-end">
       <div class="flex text-base font-semibold pl-4 py-2 justify-between">
-        <span>🍩DONUTINO🍩 - nasze wypieki tworzymy z pasją już od 30 lat!</span>
+        <span>DONUTINO - nasze wypieki tworzymy z pasją już od 30 lat!</span>
         <div class="flex">
           <span>Szukaj nas na: </span>
           <img src="@/images/fb.png" class="w-7 h-7 mt-2 ml-3"/>
