@@ -33,55 +33,67 @@
         </div>
       </div>
     </button>
-    <div 
-      :class="{ '-translate-x-full': !show}"
-      class="fixed h-full w-64 block text-xl text-slate-800 bg-slate-300 top-0 bottom-0 left-0 transition duration-700">
-    <div class=" my-4 px-4">
-      <span class="font-pacifico text-amber-700">DONUTINO</span>
-    <img src="@/images/donutino.png" class="w-16 h-16 mt-2"/>
+    <div
+      :class="{ '-translate-x-full': !show }"
+      class="fixed h-full w-64 block text-xl text-slate-800 bg-slate-300 top-0 bottom-0 left-0 transition duration-700"
+    >
+      <div class="my-4 px-4">
+        <span class="font-pacifico text-amber-700">DONUTINO</span>
+        <img src="@/images/donutino.png" class="w-16 h-16 mt-2" />
+      </div>
+      <p
+        @click="clickLink('/')"
+        class="hover:bg-slate-400 py-2 px-4 font-pacifico cursor-pointer"
+      >
+        Strona główna
+      </p>
+      <p
+        @click="clickLink('/DonutShop')"
+        class="hover:bg-slate-400 py-2 px-4 font-pacifico cursor-pointer"
+      >
+        Zakupy
+      </p>
+      <p
+        @click="clickLink('/AboutDonuts')"
+        class="hover:bg-slate-400 py-2 px-4 font-pacifico cursor-pointer"
+      >
+        Nasze donuty
+      </p>
+      <p
+        @click="clickLink('/AboutUs')"
+        class="hover:bg-slate-400 py-2 px-4 font-pacifico cursor-pointer"
+      >
+        O firmie
+      </p>
+      <p
+        @click="clickLink('/Contact')"
+        class="hover:bg-slate-400 py-2 px-4 font-pacifico cursor-pointer"
+      >
+        Kontakt
+      </p>
     </div>
-      <div class="hover:bg-slate-400 py-2 px-4 font-pacifico">
-        <router-link to="/">
-          <span>Strona główna</span>
-        </router-link>
-      </div>
-      <div class="hover:bg-slate-400 py-2 px-4 font-pacifico">
-        <router-link to="/DonutShop">
-          <span>Zakupy</span>
-        </router-link>
-      </div>
-      <div class="hover:bg-slate-400 py-2 px-4 font-pacifico">
-        <router-link to="/AboutDonuts">
-          <span>Nasze donuty</span>
-        </router-link>
-      </div>
-      <div class="hover:bg-slate-400 py-2 px-4 font-pacifico">
-        <router-link to="/AboutUs">
-          <span>O firmie</span>
-        </router-link>
-      </div>
-      <div class="hover:bg-slate-400 py-2 px-4 font-pacifico">
-        <router-link to="/Contact">
-          <span>Kontakt</span>
-        </router-link>
-      </div>
-    </div>
-
   </div>
 </template>
 
 <script>
 import { ref } from "vue";
+import { useRouter } from "vue-router";
 export default {
   name: "NavbarHamburger",
   setup(props, context) {
+    const router = useRouter();
     const show = ref(false);
     const clickHamburger = () => {
       show.value = !show.value;
       context.emit("mobileMenu", show.value);
     };
+    const clickLink = (url) => {
+      show.value = false;
+      router.push({ path: url });
+    };
     return {
       clickHamburger,
+      clickLink,
       show,
     };
   },
