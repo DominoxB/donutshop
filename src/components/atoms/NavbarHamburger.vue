@@ -34,8 +34,8 @@
       </div>
     </button>
     <div 
-    v-show="show"
-    class="fixed h-full w-64 block text-xl text-slate-800 bg-slate-300 inset-y-0 left-0">
+      :class="{ '-translate-x-full': !show}"
+      class="fixed h-full w-64 block text-xl text-slate-800 bg-slate-300 top-0 bottom-0 left-0 transition duration-700">
     <div class=" my-4 px-4">
       <span class="font-pacifico text-amber-700">DONUTINO</span>
     <img src="@/images/donutino.png" class="w-16 h-16 mt-2"/>
