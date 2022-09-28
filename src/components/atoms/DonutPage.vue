@@ -4,7 +4,7 @@
     <img :src="donut.image" class="w-68 h-72 object-contain mx-auto mt-2" />
     <div class="text-zinc-800 text-xl m-auto">
       <div class="text-center mb-1">1 szt./{{ donut.price }}</div>
-      <input v-model="quantity" type="number" placeholder="Wybierz ilość" class="w-26 h-10 text-center mb-1 border rounded border-4" />
+      <input v-model="quantity" type="number" placeholder="Wybierz ilość" class="w-26 h-10 text-center justify-center mb-1 border rounded border-4" />
       <button
         @click="add"
         :disabled="quantity <= 0"
@@ -12,9 +12,9 @@
       >
         <span>Do koszyka 🍩</span> 
       </button>
-
     </div>
     </div>
+    <div v-if="showMessage" class="font-garamond text-2xl text-center text-emerald-600 font-bold mt-4">Świetny wybór, produkt został dodany do koszyka!</div>
   <div class="text-zinc-800 text-center mt-6">
     <div class="flex justify-center items-center">
       <div v-if="donut.glutenFree"><img src="../icons/gluten.png" class="w-24 h-18"></div>
@@ -42,16 +42,20 @@ export default {
     setup(props) {
     const quantity = ref(0)
     const store = useBasketStore();
+    const showMessage = ref(false)
 
-    const add = () => store.addProduct({
-      id: props.donut.id, 
-      quantity: quantity.value
-    });
-
+    const add = () => {
+      store.addProduct({
+        id: props.donut.id, 
+        quantity: quantity.value,
+      });
+      showMessage.value = true
+  }
 
     return {
       quantity,
       add,
+      showMessage
     };
   },
 };
