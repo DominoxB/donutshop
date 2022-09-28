@@ -4,9 +4,10 @@
     <img :src="donut.image" class="w-68 h-72 object-contain mx-auto mt-2" />
     <div class="text-zinc-800 text-xl m-auto">
       <div class="text-center mb-1">1 szt./{{ donut.price }}</div>
-      <input v-model="quantity" type="number" placeholder="Wybierz ilość" class="w-26 h-6 text-center mb-1" />
+      <input v-model="quantity" type="number" placeholder="Wybierz ilość" class="w-26 h-10 text-center mb-1 border rounded border-4" />
       <button
         @click="add"
+        :disabled="quantity <= 0"
         class="bg-orange-200 hover:bg-orange-300 text-gray-800 block w-44 h-10 font-bold text-base rounded my-auto mx-auto"
       >
         <span>Do koszyka 🍩</span> 
@@ -42,7 +43,12 @@ export default {
     const quantity = ref(0)
     const store = useBasketStore();
 
-    const add = () => store.addProduct({id: props.donut.id, quantity: quantity.value});
+    const add = () => store.addProduct({
+      id: props.donut.id, 
+      quantity: quantity.value
+    });
+
+
     return {
       quantity,
       add,
