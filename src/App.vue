@@ -11,7 +11,11 @@
     </select>
   </div>
   <div class="flex justify-end mt-2 mr-4">
-    {{ basket }}
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/52/52404.png"
+      class="w-6 h-6"
+    />
+    {{ result }}
   </div>
 
   <Navbar></Navbar>
@@ -21,6 +25,7 @@
 <script>
 import Navbar from "./components/molecules/Navbar.vue";
 import { useBasketStore } from "@/stores/basket";
+import { computed } from 'vue'
 export default {
   name: "App",
   components: {
@@ -29,8 +34,12 @@ export default {
   setup() {
     const store = useBasketStore();
     const { basket } = store;
+    const result = computed(() => {
+      return store.getDonutsQuantity
+    })
     return {
       basket,
+      result,
     };
   },
 };

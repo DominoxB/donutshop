@@ -16,4 +16,10 @@ export const useBasketStore = defineStore("BasketStore", {
       }
     },
   },
+  getters: {
+    getDonutsQuantity(state) {
+      return state.basket.map(el => el.quantity).reduce((a,b) => a+b,0)
+    }
+  },
+
 });

@@ -4,7 +4,7 @@
     <img :src="donut.image" class="w-68 h-72 object-contain mx-auto mt-2" />
     <div class="text-zinc-800 text-xl m-auto">
       <div class="text-center mb-1">1 szt./{{ donut.price }}</div>
-      <input v-model="quantity" type="number" placeholder="Wybierz ilość" class="w-26 h-10 text-center justify-center mb-1 border rounded border-4" />
+      <input v-model="quantity" type="number" placeholder="Wybierz ilość" class="w-26 h-10 text-center justify-center mb-1 border-4 rounded" />
       <button
         @click="add"
         :disabled="quantity <= 0"
@@ -47,15 +47,15 @@ export default {
     const add = () => {
       store.addProduct({
         id: props.donut.id, 
-        quantity: quantity.value,
-      });
+         quantity: quantity.value,
+    });
       showMessage.value = true
   }
 
     return {
       quantity,
       add,
-      showMessage
+      showMessage,
     };
   },
 };
