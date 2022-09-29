@@ -10,13 +10,15 @@
       </option>
     </select>
   </div>
-  <div class="flex justify-end mt-2 mr-4">
+  <router-link to="/BasketContent">
+  <div class="flex w-14 mt-3 ml-auto cursor-pointer">
     <img
       src="https://cdn-icons-png.flaticon.com/512/52/52404.png"
-      class="w-6 h-6"
+      class="w-6 h-6 mr-2"
     />
     {{ result }}
   </div>
+</router-link>
 
   <Navbar></Navbar>
   <router-view class="text-3xl mt-5"></router-view>
