@@ -10,7 +10,7 @@
       </option>
     </select>
   </div>
-  <router-link to="/BasketContent">
+  <router-link to="/BasketPage">
   <div class="flex w-14 mt-3 ml-auto cursor-pointer">
     <img
       src="https://cdn-icons-png.flaticon.com/512/52/52404.png"
