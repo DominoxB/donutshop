@@ -11,11 +11,11 @@
           ></div>
           <div
             :class="{ 'translate-x-10': show }"
-            class="bg-zinc-800 h-[2px] w-7"
+            class="bg-zinc-800 h-[2px] w-7 origin-left"
           ></div>
           <div
             :class="{ 'translate-x-10': show }"
-            class="bg-zinc-800 h-[2px] w-7 origin-left"
+            class="bg-zinc-800 h-[3px] w-7 origin-left"
           ></div>
 
           <div
