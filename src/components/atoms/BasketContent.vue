@@ -17,8 +17,12 @@
         :key="data.id"
       >
         <div class="font-semibold">
+          <router-link :to="`/donut/${data.product.id}`">
+
           {{ data.product.taste }}
           <img :src="data.product.image" class="w-20 h-20 m-auto" />
+        </router-link>
+
         </div>
         <div>{{ data.product.price }}</div>
         <div>{{ data.quantity }}</div>
@@ -55,6 +59,12 @@ import { useProductStore } from "@/stores/products";
 import { computed } from "vue";
 export default {
   name: "BasketContent",
+  props: {
+    donut: {
+      type: Object
+    }
+  },
+
   setup() {
     const store = useBasketStore();
     const { basket } = store;
