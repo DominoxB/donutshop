@@ -4,19 +4,19 @@
       <p class="mb-6 mt-6 text-center text-3xl font-pacifico text-neutral-700">
         Twój koszyk pełen pyszności
       </p>
-      <div class="grid grid-cols-4 border-4 text-center font-semibold mt-4">
+      <div class="grid grid-cols-4 border-4 text-center text-lg md:text-xl lg:text-2xl font-semibold mt-4">
         <div>Donut</div>
         <div>Cena</div>
         <div>Ilość</div>
         <div>Suma</div>
       </div>
       <div
-        class="grid grid-cols-4 border-t-0 border-b-0 border-2 text-center p-3"
+        class="grid grid-cols-4 border-t-0 border-b-0 border-2 text-center text-sm md:text-xl lg:text-2xl py-2"
         v-for="data in basket"
         :donut="product"
         :key="data.id"
       >
-        <div class="font-semibold cursor-pointer border border-white hover:border-indigo-500">
+        <div class="font-semibold cursor-pointer border-2 border-white hover:border-slate-700">
           <router-link :to="`/donut/${data.product.id}`">
           {{ data.product.taste }}
           <img :src="data.product.image" class="w-20 h-20 m-auto" />
@@ -27,11 +27,11 @@
         <div>{{ (data.product.price * data.quantity).toFixed(2) }}</div>
       </div>
       <div
-        class="grid grid-cols-4 border-black border-2 text-center font-semibold h-10"
+        class="grid grid-cols-4 border-black border-2 text-center font-bold h-10"
       >
-        <div class="col-span-2"></div>
-        <div>{{ result }}</div>
-        <div>Łącznie zł: {{ total.toFixed(2) }}</div>
+        <div class="col-span-2 my-auto text-sm md:text-xl lg:text-2xl">Podsumowanie zakupów: </div>
+        <div class="my-auto text-sm md:text-xl lg:text-2xl">{{ result }}</div>
+        <div class="my-auto text-sm md:text-xl lg:text-2xl">Razem zł: {{ total.toFixed(2) }}</div>
       </div>
     </div>
     <div class="flex justify-between">
