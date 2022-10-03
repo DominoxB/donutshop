@@ -22,12 +22,12 @@
         <div>{{ (data.product.price * data.quantity).toFixed(2) }}</div>
       </div>
       <div
-        class="grid grid-cols-4 border-black border-2 text-center font-semibold"
+        class="grid grid-cols-4 border-black border-2 text-center font-semibold h-10"
       >
         <div></div>
         <div></div>
         <div>{{ result }}</div>
-        <div>Łącznie zł:</div>
+        <div>Łącznie zł: {{ total.toFixed(2) }}</div>
       </div>
     </div>
     <div class="flex justify-between">
@@ -35,7 +35,7 @@
         <button
           class="border-4 border-amber-800 hover:bg-slate-200 rounded p-3 font-pacifico text-2xl ml-4"
         >
-          Kontunuuj zakupy
+          Kontynuuj zakupy
         </button>
       </router-link>
       <button
@@ -64,6 +64,10 @@ export default {
       return store.getDonutsQuantity;
     });
 
+    const total = computed(() => {
+      return store.getDonutsPrice;
+    });
+
     basket.map((el) => {
       el.product = donuts[el.id];
     });
@@ -71,6 +75,7 @@ export default {
       basket,
       donuts,
       result,
+      total,
     };
   },
 };
