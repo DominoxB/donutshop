@@ -15,6 +15,10 @@ export const useBasketStore = defineStore("BasketStore", {
           this.basket[index].quantity + obj.quantity;
       }
     },
+    deleteProduct(id) {
+      const index = this.basket.map(el => el.id).indexOf(id)
+      this.basket.splice(index, 1)
+    }
   },
   getters: {
     getDonutsQuantity(state) {

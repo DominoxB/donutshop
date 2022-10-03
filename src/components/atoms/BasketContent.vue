@@ -4,14 +4,14 @@
       <p class="mb-6 mt-6 text-center text-3xl font-pacifico text-neutral-700">
         Twój koszyk pełen pyszności
       </p>
-      <div class="grid grid-cols-4 border-4 text-center text-lg md:text-xl lg:text-2xl font-semibold mt-4">
+      <div class="grid grid-cols-5 border-4 text-center text-lg md:text-xl lg:text-2xl font-semibold mt-4">
         <div>Donut</div>
         <div>Cena</div>
         <div>Ilość</div>
         <div>Suma</div>
       </div>
       <div
-        class="grid grid-cols-4 border-t-0 border-b-0 border-2 text-center text-sm md:text-xl lg:text-2xl"
+        class="grid grid-cols-5 border-t-0 border-b-0 border-2 text-center text-sm md:text-xl lg:text-2xl"
         v-for="data in basket"
         :donut="product"
         :key="data.id"
@@ -25,6 +25,7 @@
         <div>{{ data.product.price }}</div>
         <input v-model="data.quantity" type="number" class="w-12 h-12 mx-auto text-center border border-slate-400 rounded cursor-pointer focus:bg-slate-200"/>
         <div>{{ (data.product.price * data.quantity).toFixed(2) }}</div>
+        <button @click="removeDonut(data.id)">Usuń</button>
       </div>
       <div
         class="grid grid-cols-4 border-black border-2 text-center font-bold h-10"
@@ -78,6 +79,10 @@ export default {
       return store.getDonutsPrice;
     });
 
+    const removeDonut = (id) => {
+      store.deleteProduct(id)
+    }
+
     basket.map((el) => {
       el.product = donuts[el.id];
     });
@@ -86,6 +91,7 @@ export default {
       donuts,
       result,
       total,
+      removeDonut
     };
   },
 };
