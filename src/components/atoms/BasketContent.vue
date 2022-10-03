@@ -16,13 +16,11 @@
         :donut="product"
         :key="data.id"
       >
-        <div class="font-semibold">
+        <div class="font-semibold cursor-pointer border border-white hover:border-indigo-500">
           <router-link :to="`/donut/${data.product.id}`">
-
           {{ data.product.taste }}
           <img :src="data.product.image" class="w-20 h-20 m-auto" />
         </router-link>
-
         </div>
         <div>{{ data.product.price }}</div>
         <div>{{ data.quantity }}</div>
