@@ -13,19 +13,19 @@
         v-for="data in basket" :donut="product" :key="data.id">
          <div class="font-semibold">{{ data.product.taste }}</div> 
          <div>{{ data.product.price }}</div>
-         <div>{{ quantity }}</div>
+         <div>{{ data.quantity }}</div>
         </div>
     </div>
     <div class="flex justify-between">
       <router-link to="/DonutShop">
         <button
-          class="border-4 border-amber-800 hover:bg-slate-200 rounded p-3 font-pacifico text-2xl"
+          class="border-4 border-amber-800 hover:bg-slate-200 rounded p-3 font-pacifico text-2xl ml-4"
         >
           Kontunuuj zakupy
         </button>
       </router-link>
       <button
-        class="border-4 border-amber-800 hover:bg-slate-200 rounded p-3 font-pacifico text-2xl"
+        class="border-4 border-amber-800 hover:bg-slate-200 rounded p-3 font-pacifico text-2xl mr-4"
       >
         Przejdź do kasy
       </button>
@@ -36,7 +36,6 @@
 <script>
 import { useBasketStore } from "@/stores/basket";
 import { useProductStore } from "@/stores/products";
-import { ref } from 'vue'
 export default {
   name: "BasketContent",
   setup() {
@@ -45,17 +44,14 @@ export default {
 
     const productStore = useProductStore();
     const { donuts } = productStore;
-    const quantity = ref(0)
     
     console.log(basket);
-    // const initBasket = [];
     basket.map((el) => {
       el.product = donuts[el.id];
     });
     return {
       basket,
       donuts,
-      quantity,
     };
   },
 };
