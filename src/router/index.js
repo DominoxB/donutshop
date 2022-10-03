@@ -4,7 +4,8 @@ import DonutShop from "../views/DonutShop.vue";
 import AboutDonuts from "../views/AboutDonuts.vue";
 import AboutUs from '../views/AboutUs.vue';
 import SingleDonut from '../views/SingleDonut.vue';
-import ContactPage from '../views/ContactPage.vue'
+import ContactPage from '../views/ContactPage.vue';
+import BasketPage from '../views/BasketPage.vue'
 
 
 const router = createRouter({
@@ -15,7 +16,8 @@ const router = createRouter({
     { path: "/AboutDonuts", component: AboutDonuts },
     { path: "/AboutUs", component: AboutUs },
     { path: "/donut/:id", component: SingleDonut },
-    { path: '/Contact', component: ContactPage }
+    { path: "/Contact", component: ContactPage },
+    { path: "/BasketPage", component: BasketPage }
   ],
 });
 
