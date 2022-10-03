@@ -1,21 +1,34 @@
 <template>
   <div class="container mx-auto min-h-[500px]">
     <div class="block p-4 m-4 text-2xl">
-        <p class="mb-6 mt-6 text-center text-3xl font-pacifico text-neutral-700">Twój koszyk pełen pyszności</p>
-        <div class="grid grid-cols-4 border-4 text-center font-semibold mt-4">
-            <div>Donut</div>
-            <div>Cena</div>
-            <div>Ilość</div>
-            <div>Suma</div>
-        </div>
-        <div 
-        class="grid grid-cols-4 border-t-0 border-2 text-center p-3"
-        v-for="data in basket" :donut="product" :key="data.id">
-         <div class="font-semibold">{{ data.product.taste }}</div> 
-         <div>{{ data.product.price }}</div>
-         <div>{{ data.quantity }}</div>
-         <div>{{ (data.product.price * data.quantity).toFixed(2) }}</div>
-        </div>
+      <p class="mb-6 mt-6 text-center text-3xl font-pacifico text-neutral-700">
+        Twój koszyk pełen pyszności
+      </p>
+      <div class="grid grid-cols-4 border-4 text-center font-semibold mt-4">
+        <div>Donut</div>
+        <div>Cena</div>
+        <div>Ilość</div>
+        <div>Suma</div>
+      </div>
+      <div
+        class="grid grid-cols-4 border-t-0 border-b-0 border-2 text-center p-3"
+        v-for="data in basket"
+        :donut="product"
+        :key="data.id"
+      >
+        <div class="font-semibold">{{ data.product.taste }}</div>
+        <div>{{ data.product.price }}</div>
+        <div>{{ data.quantity }}</div>
+        <div>{{ (data.product.price * data.quantity).toFixed(2) }}</div>
+      </div>
+      <div
+        class="grid grid-cols-4 border-black border-2 text-center font-semibold"
+      >
+        <div></div>
+        <div></div>
+        <div>{{ result }}</div>
+        <div>Łącznie zł:</div>
+      </div>
     </div>
     <div class="flex justify-between">
       <router-link to="/DonutShop">
@@ -37,6 +50,7 @@
 <script>
 import { useBasketStore } from "@/stores/basket";
 import { useProductStore } from "@/stores/products";
+import { computed } from "vue";
 export default {
   name: "BasketContent",
   setup() {
@@ -45,13 +59,18 @@ export default {
 
     const productStore = useProductStore();
     const { donuts } = productStore;
-    
+
+    const result = computed(() => {
+      return store.getDonutsQuantity;
+    });
+
     basket.map((el) => {
       el.product = donuts[el.id];
     });
     return {
       basket,
       donuts,
+      result,
     };
   },
 };
