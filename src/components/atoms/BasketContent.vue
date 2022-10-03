@@ -16,16 +16,17 @@
         :donut="product"
         :key="data.id"
       >
-        <div class="font-semibold cursor-pointer border-2 border-white hover:border-slate-700">
+        <div class="font-semibold cursor-pointer border-2 border-white hover:border-slate-700 hover:rounded-2xl">
           <router-link :to="`/donut/${data.product.id}`">
           {{ data.product.taste }}
           <img :src="data.product.image" class="w-20 h-20 m-auto" />
         </router-link>
         </div>
-        <div>{{ data.product.price }}</div>
-        <input v-model="data.quantity" type="number" class="w-12 h-12 mx-auto text-center border border-slate-400 rounded cursor-pointer focus:bg-slate-200"/>
-        <div>{{ (data.product.price * data.quantity).toFixed(2) }}</div>
-        <button @click="removeDonut(data.id)">Usuń</button>
+        <div class="m-auto">{{ data.product.price }}</div>
+        <input v-model="data.quantity" type="number" class="w-12 h-12 m-auto text-center border border-slate-400 rounded cursor-pointer focus:bg-slate-200"/>
+        <div class="m-auto">{{ (data.product.price * data.quantity).toFixed(2) }}</div>
+        <button @click="removeDonut(data.id)"
+        class="text-sm md:text-xl border rounded border-neutral-900 hover:bg-red-500 w-14 h-8 md:w-24 md:h-10 m-auto font-pacifico">Usuń</button>
       </div>
       <div
         class="grid grid-cols-4 border-black border-2 text-center font-bold h-10"
@@ -38,13 +39,13 @@
     <div class="flex justify-between">
       <router-link to="/DonutShop">
         <button
-          class="border-4 border-amber-800 hover:bg-slate-200 rounded p-3 font-pacifico text-2xl ml-4"
+          class="border border-neutral-900  bg-orange-200 hover:bg-orange-300 rounded p-3 font-pacifico text-2xl ml-4"
         >
           Kontynuuj zakupy
         </button>
       </router-link>
       <button
-        class="border-4 border-amber-800 hover:bg-slate-200 rounded p-3 font-pacifico text-2xl mr-4"
+        class="border border-neutral-900 bg-orange-200 hover:bg-orange-300 rounded p-3 font-pacifico text-2xl mr-4"
       >
         Przejdź do kasy
       </button>
