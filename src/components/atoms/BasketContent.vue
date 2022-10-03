@@ -11,7 +11,7 @@
         <div>Suma</div>
       </div>
       <div
-        class="grid grid-cols-4 border-t-0 border-b-0 border-2 text-center text-sm md:text-xl lg:text-2xl py-2"
+        class="grid grid-cols-4 border-t-0 border-b-0 border-2 text-center text-sm md:text-xl lg:text-2xl"
         v-for="data in basket"
         :donut="product"
         :key="data.id"
@@ -23,7 +23,7 @@
         </router-link>
         </div>
         <div>{{ data.product.price }}</div>
-        <div>{{ data.quantity }}</div>
+        <input v-model="data.quantity" type="number" class="w-12 h-12 mx-auto text-center border border-slate-400 rounded cursor-pointer focus:bg-slate-200"/>
         <div>{{ (data.product.price * data.quantity).toFixed(2) }}</div>
       </div>
       <div
