@@ -14,6 +14,7 @@
          <div class="font-semibold">{{ data.product.taste }}</div> 
          <div>{{ data.product.price }}</div>
          <div>{{ data.quantity }}</div>
+         <div>{{ (data.product.price * data.quantity).toFixed(2) }}</div>
         </div>
     </div>
     <div class="flex justify-between">
@@ -45,7 +46,6 @@ export default {
     const productStore = useProductStore();
     const { donuts } = productStore;
     
-    console.log(basket);
     basket.map((el) => {
       el.product = donuts[el.id];
     });
