@@ -24,10 +24,10 @@
       <div
         class="grid grid-cols-4 border-black border-2 text-center font-semibold h-10"
       >
-        <div></div>
-        <div></div>
+        <div class="col-span-2"></div>
         <div>{{ result }}</div>
         <div>Łącznie zł: {{ total.toFixed(2) }}</div>
+
       </div>
     </div>
     <div class="flex justify-between">
