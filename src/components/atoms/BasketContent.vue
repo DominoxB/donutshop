@@ -69,20 +69,32 @@
       </button>
     </div>
   </div>
+  <ModalContent 
+    v-if="showModal"
+    @delete-donut="agree($event)"
+    @cancel-action="cancel($event)">
+    </ModalContent>
 </template>
 
 <script>
 import { useBasketStore } from "@/stores/basket";
 import { useProductStore } from "@/stores/products";
-import { computed } from "vue";
+import { computed, ref } from "vue";
+import ModalContent from "@/components/atoms/ModalContent.vue";
 export default {
   name: "BasketContent",
+  components: {
+    ModalContent,
+},
   setup() {
     const store = useBasketStore();
     const { basket } = store;
 
     const productStore = useProductStore();
     const { donuts } = productStore;
+
+    const showModal = ref(false)
+    const activeId = ref(-1)
 
     const result = computed(() => {
       return store.getDonutsQuantity;
@@ -93,10 +105,20 @@ export default {
     });
 
     const removeDonut = (id) => {
-      if (confirm("Czy na pewno chcesz usunąć tego donuta?")) {
-        store.deleteProduct(id);
-      }
+      activeId.value = id
+      showModal.value = true
     };
+
+    const agree = (event) => {
+      console.log(event)
+      store.deleteProduct(activeId.value)
+      showModal.value = false
+    }
+
+    const cancel = (event) => {
+      console.log(event)
+      showModal.value = false
+    }
 
     basket.map((el) => {
       el.product = donuts[el.id];
@@ -107,6 +129,9 @@ export default {
       result,
       total,
       removeDonut,
+      showModal,
+      agree,
+      cancel
     };
   },
 };
