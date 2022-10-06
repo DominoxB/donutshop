@@ -69,7 +69,11 @@
       </button>
     </div>
   </div>
-  <ModalContent v-if="showModal"></ModalContent>
+  <ModalContent 
+    v-if="showModal"
+    @delete-donut="agree($event)"
+    @cancel-action="cancel($event)">
+    </ModalContent>
 </template>
 
 <script>
@@ -105,6 +109,17 @@ export default {
       showModal.value = true
     };
 
+    const agree = (event) => {
+      console.log(event)
+      store.deleteProduct(activeId.value)
+      showModal.value = false
+    }
+
+    const cancel = (event) => {
+      console.log(event)
+      showModal.value = false
+    }
+
     basket.map((el) => {
       el.product = donuts[el.id];
     });
@@ -114,7 +129,9 @@ export default {
       result,
       total,
       removeDonut,
-      showModal
+      showModal,
+      agree,
+      cancel
     };
   },
 };

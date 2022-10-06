@@ -18,7 +18,6 @@ export default {
     const scroll = () => {
       window.scrollTo(0, 0);
     }
-    console.log(window)
     return {
       scroll,
       isVisible,
