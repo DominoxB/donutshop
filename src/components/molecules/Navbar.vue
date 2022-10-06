@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white sticky top-0 w-screen z-10 md:relative lg:relative">
+  <div class="bg-white sticky top-0 z-10 md:relative lg:relative">
     <div
       class="flex justify-between items-center text-2xl md:text-4xl md:block md:text-center md:pb-4 lg:text-6xl lg:pb-4 text-amber-600"
     >
