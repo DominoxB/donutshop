@@ -1,9 +1,11 @@
 <template>
-  <div></div>
+  <PaymentUserData></PaymentUserData>
 </template>
 
 <script>
+import PaymentUserData from '@/components/atoms/PaymentUserData.vue';
 export default {
-  name: "PaymentPage"
+    name: "PaymentPage",
+    components: { PaymentUserData }
 }
 </script>
