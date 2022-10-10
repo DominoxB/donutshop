@@ -1,13 +1,13 @@
 <template>
-  <div class="container mx-auto min-h-[500px]">
-    <div>
-      <span class="font-garamond font-bold ml-16 text-2xl"
+    <div class="block">
+      <div>
+      <span class="font-garamond font-bold ml-10 text-2xl"
         >Uzupełnij swoje dane</span
       >
     </div>
-    <div class="flex mx-auto mt-4">
+    <div class="flex mt-4">
       <div
-        class="flex bg-gray-100 ml-16 font-garamond border border-black rounded-2xl"
+        class="flex bg-gray-100 ml-10 font-garamond border border-black rounded"
       >
         <div class="ml-4">
           <!-- imię i nazwisko -->

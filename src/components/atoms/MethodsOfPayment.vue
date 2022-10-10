@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-slate-100 font-garamond border block mt-4">
+  <div class="bg-slate-200 font-garamond border border-black rounded block mt-12 ml-auto mr-auto p-4">
     <p class="text-xl font-semibold mb-2">Wybierz metodę płatności: </p>
     <div class="flex text-lg mb-2">
       <input type="radio" value="cash" v-model="chosen.cash"/>
