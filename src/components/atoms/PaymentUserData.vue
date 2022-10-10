@@ -5,9 +5,9 @@
         >Uzupełnij swoje dane</span
       >
     </div>
-    <div class="flex mt-4">
+    <div class="flex mx-auto mt-4">
       <div
-        class="block w-1/2 ml-16 font-garamond border border-black rounded-2xl"
+        class="flex bg-gray-100 ml-16 font-garamond border border-black rounded-2xl"
       >
         <div class="ml-4">
           <!-- imię i nazwisko -->
@@ -19,7 +19,7 @@
             <input
               v-model="state.name"
               type="text"
-              class="form-control block w-1/2 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              class="form-control block px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
               :class="v$.name.$error ? 'border-red-600' : 'border-gray-300'"
               placeholder="Wpisz swoje dane"
               @blur="v$.name.$touch"
@@ -47,25 +47,25 @@
           <div class="flex">
             <div>
               <label
-                class="form-label w-full inline-block mb-2 text-gray-700 text-xl font-semibold"
+                class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
                 >Nazwa firmy</label
               >
               <input
                 v-model="state.company"
                 type="text"
-                class="form-control block px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                class="form-control block px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
                 placeholder="nazwa firmy (opcjonalnie)"
               />
             </div>
             <div>
               <label
-                class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
+                class="form-label inline-block ml-2 mb-2 text-gray-700 text-xl font-semibold"
                 >NIP</label
               >
               <input
                 v-model="state.identification"
                 type="text"
-                class="form-control block ml-2 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                class="form-control block ml-2 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
                 placeholder="NIP (opcjonalnie)"
               />
             </div>
@@ -80,7 +80,7 @@
               <input
                 v-model="state.street"
                 type="text"
-                class="form-control block px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                class="form-control block px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
                 :class="v$.street.$error ? 'border-red-600' : 'border-gray-300'"
                 placeholder="Wpisz swój adres"
                 @blur="v$.street.$touch"
@@ -113,7 +113,7 @@
               <input
                 v-model="state.building"
                 type="text"
-                class="form-control block px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                class="form-control block px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
                 :class="
                   v$.building.$error ? 'border-red-600' : 'border-gray-300'
                 "
@@ -139,7 +139,7 @@
               <input
                 v-model="state.local"
                 type="text"
-                class="form-control block w-24 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                class="form-control block mr-2 w-24 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
                 :class="v$.local.$error ? 'border-red-600' : 'border-gray-300'"
                 placeholder="nr"
                 @blur="v$.local.$touch"
@@ -165,7 +165,7 @@
               <input
                 v-model="state.code"
                 type="text"
-                class="form-control block px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                class="form-control block px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
                 :class="v$.code.$error ? 'border-red-600' : 'border-gray-300'"
                 placeholder="wpisz kod"
                 @blur="v$.code.$touch"
@@ -191,13 +191,13 @@
             <!-- miasto -->
             <div>
               <label
-                class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
+                class="form-label inline-block ml-2 mb-2 text-gray-700 text-xl font-semibold"
                 >Miasto</label
               >
               <input
                 v-model="state.town"
                 type="email"
-                class="form-control block ml-2 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                class="form-control block ml-2 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
                 :class="v$.town.$error ? 'border-red-600' : 'border-gray-300'"
                 placeholder="wpisz adres e-mail"
                 @blur="v$.town.$touch"
@@ -222,7 +222,7 @@
             <input
               v-model="state.emailAdress"
               type="email"
-              class="form-control block w-1/2 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              class="form-control block px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
               :class="
                 v$.emailAdress.$error ? 'border-red-600' : 'border-gray-300'
               "
@@ -257,7 +257,7 @@
             <input
               v-model="state.telephone"
               type="text"
-              class="form-control block w-1/2 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              class="form-control block px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
               :class="
                 v$.telephone.$error ? 'border-red-600' : 'border-gray-300'
               "
