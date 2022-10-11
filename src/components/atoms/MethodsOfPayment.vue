@@ -43,10 +43,26 @@
     <div class="mt-2 border-t-2 bg-slate-300">
       <h1 class="p-2">Wybrany sposób dostawy: <span class="font-semibold">{{ delivery }}</span></h1>
     </div>
-
-
   </div>
   </div>
+  <div class="flex justify-start mt-4 ml-5">
+    <router-link to="/BasketPage">
+        <button
+          class="border border-neutral-900 bg-orange-400 hover:bg-orange-500 rounded p-3 font-pacifico text-2xl"
+        >
+          Wróć do koszyka
+        </button>
+      </router-link>
+</div>
+<div class="flex justify-end mt-4 mr-5">
+  <router-link to="/">
+        <button
+          class="border border-neutral-900 bg-orange-400 hover:bg-orange-500 rounded p-3 font-pacifico text-2xl"
+        >
+          Podsumowanie
+        </button>
+      </router-link>
+    </div>
 </template>
 
 <script>
