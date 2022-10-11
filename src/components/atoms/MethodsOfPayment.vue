@@ -38,7 +38,7 @@
     </div>
     <div class="flex text-lg mb-2">
       <input type="radio" value="odbiór osobisty" id="self" name="delivery" v-model="delivery"/>
-      <label>Odbiór osobisty w Pączkowicach (0,00)</label>
+      <label>Odbiór osobisty w Pączkosławicach (0,00)</label>
     </div>
     <div class="mt-2 border-t-2 bg-slate-300">
       <h1 class="p-2">Wybrany sposób dostawy: <span class="font-semibold">{{ delivery }}</span></h1>

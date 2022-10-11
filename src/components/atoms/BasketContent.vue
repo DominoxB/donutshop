@@ -65,8 +65,9 @@
       <router-link to="/PaymentPage">
       <button
         class="border border-neutral-900 bg-orange-400 hover:bg-orange-500 rounded p-3 font-pacifico text-2xl mr-4"
+        :disabled="result <= 0"
       >
-        Przejdź do kasy
+        Przejdź do realizacji zamówienia
       </button>
     </router-link>
     </div>
