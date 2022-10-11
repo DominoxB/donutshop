@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-slate-200 font-garamond border border-black rounded block mt-12 ml-auto mr-auto p-4">
+  <div class="bg-slate-200 w-3/4 font-garamond border border-black rounded block mt-12 ml-auto mr-auto p-4">
     <!-- SPOSÓB PŁATNOŚCI -->
     <p class="text-xl font-semibold mb-2">Wybierz metodę płatności: </p>
     <div class="flex text-lg mb-2">
@@ -26,8 +26,8 @@
       <h1 class="p-2">Wybrany sposób płatności: <span class="font-semibold">{{ selected }}</span></h1>
     </div>
     <!-- DOSTAWA -->
-    <div class="mt-4 border-t-2 border-black">
-    <p class="text-xl font-semibold mt-2">Wybierz sposób dostawy: </p>
+    <div class="mt-8 border-t-2 border-black">
+    <p class="text-xl font-semibold mt-4 mb-2">Wybierz sposób dostawy: </p>
     <div class="flex text-lg mb-2">
       <input type="radio" value="kurier DPD" id="courier" name="delivery" v-model="delivery"/>
       <label>Kurier DPD (12,99)</label>
