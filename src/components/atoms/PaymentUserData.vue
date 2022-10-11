@@ -18,6 +18,7 @@
               >Imię</label
             >
             <input
+              id="name"
               v-model="state.name"
               type="text"
               class="form-control block px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
@@ -327,10 +328,16 @@
 <script>
 import { useVuelidate } from "@vuelidate/core";
 import { required, email, minLength, helpers } from "@vuelidate/validators";
-import { reactive, computed } from "vue";
+import { reactive, computed, onMounted, nextTick} from "vue";
 export default {
   name: "PaymentUserData",
   setup() {
+    onMounted(async() => {
+      const hasAutofocus = document.getElementById('name')
+      hasAutofocus.focus()
+      await nextTick()
+      hasAutofocus.scrollIntoView({ block: 'end', behavior: 'smooth' })
+    })
     const state = reactive({
       name: "",
       surname: "",

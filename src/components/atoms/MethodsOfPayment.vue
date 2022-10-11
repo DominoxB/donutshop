@@ -72,6 +72,7 @@ export default {
   setup() {
     const selected = ref(null)
     const delivery = ref(null)
+    console.log(window)
     return {
       selected,
       delivery
