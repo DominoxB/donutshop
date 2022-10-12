@@ -1,26 +1,31 @@
 <template>
   <button
-    v-show="isVisible"
+    v-show="scY > 150"
     @click="scroll"
-    class="fixed z-10 bottom-8 right-2 border-0 w-12 h-12 rounded-full drop-shadow-md bg-indigo-300 hover:bg-indigo-400 text-white text-3xl font-bold scroll-smooth"
+    class="fixed z-10 bottom-8 right-2 border-0 w-12 h-12 rounded-full drop-shadow-md bg-indigo-300 opacity-30 hover:bg-indigo-400 text-white text-3xl font-bold scroll-smooth"
   >
-    &#129045; 
+    &#129045;
   </button>
 </template>
 
 <script>
+import { ref, onMounted } from "vue";
 export default {
   name: "BtnScrollToTop",
   setup() {
-    const isVisible = () => {
-      window.scrollY > 150
-    }
+    const scY = ref(0);
     const scroll = () => {
-      window.scrollTo(0, 0);
-    }
+      const charger = document.getElementById("charger"); // chwytamy element po id
+      charger.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+    onMounted(() => {
+      document.addEventListener("scroll", () => {
+        scY.value = window.scrollY;
+      });
+    });
     return {
       scroll,
-      isVisible,
+      scY,
     };
   },
 };

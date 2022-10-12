@@ -8,7 +8,7 @@
       <button
         @click="add"
         :disabled="quantity <= 0"
-        class="bg-orange-200 hover:bg-orange-300 text-gray-800 block w-44 h-10 font-bold text-base rounded my-auto mx-auto"
+        class="bg-orange-300 hover:bg-orange-400 text-gray-800 block w-44 h-10 font-bold text-base rounded my-auto mx-auto"
       >
         <span>Do koszyka 🍩</span> 
       </button>

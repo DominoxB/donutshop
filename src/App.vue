@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-end mt-4 mr-4 text-xl font-sans">
+  <div id="charger" class="flex justify-end mt-4 mr-4 text-xl font-sans">
     <select v-model="$i18n.locale" class="cursor-pointer">
       <option
         v-for="locale in $i18n.availableLocales"
