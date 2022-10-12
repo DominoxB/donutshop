@@ -6,19 +6,19 @@
     <div
       class="bg-white fixed left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 border-2 border-indigo-900 rounded-2xl p-10 text-center"
     >
-      <span class="text-2xl font-pacifico font-semibold"
+      <span class="text-2xl font-pacifico"
         >Czy na pewno chcesz usunąć te pozycję?</span
       >
       <div class="flex justify-center mt-10 font-pacifico">
         <button
          @click="clickYes"
-          class="border hover:bg-slate-200 border-indigo-600 rounded text-center text-lg p-1 mr-10"
+          class="border border-black hover:bg-slate-200 rounded text-center text-lg p-1 mr-10"
         >
           Tak, usuń donuta
         </button>
         <button
           @click="clickCancel"
-          class="w-[136px] border hover:bg-slate-200 border-indigo-600 rounded text-center text-lg p-1"
+          class="w-[136px] border border-black hover:bg-slate-200 rounded text-center text-lg p-1"
         >
           Anuluj
         </button>

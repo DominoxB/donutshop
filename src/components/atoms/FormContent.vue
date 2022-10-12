@@ -160,7 +160,8 @@
       </div>
 
       <div
-        class="w-2/3 font-garamond font-semibold text-xl text-center my-auto bg-gray-100 p-6 mx-auto"
+        style="background-image: url('https://t4.ftcdn.net/jpg/01/98/88/85/360_F_198888595_APmkgmFYwzY7RMCfhhav9ELknjHFv2iw.jpg');"
+        class="w-3/4 h-2/4 font-garamond font-semibold text-xl text-center my-auto p-8 pt-11 mx-auto"
       >
         <span
           >Jeżeli macie Państwo jakieś pytania, chcecie zapytać o nasze
