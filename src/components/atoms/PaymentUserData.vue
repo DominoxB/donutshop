@@ -215,14 +215,6 @@
               >
                 {{ v$.code.required.$message }}
               </span>
-              <span
-                v-if="
-                  v$.code.$errors[0] && v$.code.$errors[0].$validator === 'num'
-                "
-                class="text-xl text-red-600"
-              >
-                {{ v$.code.num.$message }}
-              </span>
             </div>
             <!-- miasto -->
             <div>
@@ -401,10 +393,6 @@ export default {
           required: helpers.withMessage(
             "To pole musi być wypełnione.",
             required
-          ),
-          num: helpers.withMessage(
-            "To pole może zawierać tylko cyfry.",
-            helpers.regex(/^[0-9]*$/)
           ),
         },
         town: {
