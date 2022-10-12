@@ -3,8 +3,8 @@
     <div>
       <span class="font-medium ml-16 text-2xl">FORMULARZ KONTAKTOWY</span>
     </div>
-    <div class="flex">
-      <div class="block w-1/2 ml-16 border bg-orange-100 rounded-2xl">
+    <div class="grid md:grid-cols-2">
+      <div class="block md:w-full m-8 ml-10 border bg-orange-100 rounded-2xl">
         <div class="ml-4">
           <label
             class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
@@ -13,7 +13,7 @@
           <input
             v-model="state.name"
             type="text"
-            class="form-control block w-1/2 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            class="form-control block w-3/4 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
             :class="v$.name.$error ? 'border-red-600' : 'border-gray-300'"
             placeholder="Wpisz swoje dane"
             @blur="v$.name.$touch"
@@ -43,7 +43,7 @@
             <input
               v-model="state.company"
               type="text"
-              class="form-control block w-1/2 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              class="form-control block w-3/4 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
               placeholder="nazwa firmy (opcjonalnie)"
             />
           </div>
@@ -55,7 +55,7 @@
             <input
               v-model="state.emailAdress"
               type="email"
-              class="form-control block w-1/2 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              class="form-control block w-3/4 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
               :class="
                 v$.emailAdress.$error ? 'border-red-600' : 'border-gray-300'
               "
@@ -89,7 +89,7 @@
             <input
               v-model="state.telephone"
               type="text"
-              class="form-control block w-1/2 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              class="form-control block w-3/4 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
               :class="
                 v$.telephone.$error ? 'border-red-600' : 'border-gray-300'
               "
@@ -123,7 +123,7 @@
             <textarea
               v-model="state.yourMessage"
               type="text"
-              class="form-control block w-1/2 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              class="form-control block w-3/4 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
               :class="
                 v$.yourMessage.$error ? 'border-red-600' : 'border-gray-300'
               "
@@ -160,7 +160,7 @@
       </div>
 
       <div
-        class="w-1/3 font-garamond font-semibold text-xl text-center my-auto bg-gray-100 p-6 mx-auto"
+        class="w-2/3 font-garamond font-semibold text-xl text-center my-auto bg-gray-100 p-6 mx-auto"
       >
         <span
           >Jeżeli macie Państwo jakieś pytania, chcecie zapytać o nasze

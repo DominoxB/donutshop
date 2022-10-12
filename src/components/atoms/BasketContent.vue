@@ -57,14 +57,14 @@
     <div class="flex justify-between">
       <router-link to="/DonutShop">
         <button
-          class="border border-neutral-900 bg-orange-400 hover:bg-orange-500 rounded p-3 font-pacifico text-2xl ml-4"
+          class="border border-neutral-900 bg-orange-400 hover:bg-orange-500 rounded p-3 font-pacifico md:text-2xl ml-2 md:ml-4"
         >
           Kontynuuj zakupy
         </button>
       </router-link>
       <router-link to="/PaymentPage">
       <button
-        class="border border-neutral-900 bg-orange-400 hover:bg-orange-500 rounded p-3 font-pacifico text-2xl mr-4"
+        class="border border-neutral-900 bg-orange-400 hover:bg-orange-500 rounded p-3 font-pacifico md:text-2xl mr-2 md:mr-4"
         :disabled="result <= 0"
       >
         Przejdź do realizacji zamówienia

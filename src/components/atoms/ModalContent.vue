@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-black fixed top-0 left-0 h-screen w-screen z-40 opacity-80"
+    class="bg-slate-400 fixed top-0 left-0 h-screen w-screen z-40 opacity-80"
   ></div>
   <div class="relative z-50">
     <div
