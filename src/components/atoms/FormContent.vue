@@ -3,8 +3,8 @@
     <div>
       <span class="font-medium ml-16 text-2xl">FORMULARZ KONTAKTOWY</span>
     </div>
-    <div class="grid md:grid-cols-2">
-      <div class="block md:w-full m-8 ml-10 border bg-orange-100 rounded-2xl">
+    <div class="grid lg:grid-cols-2">
+      <div class="block md:w-auto m-8 ml-10 border bg-orange-100 rounded-2xl">
         <div class="ml-4">
           <label
             class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
@@ -160,8 +160,8 @@
       </div>
 
       <div
-        style="background-image: url('https://t4.ftcdn.net/jpg/01/98/88/85/360_F_198888595_APmkgmFYwzY7RMCfhhav9ELknjHFv2iw.jpg');"
-        class="w-3/4 h-2/4 font-garamond font-semibold text-xl text-center my-auto p-8 pt-11 mx-auto"
+        style="background-image: url('https://i.pinimg.com/736x/df/3a/b6/df3ab6eee0fdeccc33d4aa70e1ea9d2f.jpg');"
+        class="font-garamond font-semibold text-gray-900 text-xl text-center lg:my-auto p-4 lg:p-8 lg:pt-11 mx-4 lg:mr-3 lg:mx-auto bg-no-repeat bg-top bg-cover bg-opacity-25"
       >
         <span
           >Jeżeli macie Państwo jakieś pytania, chcecie zapytać o nasze

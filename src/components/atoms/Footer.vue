@@ -9,7 +9,7 @@
         <p>ul. Czekoladowa 17</p>
         <p>88-888 Pączkosławice Wielkie</p>
       </div>
-      <div class="flex justify-center font-garamond my-auto mt-2">
+      <div class="flex justify-center text-lg font-garamond my-auto mt-2">
           <span class="font-semibold my-auto">Szukaj nas na: </span>
           <a href="https://pl-pl.facebook.com" target="_blank">
             <img src="@/images/fb.png" class="w-5 h-5 md:w-7 md:h-7 mt-2 ml-3" />
