@@ -1,16 +1,17 @@
 <template>
   <div class="container mx-auto min-h-[500px]">
-    <div>
-      <span class="font-medium ml-16 text-2xl">FORMULARZ KONTAKTOWY</span>
-    </div>
     <div class="grid lg:grid-cols-2">
       <div class="block md:w-auto m-8 ml-10 border bg-orange-100 rounded-2xl">
+        <div>
+          <span class="font-medium ml-4 text-2xl">FORMULARZ KONTAKTOWY</span>
+        </div>
         <div class="ml-4">
           <label
             class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
             >Imię i nazwisko</label
           >
           <input
+            id="name"
             v-model="state.name"
             type="text"
             class="form-control block w-3/4 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
@@ -160,17 +161,27 @@
       </div>
 
       <div
-        style="background-image: url('https://i.pinimg.com/736x/df/3a/b6/df3ab6eee0fdeccc33d4aa70e1ea9d2f.jpg');"
-        class="font-garamond font-semibold text-gray-900 text-xl text-center lg:my-auto p-4 lg:p-8 lg:pt-11 mx-4 lg:mr-3 lg:mx-auto bg-no-repeat bg-top bg-cover bg-opacity-25"
+        style="
+          background-image: url('https://i.pinimg.com/736x/df/3a/b6/df3ab6eee0fdeccc33d4aa70e1ea9d2f.jpg');
+        "
+        class="font-garamond font-semibold text-gray-900 text-xl text-center m-9 p-4 lg:p-10 lg:pt-11 mx-4 lg:mr-3 lg:mx-auto bg-no-repeat bg-top bg-cover bg-opacity-25"
       >
-        <span
-          >Jeżeli macie Państwo jakieś pytania, chcecie zapytać o nasze
-          składniki, nawiązać współpracę, przygotować słodki stół na ważnej dla
-          Was uroczystości, zapraszamy do kontaktu. Wystarczy wysłać do nas
-          wiadomość, a my skontaktujemy się Wami. Na wszystkie wiadomości
-          odpowiada Donata, dlatego informacje będą z najpewniejszego źródła
-          :)</span
-        >
+        <p class="mt-7">
+          Jeżeli macie Państwo pytania o nasze składniki, chcecie nawiązać
+          współpracę, przygotować słodki stół na ważnej dla Was uroczystości,
+          zapraszamy do kontaktu.
+        </p>
+        <p class="mt-7">
+          Wystarczy wysłać do nas wiadomość, z krótkim opisem, a my
+          skontaktujemy się Wami. Na wszystkie wiadomości staramy się odpowiadać
+          w ciągu 12 godzin.
+        </p>
+        <p class="mt-7">
+          Realizujemy specjalne zamówienia na terenie całej Polski,
+          przygotowujemy urodzinowe donutowe torty, obsługujemy słodki
+          poczęstunek na weselach, konferencjach i innych wydarzeniach.
+        </p>
+        <p class="mt-7">Serdecznie zapraszamy do naszego donutowego świata!</p>
       </div>
     </div>
   </div>
@@ -179,7 +190,7 @@
 <script>
 import { useVuelidate } from "@vuelidate/core";
 import { required, email, minLength, helpers } from "@vuelidate/validators";
-import { reactive, computed } from "vue";
+import { reactive, computed, onMounted, nextTick } from "vue";
 export default {
   name: "FormContent",
   setup() {
@@ -190,7 +201,6 @@ export default {
       telephone: "",
       yourMessage: "",
     });
-
     const rules = computed(() => {
       return {
         name: {
@@ -235,6 +245,13 @@ export default {
           ),
         },
       };
+    });
+    onMounted(async () => {
+      const hasAutofocus = document.getElementById("name");
+      hasAutofocus.focus();
+      await nextTick();
+      hasAutofocus.scrollIntoView({ block: "end", behavior: "smooth" });
+      console.log(hasAutofocus);
     });
 
     const v$ = useVuelidate(rules, state);
