@@ -7,7 +7,7 @@
       <div class="text-center font-garamond text-sm mt-2">
         <p>Donata Pączkowska</p>
         <p>ul. Czekoladowa 17</p>
-        <p>88-888 Pączkosławice Wielkie</p>
+        <p>06-550 Pączkowo</p>
       </div>
       <div class="flex justify-center text-lg font-garamond my-auto mt-2">
           <span class="font-semibold my-auto">Szukaj nas na: </span>
