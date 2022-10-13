@@ -1,17 +1,17 @@
 <template>
     <div class="block">
       <div>
-      <span class="font-garamond font-bold ml-10 text-2xl"
+      <span class="font-garamond font-bold ml-3 text-2xl"
         >Uzupełnij swoje dane</span
       >
     </div>
-    <div class="flex mt-4">
+    <div class="flex mt-4 justify-center">
       <div
-        class="flex bg-gray-100 ml-10 font-garamond border border-black rounded"
+        class="flex bg-gray-100 w-3/4 md:w-[617px] font-garamond lg:ml-4 border border-black rounded "
       >
-        <div class="ml-4">
+        <div class="ml-3 mr-3">
           <!-- imię i nazwisko -->
-          <div class="flex mt-1">
+          <div class="md:flex mt-1">
           <div>
             <label
               class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
@@ -47,13 +47,13 @@
           </div>
           <div>
             <label
-              class="form-label inline-block ml-2 mb-2 text-gray-700 text-xl font-semibold"
+              class="form-label inline-block md:ml-2 mb-2 text-gray-700 text-xl font-semibold"
               >Nazwisko</label
             >
             <input
               v-model="state.surname"
               type="text"
-              class="form-control block px-4 py-2 ml-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
+              class="form-control block px-4 py-2 md:ml-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
               :class="v$.surname.$error ? 'border-red-600' : 'border-gray-300'"
               placeholder="Wpisz nazwisko"
               @blur="v$.surname.$touch"
@@ -80,7 +80,7 @@
         </div>
 
           <!-- firma i nip -->
-          <div class="flex">
+          <div class="md:flex">
             <div>
               <label
                 class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
@@ -95,19 +95,19 @@
             </div>
             <div>
               <label
-                class="form-label inline-block ml-2 mb-2 text-gray-700 text-xl font-semibold"
+                class="form-label inline-block md:ml-2 mb-2 text-gray-700 text-xl font-semibold"
                 >NIP</label
               >
               <input
                 v-model="state.identification"
                 type="text"
-                class="form-control block ml-2 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
+                class="form-control block md:ml-2 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
                 placeholder="NIP (opcjonalnie)"
               />
             </div>
           </div>
           <!-- ulica -->
-          <div class="flex">
+          <div class="md:flex">
             <div>
               <label
                 class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
@@ -141,7 +141,7 @@
               </span>
             </div>
             <!-- nr budynku -->
-            <div class="ml-2">
+            <div class="md:ml-2">
               <label
                 class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
                 >Nr budynku</label
@@ -167,7 +167,7 @@
               </span>
             </div>
             <!-- nr lokalu -->
-            <div class="ml-2">
+            <div class="md:ml-2">
               <label
                 class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
                 >Nr lokalu</label
@@ -191,7 +191,7 @@
               </span>
             </div>
           </div>
-          <div class="flex">
+          <div class="md:flex">
             <!-- kod pocztowy -->
             <div class="mb-3">
               <label
@@ -219,15 +219,15 @@
             <!-- miasto -->
             <div>
               <label
-                class="form-label inline-block ml-2 mb-2 text-gray-700 text-xl font-semibold"
+                class="form-label inline-block md:ml-2 mb-2 text-gray-700 text-xl font-semibold"
                 >Miasto</label
               >
               <input
                 v-model="state.town"
-                type="email"
-                class="form-control block ml-2 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
+                type="text"
+                class="form-control block md:ml-2 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
                 :class="v$.town.$error ? 'border-red-600' : 'border-gray-300'"
-                placeholder="wpisz adres e-mail"
+                placeholder="wpisz nazwę miasta"
                 @blur="v$.town.$touch"
               />
               <span
