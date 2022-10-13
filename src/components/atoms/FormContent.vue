@@ -164,7 +164,7 @@
         style="
           background-image: url('https://i.pinimg.com/736x/df/3a/b6/df3ab6eee0fdeccc33d4aa70e1ea9d2f.jpg');
         "
-        class="font-garamond font-semibold text-gray-900 text-xl text-center m-9 p-4 lg:p-10 lg:pt-11 mx-4 lg:mr-3 lg:mx-auto bg-no-repeat bg-top bg-cover bg-opacity-25"
+        class="lg:w-[620px] font-garamond font-semibold text-gray-900 text-xl text-center m-9 p-4 lg:p-10 lg:pt-11 mx-4 lg:mr-3 lg:mx-auto bg-no-repeat bg-top bg-cover bg-opacity-25"
       >
         <p class="mt-7">
           Jeżeli macie Państwo pytania o nasze składniki, chcecie nawiązać
