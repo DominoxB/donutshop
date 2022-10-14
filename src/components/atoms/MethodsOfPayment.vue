@@ -1,7 +1,7 @@
 <template>
   <div class="container mx-auto min-h-[500px] mt-3">
     <div
-      class="bg-purple-200 w-3/4 font-garamond border border-black rounded block mt-12 ml-auto mr-auto p-4"
+      class="bg-purple-100 w-3/4 font-garamond border border-black rounded block mt-12 ml-auto mr-auto p-4"
     >
       <!-- SPOSÓB PŁATNOŚCI -->
       <p class="text-xl font-semibold mb-2">Wybierz metodę płatności:</p>
@@ -49,7 +49,7 @@
         <label>Blik</label>
         <img src="@/images/blik.png" class="w-8 h-8 ml-2" />
       </div>
-      <div class="mt-2 border-t-2 bg-purple-300">
+      <div class="mt-2 bg-purple-200">
         <h1 class="p-2">
           Wybrany sposób płatności:
           <span class="font-semibold">{{ selected }}</span>
@@ -88,7 +88,7 @@
           />
           <label>Odbiór osobisty w Pączkosławicach (0,00)</label>
         </div>
-        <div class="mt-2 border-t-2 bg-purple-300">
+        <div class="mt-2 bg-purple-200">
           <h1 class="p-2">
             Wybrany sposób dostawy:
             <span class="font-semibold">{{ delivery }}</span>
@@ -98,7 +98,7 @@
       <div class="flex justify-end mr-2 mt-4">
         <router-link to="/">
           <button
-            class="border border-neutral-900 bg-purple-400 hover:bg-purple-500 rounded p-3 font-pacifico text-2xl"
+            class="border border-neutral-900 bg-pink-100 hover:bg-pink-200 rounded p-3 font-pacifico text-2xl"
           >
             Podsumowanie
           </button>
