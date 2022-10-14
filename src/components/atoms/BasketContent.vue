@@ -57,26 +57,27 @@
     <div class="flex justify-between">
       <router-link to="/DonutShop">
         <button
-          class="border border-neutral-900 bg-orange-400 hover:bg-orange-500 rounded p-3 font-pacifico md:text-2xl ml-2 md:ml-4"
+          class="border border-neutral-900 bg-purple-400 hover:bg-purple-500 rounded p-3 font-pacifico md:text-2xl ml-2 md:ml-4"
         >
           Kontynuuj zakupy
         </button>
       </router-link>
       <router-link to="/PaymentPage">
-      <button
-        class="border border-neutral-900 bg-orange-400 hover:bg-orange-500 rounded p-3 font-pacifico md:text-2xl mr-2 md:mr-4"
-        :disabled="result <= 0"
-      >
-        Przejdź do realizacji zamówienia
-      </button>
-    </router-link>
+        <button
+          class="border border-neutral-900 bg-purple-400 hover:bg-purple-500 rounded p-3 font-pacifico md:text-2xl mr-2 md:mr-4"
+          :disabled="result <= 0"
+        >
+          Przejdź do realizacji zamówienia
+        </button>
+      </router-link>
     </div>
   </div>
-  <ModalContent 
+  <ModalContent
     v-if="showModal"
     @delete-donut="agree($event)"
-    @cancel-action="cancel($event)">
-    </ModalContent>
+    @cancel-action="cancel($event)"
+  >
+  </ModalContent>
 </template>
 
 <script>
@@ -88,7 +89,7 @@ export default {
   name: "BasketContent",
   components: {
     ModalContent,
-},
+  },
   setup() {
     const store = useBasketStore();
     const { basket } = store;
@@ -96,8 +97,8 @@ export default {
     const productStore = useProductStore();
     const { donuts } = productStore;
 
-    const showModal = ref(false)
-    const activeId = ref(-1)
+    const showModal = ref(false);
+    const activeId = ref(-1);
 
     const result = computed(() => {
       return store.getDonutsQuantity;
@@ -108,20 +109,20 @@ export default {
     });
 
     const removeDonut = (id) => {
-      activeId.value = id
-      showModal.value = true
+      activeId.value = id;
+      showModal.value = true;
     };
 
     const agree = (event) => {
-      console.log(event)
-      store.deleteProduct(activeId.value)
-      showModal.value = false
-    }
+      console.log(event);
+      store.deleteProduct(activeId.value);
+      showModal.value = false;
+    };
 
     const cancel = (event) => {
-      console.log(event)
-      showModal.value = false
-    }
+      console.log(event);
+      showModal.value = false;
+    };
 
     basket.map((el) => {
       el.product = donuts[el.id];
@@ -134,7 +135,7 @@ export default {
       removeDonut,
       showModal,
       agree,
-      cancel
+      cancel,
     };
   },
 };
