@@ -1,13 +1,13 @@
 <template>
     <div class="block">
       <div>
-      <span class="font-garamond font-bold ml-3 text-2xl"
+      <span class="font-garamond font-bold ml-5 text-2xl"
         >Uzupełnij swoje dane</span
       >
     </div>
     <div class="flex mt-4 justify-center">
       <div
-        class="flex bg-gray-100 w-3/4 md:w-[617px] font-garamond lg:ml-4 border border-black rounded "
+        class="flex bg-gray-100 md:w-[617px] font-garamond border border-black rounded"
       >
         <div class="ml-3 mr-3">
           <!-- imię i nazwisko -->

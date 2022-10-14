@@ -1,7 +1,7 @@
 <template>
   <div class="container mx-auto min-h-[500px]">
     <div class="grid lg:grid-cols-2">
-      <div class="block md:w-auto m-8 ml-10 border bg-orange-100 rounded-2xl">
+      <div class="block md:w-auto mb-8 border bg-orange-100 rounded-2xl">
         <div>
           <span class="font-medium ml-4 text-2xl">FORMULARZ KONTAKTOWY</span>
         </div>
@@ -23,7 +23,7 @@
             v-if="
               v$.name.$errors[0] && v$.name.$errors[0].$validator === 'required'
             "
-            class="text-xl text-red-600"
+            class="text-sm text-red-600"
           >
             {{ v$.name.required.$message }}
           </span>
@@ -32,7 +32,7 @@
               v$.name.$errors[0] &&
               v$.name.$errors[0].$validator === 'minLength'
             "
-            class="text-xl text-red-600"
+            class="text-sm text-red-600"
           >
             {{ v$.name.minLength.$message }}
           </span>
@@ -68,7 +68,7 @@
                 v$.emailAdress.$errors[0] &&
                 v$.emailAdress.$errors[0].$validator === 'required'
               "
-              class="text-xl text-red-600"
+              class="text-sm text-red-600"
             >
               {{ v$.emailAdress.required.$message }}
             </span>
@@ -77,7 +77,7 @@
                 v$.emailAdress.$errors[0] &&
                 v$.emailAdress.$errors[0].$validator === 'email'
               "
-              class="text-xl text-red-600"
+              class="text-sm text-red-600"
             >
               {{ v$.emailAdress.email.$message }}
             </span>
@@ -102,7 +102,7 @@
                 v$.telephone.$errors[0] &&
                 v$.telephone.$errors[0].$validator === 'required'
               "
-              class="text-xl text-red-600"
+              class="text-sm text-red-600"
             >
               {{ v$.telephone.required.$message }}
             </span>
@@ -111,7 +111,7 @@
                 v$.telephone.$errors[0] &&
                 v$.telephone.$errors[0].$validator === 'num'
               "
-              class="text-xl text-red-600"
+              class="text-sm text-red-600"
             >
               {{ v$.telephone.num.$message }}
             </span>
@@ -137,7 +137,7 @@
                 v$.yourMessage.$errors[0] &&
                 v$.yourMessage.$errors[0].$validator === 'required'
               "
-              class="text-xl text-red-600"
+              class="text-sm text-red-600"
             >
               {{ v$.yourMessage.required.$message }}
             </span>
@@ -146,7 +146,7 @@
                 v$.yourMessage.$errors[0] &&
                 v$.yourMessage.$errors[0].$validator === 'minLength'
               "
-              class="text-xl text-red-600"
+              class="text-sm text-red-600"
             >
               {{ v$.yourMessage.minLength.$message }}
             </span>
@@ -164,7 +164,7 @@
         style="
           background-image: url('https://i.pinimg.com/736x/df/3a/b6/df3ab6eee0fdeccc33d4aa70e1ea9d2f.jpg');
         "
-        class="lg:w-[620px] font-garamond font-semibold text-gray-900 text-xl text-center m-9 p-4 lg:p-10 lg:pt-11 mx-4 lg:mr-3 lg:mx-auto bg-no-repeat bg-top bg-cover bg-opacity-25"
+        class="lg:w-[620px] font-garamond font-semibold text-gray-900 text-xl text-center mb-8 p-4 lg:p-10 lg:pt-11 lg:mx-auto bg-no-repeat bg-top bg-cover bg-opacity-25 rounded"
       >
         <p class="mt-7">
           Jeżeli macie Państwo pytania o nasze składniki, chcecie nawiązać
@@ -184,6 +184,15 @@
         <p class="mt-7">Serdecznie zapraszamy do naszego donutowego świata!</p>
       </div>
     </div>
+    <div class="block">
+      <div class="font-garamond font-semibold text-xl text-center mb-4">
+      <span>Możesz także porozmawiać z nami osobiście, zapraszamy do naszej cukierenki przy ulicy Czekoladowej 17 w Pączkowie. </span>
+    </div>
+    <div class="lg:flex">
+      <img src="@/images/shop.jpg" class="w-[750px] h-[500px]"/>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9607.638453963564!2d20.079489734036667!3d52.98602709626071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471c4dd538fc70f9%3A0xbbdb5f0b921b7226!2s06-550%20P%C4%85czkowo!5e0!3m2!1spl!2spl!4v1665664662709!5m2!1spl!2spl" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="my-auto mx-auto"></iframe>
+    </div>
+  </div>
   </div>
 </template>
 
