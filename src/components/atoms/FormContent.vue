@@ -23,7 +23,7 @@
             v-if="
               v$.name.$errors[0] && v$.name.$errors[0].$validator === 'required'
             "
-            class="text-xl text-red-600"
+            class="text-sm text-red-600"
           >
             {{ v$.name.required.$message }}
           </span>
@@ -32,7 +32,7 @@
               v$.name.$errors[0] &&
               v$.name.$errors[0].$validator === 'minLength'
             "
-            class="text-xl text-red-600"
+            class="text-sm text-red-600"
           >
             {{ v$.name.minLength.$message }}
           </span>
@@ -68,7 +68,7 @@
                 v$.emailAdress.$errors[0] &&
                 v$.emailAdress.$errors[0].$validator === 'required'
               "
-              class="text-xl text-red-600"
+              class="text-sm text-red-600"
             >
               {{ v$.emailAdress.required.$message }}
             </span>
@@ -77,7 +77,7 @@
                 v$.emailAdress.$errors[0] &&
                 v$.emailAdress.$errors[0].$validator === 'email'
               "
-              class="text-xl text-red-600"
+              class="text-sm text-red-600"
             >
               {{ v$.emailAdress.email.$message }}
             </span>
@@ -102,7 +102,7 @@
                 v$.telephone.$errors[0] &&
                 v$.telephone.$errors[0].$validator === 'required'
               "
-              class="text-xl text-red-600"
+              class="text-sm text-red-600"
             >
               {{ v$.telephone.required.$message }}
             </span>
@@ -111,7 +111,7 @@
                 v$.telephone.$errors[0] &&
                 v$.telephone.$errors[0].$validator === 'num'
               "
-              class="text-xl text-red-600"
+              class="text-sm text-red-600"
             >
               {{ v$.telephone.num.$message }}
             </span>
@@ -137,7 +137,7 @@
                 v$.yourMessage.$errors[0] &&
                 v$.yourMessage.$errors[0].$validator === 'required'
               "
-              class="text-xl text-red-600"
+              class="text-sm text-red-600"
             >
               {{ v$.yourMessage.required.$message }}
             </span>
@@ -146,7 +146,7 @@
                 v$.yourMessage.$errors[0] &&
                 v$.yourMessage.$errors[0].$validator === 'minLength'
               "
-              class="text-xl text-red-600"
+              class="text-sm text-red-600"
             >
               {{ v$.yourMessage.minLength.$message }}
             </span>
