@@ -94,24 +94,16 @@
         </h1>
       </div>
     </div>
-  </div>
-  <div class="flex justify-center lg:justify-start mt-4 lg:ml-5">
-    <router-link to="/BasketPage">
-      <button
-        class="border border-neutral-900 bg-orange-400 hover:bg-orange-500 rounded p-3 font-pacifico text-2xl"
-      >
-        Wróć do koszyka
-      </button>
-    </router-link>
-  </div>
-  <div class="flex justify-center lg:justify-end mt-4 lg:mr-5">
+    <div class="flex justify-end mr-2 mt-4">
     <router-link to="/">
       <button
-        class="border border-neutral-900 bg-orange-400 hover:bg-orange-500 rounded p-3 font-pacifico text-2xl"
+        class="border border-neutral-900 bg-indigo-400 hover:bg-indigo-500 rounded p-3 font-pacifico text-2xl"
       >
         Podsumowanie
       </button>
     </router-link>
+  </div>
+
   </div>
 </template>
 

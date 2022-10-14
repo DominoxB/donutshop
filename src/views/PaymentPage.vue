@@ -1,7 +1,9 @@
 <template>
   <div class="grid grid-cols-1 lg:grid-cols-2">
     <PaymentUserData></PaymentUserData>
-    <MethodsOfPayment></MethodsOfPayment>
+    <div>
+      <MethodsOfPayment></MethodsOfPayment>
+    </div>
   </div>
   <BtnScrollToTop></BtnScrollToTop>
   <Footer></Footer>

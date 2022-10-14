@@ -7,7 +7,7 @@
     </div>
     <div class="flex mt-4 justify-center">
       <div
-        class="flex bg-gray-100 md:w-[617px] font-garamond border border-black rounded"
+        class="flex bg-gray-100 w-auto font-garamond border border-black rounded"
       >
         <div class="ml-3 mr-3">
           <!-- imię i nazwisko -->
@@ -314,6 +314,16 @@
         </div>
       </div>
     </div>
+    <div class="flex justify-center lg:justify-start mt-4 lg:ml-5">
+    <router-link to="/BasketPage">
+      <button
+        class="border border-neutral-900 bg-indigo-400 hover:bg-indigo-500 rounded p-3 font-pacifico text-2xl"
+      >
+        Wróć do koszyka
+      </button>
+    </router-link>
+  </div>
+
   </div>
 </template>
 
