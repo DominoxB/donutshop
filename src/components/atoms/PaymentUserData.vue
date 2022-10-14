@@ -1,345 +1,352 @@
 <template>
+  <div class="container mx-auto min-h-[500px] mt-3">
     <div class="block">
       <div>
-      <span class="font-garamond font-bold ml-5 text-2xl"
-        >Uzupełnij swoje dane</span
-      >
-    </div>
-    <div class="flex mt-4 justify-center">
-      <div
-        class="flex bg-gray-100 w-auto font-garamond border border-black rounded"
-      >
-        <div class="ml-3 mr-3">
-          <!-- imię i nazwisko -->
-          <div class="md:flex mt-1">
-          <div>
-            <label
-              class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
-              >Imię</label
-            >
-            <input
-              id="name"
-              v-model="state.name"
-              type="text"
-              class="form-control block px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
-              :class="v$.name.$error ? 'border-red-600' : 'border-gray-300'"
-              placeholder="Wpisz swoje imię"
-              @blur="v$.name.$touch"
-            />
-            <span
-              v-if="
-                v$.name.$errors[0] &&
-                v$.name.$errors[0].$validator === 'required'
-              "
-              class="text-xl text-red-600"
-            >
-              {{ v$.name.required.$message }}
-            </span>
-            <span
-              v-if="
-                v$.name.$errors[0] &&
-                v$.name.$errors[0].$validator === 'minLength'
-              "
-              class="text-xl text-red-600"
-            >
-              {{ v$.name.minLength.$message }}
-            </span>
-          </div>
-          <div>
-            <label
-              class="form-label inline-block md:ml-2 mb-2 text-gray-700 text-xl font-semibold"
-              >Nazwisko</label
-            >
-            <input
-              v-model="state.surname"
-              type="text"
-              class="form-control block px-4 py-2 md:ml-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
-              :class="v$.surname.$error ? 'border-red-600' : 'border-gray-300'"
-              placeholder="Wpisz nazwisko"
-              @blur="v$.surname.$touch"
-            />
-            <span
-              v-if="
-                v$.surname.$errors[0] &&
-                v$.surname.$errors[0].$validator === 'required'
-              "
-              class="text-xl text-red-600"
-            >
-              {{ v$.surname.required.$message }}
-            </span>
-            <span
-              v-if="
-                v$.surname.$errors[0] &&
-                v$.surname.$errors[0].$validator === 'minLength'
-              "
-              class="text-xl text-red-600"
-            >
-              {{ v$.surname.minLength.$message }}
-            </span>
-          </div>
-        </div>
+        <span class="font-garamond font-bold ml-5 text-2xl"
+          >Uzupełnij swoje dane</span
+        >
+      </div>
+      <div class="flex mt-4 justify-center">
+        <div
+          class="flex bg-purple-100 w-auto font-garamond border border-black rounded"
+        >
+          <div class="ml-3 mr-3">
+            <!-- imię i nazwisko -->
+            <div class="md:flex mt-1">
+              <div>
+                <label
+                  class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
+                  >Imię</label
+                >
+                <input
+                  id="name"
+                  v-model="state.name"
+                  type="text"
+                  class="form-control block px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
+                  :class="v$.name.$error ? 'border-red-600' : 'border-gray-300'"
+                  placeholder="Wpisz swoje imię"
+                  @blur="v$.name.$touch"
+                />
+                <span
+                  v-if="
+                    v$.name.$errors[0] &&
+                    v$.name.$errors[0].$validator === 'required'
+                  "
+                  class="text-xl text-red-600"
+                >
+                  {{ v$.name.required.$message }}
+                </span>
+                <span
+                  v-if="
+                    v$.name.$errors[0] &&
+                    v$.name.$errors[0].$validator === 'minLength'
+                  "
+                  class="text-xl text-red-600"
+                >
+                  {{ v$.name.minLength.$message }}
+                </span>
+              </div>
+              <div>
+                <label
+                  class="form-label inline-block md:ml-2 mb-2 text-gray-700 text-xl font-semibold"
+                  >Nazwisko</label
+                >
+                <input
+                  v-model="state.surname"
+                  type="text"
+                  class="form-control block px-4 py-2 md:ml-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
+                  :class="
+                    v$.surname.$error ? 'border-red-600' : 'border-gray-300'
+                  "
+                  placeholder="Wpisz nazwisko"
+                  @blur="v$.surname.$touch"
+                />
+                <span
+                  v-if="
+                    v$.surname.$errors[0] &&
+                    v$.surname.$errors[0].$validator === 'required'
+                  "
+                  class="text-xl text-red-600"
+                >
+                  {{ v$.surname.required.$message }}
+                </span>
+                <span
+                  v-if="
+                    v$.surname.$errors[0] &&
+                    v$.surname.$errors[0].$validator === 'minLength'
+                  "
+                  class="text-xl text-red-600"
+                >
+                  {{ v$.surname.minLength.$message }}
+                </span>
+              </div>
+            </div>
 
-          <!-- firma i nip -->
-          <div class="md:flex">
+            <!-- firma i nip -->
+            <div class="md:flex">
+              <div>
+                <label
+                  class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
+                  >Nazwa firmy</label
+                >
+                <input
+                  v-model="state.company"
+                  type="text"
+                  class="form-control block px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
+                  placeholder="nazwa firmy (opcjonalnie)"
+                />
+              </div>
+              <div>
+                <label
+                  class="form-label inline-block md:ml-2 mb-2 text-gray-700 text-xl font-semibold"
+                  >NIP</label
+                >
+                <input
+                  v-model="state.identification"
+                  type="text"
+                  class="form-control block md:ml-2 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
+                  placeholder="NIP (opcjonalnie)"
+                />
+              </div>
+            </div>
+            <!-- ulica -->
+            <div class="md:flex">
+              <div>
+                <label
+                  class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
+                  >Ulica</label
+                >
+                <input
+                  v-model="state.street"
+                  type="text"
+                  class="form-control block px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
+                  :class="
+                    v$.street.$error ? 'border-red-600' : 'border-gray-300'
+                  "
+                  placeholder="Wpisz swój adres"
+                  @blur="v$.street.$touch"
+                />
+                <span
+                  v-if="
+                    v$.street.$errors[0] &&
+                    v$.street.$errors[0].$validator === 'required'
+                  "
+                  class="text-xl text-red-600"
+                >
+                  {{ v$.street.required.$message }}
+                </span>
+                <span
+                  v-if="
+                    v$.street.$errors[0] &&
+                    v$.street.$errors[0].$validator === 'minLength'
+                  "
+                  class="text-xl text-red-600"
+                >
+                  {{ v$.street.minLength.$message }}
+                </span>
+              </div>
+              <!-- nr budynku -->
+              <div class="md:ml-2">
+                <label
+                  class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
+                  >Nr budynku</label
+                >
+                <input
+                  v-model="state.building"
+                  type="text"
+                  class="form-control block px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
+                  :class="
+                    v$.building.$error ? 'border-red-600' : 'border-gray-300'
+                  "
+                  placeholder="nr"
+                  @blur="v$.building.$touch"
+                />
+                <span
+                  v-if="
+                    v$.building.$errors[0] &&
+                    v$.building.$errors[0].$validator === 'required'
+                  "
+                  class="text-xl text-red-600"
+                >
+                  {{ v$.building.required.$message }}
+                </span>
+              </div>
+              <!-- nr lokalu -->
+              <div class="md:ml-2">
+                <label
+                  class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
+                  >Nr lokalu</label
+                >
+                <input
+                  v-model="state.local"
+                  type="text"
+                  class="form-control block mr-2 w-24 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
+                  :class="
+                    v$.local.$error ? 'border-red-600' : 'border-gray-300'
+                  "
+                  placeholder="nr"
+                  @blur="v$.local.$touch"
+                />
+                <span
+                  v-if="
+                    v$.local.$errors[0] &&
+                    v$.local.$errors[0].$validator === 'required'
+                  "
+                  class="text-xl text-red-600"
+                >
+                  {{ v$.local.required.$message }}
+                </span>
+              </div>
+            </div>
+            <div class="md:flex">
+              <!-- kod pocztowy -->
+              <div class="mb-3">
+                <label
+                  class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
+                  >Kod pocztowy</label
+                >
+                <input
+                  v-model="state.code"
+                  type="text"
+                  class="form-control block px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
+                  :class="v$.code.$error ? 'border-red-600' : 'border-gray-300'"
+                  placeholder="wpisz kod"
+                  @blur="v$.code.$touch"
+                />
+                <span
+                  v-if="
+                    v$.code.$errors[0] &&
+                    v$.code.$errors[0].$validator === 'required'
+                  "
+                  class="text-xl text-red-600"
+                >
+                  {{ v$.code.required.$message }}
+                </span>
+              </div>
+              <!-- miasto -->
+              <div>
+                <label
+                  class="form-label inline-block md:ml-2 mb-2 text-gray-700 text-xl font-semibold"
+                  >Miasto</label
+                >
+                <input
+                  v-model="state.town"
+                  type="text"
+                  class="form-control block md:ml-2 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
+                  :class="v$.town.$error ? 'border-red-600' : 'border-gray-300'"
+                  placeholder="wpisz nazwę miasta"
+                  @blur="v$.town.$touch"
+                />
+                <span
+                  v-if="
+                    v$.town.$errors[0] &&
+                    v$.town.$errors[0].$validator === 'required'
+                  "
+                  class="text-xl text-red-600"
+                >
+                  {{ v$.town.required.$message }}
+                </span>
+              </div>
+            </div>
+            <!-- adres email -->
             <div>
               <label
                 class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
-                >Nazwa firmy</label
+                >E-mail</label
               >
               <input
-                v-model="state.company"
-                type="text"
-                class="form-control block px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
-                placeholder="nazwa firmy (opcjonalnie)"
-              />
-            </div>
-            <div>
-              <label
-                class="form-label inline-block md:ml-2 mb-2 text-gray-700 text-xl font-semibold"
-                >NIP</label
-              >
-              <input
-                v-model="state.identification"
-                type="text"
-                class="form-control block md:ml-2 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
-                placeholder="NIP (opcjonalnie)"
-              />
-            </div>
-          </div>
-          <!-- ulica -->
-          <div class="md:flex">
-            <div>
-              <label
-                class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
-                >Ulica</label
-              >
-              <input
-                v-model="state.street"
-                type="text"
-                class="form-control block px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
-                :class="v$.street.$error ? 'border-red-600' : 'border-gray-300'"
-                placeholder="Wpisz swój adres"
-                @blur="v$.street.$touch"
-              />
-              <span
-                v-if="
-                  v$.street.$errors[0] &&
-                  v$.street.$errors[0].$validator === 'required'
-                "
-                class="text-xl text-red-600"
-              >
-                {{ v$.street.required.$message }}
-              </span>
-              <span
-                v-if="
-                  v$.street.$errors[0] &&
-                  v$.street.$errors[0].$validator === 'minLength'
-                "
-                class="text-xl text-red-600"
-              >
-                {{ v$.street.minLength.$message }}
-              </span>
-            </div>
-            <!-- nr budynku -->
-            <div class="md:ml-2">
-              <label
-                class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
-                >Nr budynku</label
-              >
-              <input
-                v-model="state.building"
-                type="text"
+                v-model="state.emailAdress"
+                type="email"
                 class="form-control block px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
                 :class="
-                  v$.building.$error ? 'border-red-600' : 'border-gray-300'
+                  v$.emailAdress.$error ? 'border-red-600' : 'border-gray-300'
                 "
-                placeholder="nr"
-                @blur="v$.building.$touch"
+                placeholder="wpisz adres e-mail"
+                @blur="v$.emailAdress.$touch"
               />
               <span
                 v-if="
-                  v$.building.$errors[0] &&
-                  v$.building.$errors[0].$validator === 'required'
+                  v$.emailAdress.$errors[0] &&
+                  v$.emailAdress.$errors[0].$validator === 'required'
                 "
                 class="text-xl text-red-600"
               >
-                {{ v$.building.required.$message }}
+                {{ v$.emailAdress.required.$message }}
               </span>
-            </div>
-            <!-- nr lokalu -->
-            <div class="md:ml-2">
-              <label
-                class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
-                >Nr lokalu</label
-              >
-              <input
-                v-model="state.local"
-                type="text"
-                class="form-control block mr-2 w-24 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
-                :class="v$.local.$error ? 'border-red-600' : 'border-gray-300'"
-                placeholder="nr"
-                @blur="v$.local.$touch"
-              />
               <span
                 v-if="
-                  v$.local.$errors[0] &&
-                  v$.local.$errors[0].$validator === 'required'
+                  v$.emailAdress.$errors[0] &&
+                  v$.emailAdress.$errors[0].$validator === 'email'
                 "
                 class="text-xl text-red-600"
               >
-                {{ v$.local.required.$message }}
+                {{ v$.emailAdress.email.$message }}
               </span>
             </div>
-          </div>
-          <div class="md:flex">
-            <!-- kod pocztowy -->
+            <!-- nr telefonu -->
             <div class="mb-3">
               <label
                 class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
-                >Kod pocztowy</label
+                >Numer telefonu</label
               >
               <input
-                v-model="state.code"
+                v-model="state.telephone"
                 type="text"
                 class="form-control block px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
-                :class="v$.code.$error ? 'border-red-600' : 'border-gray-300'"
-                placeholder="wpisz kod"
-                @blur="v$.code.$touch"
+                :class="
+                  v$.telephone.$error ? 'border-red-600' : 'border-gray-300'
+                "
+                placeholder="wpisz swój numer"
+                @blur="v$.telephone.$touch"
               />
               <span
                 v-if="
-                  v$.code.$errors[0] &&
-                  v$.code.$errors[0].$validator === 'required'
+                  v$.telephone.$errors[0] &&
+                  v$.telephone.$errors[0].$validator === 'required'
                 "
                 class="text-xl text-red-600"
               >
-                {{ v$.code.required.$message }}
+                {{ v$.telephone.required.$message }}
               </span>
-            </div>
-            <!-- miasto -->
-            <div>
-              <label
-                class="form-label inline-block md:ml-2 mb-2 text-gray-700 text-xl font-semibold"
-                >Miasto</label
-              >
-              <input
-                v-model="state.town"
-                type="text"
-                class="form-control block md:ml-2 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
-                :class="v$.town.$error ? 'border-red-600' : 'border-gray-300'"
-                placeholder="wpisz nazwę miasta"
-                @blur="v$.town.$touch"
-              />
               <span
                 v-if="
-                  v$.town.$errors[0] &&
-                  v$.town.$errors[0].$validator === 'required'
+                  v$.telephone.$errors[0] &&
+                  v$.telephone.$errors[0].$validator === 'num'
                 "
                 class="text-xl text-red-600"
               >
-                {{ v$.town.required.$message }}
+                {{ v$.telephone.num.$message }}
               </span>
             </div>
-          </div>
-          <!-- adres email -->
-          <div>
-            <label
-              class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
-              >E-mail</label
-            >
-            <input
-              v-model="state.emailAdress"
-              type="email"
-              class="form-control block px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
-              :class="
-                v$.emailAdress.$error ? 'border-red-600' : 'border-gray-300'
-              "
-              placeholder="wpisz adres e-mail"
-              @blur="v$.emailAdress.$touch"
-            />
-            <span
-              v-if="
-                v$.emailAdress.$errors[0] &&
-                v$.emailAdress.$errors[0].$validator === 'required'
-              "
-              class="text-xl text-red-600"
-            >
-              {{ v$.emailAdress.required.$message }}
-            </span>
-            <span
-              v-if="
-                v$.emailAdress.$errors[0] &&
-                v$.emailAdress.$errors[0].$validator === 'email'
-              "
-              class="text-xl text-red-600"
-            >
-              {{ v$.emailAdress.email.$message }}
-            </span>
-          </div>
-          <!-- nr telefonu -->
-          <div class="mb-3">
-            <label
-              class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
-              >Numer telefonu</label
-            >
-            <input
-              v-model="state.telephone"
-              type="text"
-              class="form-control block px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
-              :class="
-                v$.telephone.$error ? 'border-red-600' : 'border-gray-300'
-              "
-              placeholder="wpisz swój numer"
-              @blur="v$.telephone.$touch"
-            />
-            <span
-              v-if="
-                v$.telephone.$errors[0] &&
-                v$.telephone.$errors[0].$validator === 'required'
-              "
-              class="text-xl text-red-600"
-            >
-              {{ v$.telephone.required.$message }}
-            </span>
-            <span
-              v-if="
-                v$.telephone.$errors[0] &&
-                v$.telephone.$errors[0].$validator === 'num'
-              "
-              class="text-xl text-red-600"
-            >
-              {{ v$.telephone.num.$message }}
-            </span>
           </div>
         </div>
       </div>
+      <div class="flex justify-center lg:justify-start mt-4 lg:ml-5">
+        <router-link to="/BasketPage">
+          <button
+            class="border border-neutral-900 bg-purple-300 hover:bg-purple-400 rounded p-3 font-pacifico text-2xl"
+          >
+            Wróć do koszyka
+          </button>
+        </router-link>
+      </div>
     </div>
-    <div class="flex justify-center lg:justify-start mt-4 lg:ml-5">
-    <router-link to="/BasketPage">
-      <button
-        class="border border-neutral-900 bg-indigo-400 hover:bg-indigo-500 rounded p-3 font-pacifico text-2xl"
-      >
-        Wróć do koszyka
-      </button>
-    </router-link>
-  </div>
-
   </div>
 </template>
 
 <script>
 import { useVuelidate } from "@vuelidate/core";
 import { required, email, minLength, helpers } from "@vuelidate/validators";
-import { reactive, computed, onMounted, nextTick} from "vue";
+import { reactive, computed, onMounted, nextTick } from "vue";
 export default {
   name: "PaymentUserData",
   setup() {
-    onMounted(async() => {
-      const hasAutofocus = document.getElementById('name')
-      hasAutofocus.focus()
-      await nextTick()
-      hasAutofocus.scrollIntoView({ block: 'end', behavior: 'smooth' })
-    })
+    onMounted(async () => {
+      const hasAutofocus = document.getElementById("name");
+      hasAutofocus.focus();
+      await nextTick();
+      hasAutofocus.scrollIntoView({ block: "end", behavior: "smooth" });
+    });
     const state = reactive({
       name: "",
       surname: "",
