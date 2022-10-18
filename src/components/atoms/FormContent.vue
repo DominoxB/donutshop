@@ -193,17 +193,17 @@
         <p>zapraszamy do naszej cukierenki przy</p>
         <p>ulicy Czekoladowej 17 w Pączkowie.</p>
       </div>
-      <div class="lg:grid lg:grid-cols-3 grid-rows-1">
-        <TheSlider :slides="slides"></TheSlider>
+      <div class="lg:grid lg:grid-cols-3">
+        <TheSlider :slides="slides" class="col-span-1"></TheSlider>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9607.638453963564!2d20.079489734036667!3d52.98602709626071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471c4dd538fc70f9%3A0xbbdb5f0b921b7226!2s06-550%20P%C4%85czkowo!5e0!3m2!1spl!2spl!4v1665664662709!5m2!1spl!2spl"
-          width="400"
-          height="350"
           style="border: 0"
           allowfullscreen=""
+          width="600"
+          height="400"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          class="my-auto mx-auto"
+          class="my-auto mx-auto col-span-2"
         ></iframe>
       </div>
     </div>
