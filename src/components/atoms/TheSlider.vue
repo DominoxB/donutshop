@@ -46,6 +46,8 @@ export default {
 
       const nextElement = document.querySelector(`[data-index="${nextElementIndex}"]`)
       animate(nextElement, 'animate__fadeInRight')
+
+      currentSlideIndex.value = nextElementIndex
       
     } 
 

@@ -229,6 +229,8 @@ export default {
       "https://www.whitemad.pl/wp-content/uploads/2020/12/Zurawicki-design_AQForm-5.jpg",
       "https://www.whitemad.pl/wp-content/uploads/2020/12/Zurawicki-design_AQForm-2.jpg",
       "https://www.whitemad.pl/wp-content/uploads/2020/12/Zurawicki-design_AQForm-3.jpg",
+      "https://www.whitemad.pl/wp-content/uploads/2020/12/Zurawicki-design_AQForm-4.jpg",
+      "https://www.whitemad.pl/wp-content/uploads/2020/12/Zurawicki-design_AQForm-1.jpg"
     ];
     const rules = computed(() => {
       return {
