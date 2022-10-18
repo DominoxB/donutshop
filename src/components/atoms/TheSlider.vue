@@ -11,11 +11,10 @@
       </div>
     </div>
     <div class="flex justify-between">
-      <button class="bg-slate-500 rounded font-bold">
+      <button class="bg-slate-500 rounded font-bold" @click="onPrevious">
         &larr;
       </button>
-      <button class="bg-slate-500 rounded font-bold"
-      @click="onNext">
+      <button class="bg-slate-500 rounded font-bold" @click="onNext">
         &rarr;
       </button>
     </div>
@@ -34,22 +33,61 @@ export default {
     const currentSlideIndex = ref(0);
 
     const animate = (element, animation) => {
-      element.classList.remove('hidden')
-      element.classList.add('animate__animated', animation)
-    }
+      const plainClassList = Array.prototype.slice.call(element.classList);
+      const animationsToRemove = plainClassList.filter((className) =>
+        className.includes("animate__")
+      );
+      console.log(animationsToRemove);
+
+      element.classList.remove("hidden", ...animationsToRemove);
+      element.classList.add("animate__animated", animation);
+    };
+
+    const getNextSlideIndex = () => {
+      if (currentSlideIndex.value + 1 < props.slides.length) {
+        return currentSlideIndex.value + 1;
+      }
+      return 0;
+    };
+
+    const getPreviousSlideIndex = () => {
+      if (currentSlideIndex.value > 0) {
+        return currentSlideIndex.value - 1;
+      }
+      return props.slides.length - 1;
+    };
 
     const onNext = () => {
-      const element = document.querySelector(`[data-index="${currentSlideIndex.value}"]`)
-      animate(element, 'animate__fadeOutLeft')
+      const element = document.querySelector(
+        `[data-index="${currentSlideIndex.value}"]`
+      );
+      animate(element, "animate__fadeOutLeft");
 
-      const nextElementIndex = currentSlideIndex.value + 1
+      const nextSlideIndex = getNextSlideIndex();
 
-      const nextElement = document.querySelector(`[data-index="${nextElementIndex}"]`)
-      animate(nextElement, 'animate__fadeInRight')
+      const nextElement = document.querySelector(
+        `[data-index="${nextSlideIndex}"]`
+      );
+      animate(nextElement, "animate__fadeInRight");
 
-      currentSlideIndex.value = nextElementIndex
-      
-    } 
+      currentSlideIndex.value = nextSlideIndex;
+    };
+
+    const onPrevious = () => {
+      const element = document.querySelector(
+        `[data-index="${currentSlideIndex.value}"]`
+      );
+      animate(element, "animate__fadeOutRight");
+
+      const previousSlideIndex = getPreviousSlideIndex();
+
+      const previousElement = document.querySelector(
+        `[data-index="${previousSlideIndex}"]`
+      );
+      animate(previousElement, "animate__fadeInLeft");
+
+      currentSlideIndex.value = previousSlideIndex;
+    };
 
     onMounted(() => {
       props.slides.forEach((_, index) => {
@@ -62,7 +100,10 @@ export default {
     return {
       currentSlideIndex,
       onNext,
+      onPrevious,
       animate,
+      getNextSlideIndex,
+      getPreviousSlideIndex,
     };
   },
 };
