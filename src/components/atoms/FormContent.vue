@@ -189,12 +189,12 @@
     </div>
     <div class="block">
       <div class="font-garamond text-2xl text-center mb-4">
-        <p> Możesz także porozmawiać z nami osobiście,</p>
-        <p>zapraszamy do naszej cukierenki przy </p>
-         <p>ulicy Czekoladowej 17 w Pączkowie.</p>
+        <p>Możesz także porozmawiać z nami osobiście,</p>
+        <p>zapraszamy do naszej cukierenki przy</p>
+        <p>ulicy Czekoladowej 17 w Pączkowie.</p>
       </div>
-      <div class="lg:grid lg:grid-cols-3">
-        <img src="@/images/shop2.jpg" class="col-span-2" />
+      <div class="lg:grid lg:grid-cols-3 grid-rows-1">
+        <TheSlider :slides="slides"></TheSlider>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9607.638453963564!2d20.079489734036667!3d52.98602709626071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471c4dd538fc70f9%3A0xbbdb5f0b921b7226!2s06-550%20P%C4%85czkowo!5e0!3m2!1spl!2spl!4v1665664662709!5m2!1spl!2spl"
           width="400"
@@ -214,6 +214,7 @@
 import { useVuelidate } from "@vuelidate/core";
 import { required, email, minLength, helpers } from "@vuelidate/validators";
 import { reactive, computed, onMounted, nextTick } from "vue";
+import TheSlider from "./TheSlider.vue";
 export default {
   name: "FormContent",
   setup() {
@@ -224,6 +225,11 @@ export default {
       telephone: "",
       yourMessage: "",
     });
+    const slides = [
+      "https://www.whitemad.pl/wp-content/uploads/2020/12/Zurawicki-design_AQForm-5.jpg",
+      "https://www.whitemad.pl/wp-content/uploads/2020/12/Zurawicki-design_AQForm-2.jpg",
+      "https://www.whitemad.pl/wp-content/uploads/2020/12/Zurawicki-design_AQForm-3.jpg",
+    ];
     const rules = computed(() => {
       return {
         name: {
@@ -276,12 +282,11 @@ export default {
       hasAutofocus.scrollIntoView({ block: "end", behavior: "smooth" });
       console.log(hasAutofocus);
     });
-
     const v$ = useVuelidate(rules, state);
-
     return {
       state,
       v$,
+      slides
     };
   },
   methods: {
@@ -294,5 +299,6 @@ export default {
       }
     },
   },
+  components: { TheSlider },
 };
 </script>
