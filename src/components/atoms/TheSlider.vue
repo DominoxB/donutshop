@@ -1,6 +1,15 @@
 <template>
   <div>
     <div class="relative h-[320px]">
+      <div class="flex justify-between mb-4">
+          <button class="bg-slate-200 rounded" @click="onPrevious">
+            &larr;
+          </button>
+          <button class="bg-slate-200 rounded" @click="onNext">
+            &rarr;
+          </button>
+        </div>
+
       <div
         v-for="(slide, index) in slides"
         :key="slide"
@@ -9,14 +18,6 @@
       >
         <img :src="slide" class="h-[290px]" />
       </div>
-    </div>
-    <div class="flex justify-between">
-      <button class="bg-slate-500 rounded font-bold" @click="onPrevious">
-        &larr;
-      </button>
-      <button class="bg-slate-500 rounded font-bold" @click="onNext">
-        &rarr;
-      </button>
     </div>
   </div>
 </template>
@@ -32,15 +33,19 @@ export default {
   setup(props) {
     const currentSlideIndex = ref(0);
 
-    const animate = (element, animation) => {
+    const animate = (element, animation, onAnimationEnd) => {
       const plainClassList = Array.prototype.slice.call(element.classList);
       const animationsToRemove = plainClassList.filter((className) =>
         className.includes("animate__")
       );
-      console.log(animationsToRemove);
-
       element.classList.remove("hidden", ...animationsToRemove);
       element.classList.add("animate__animated", animation);
+
+      if (onAnimationEnd) {
+        element.addEventListener("animationend", onAnimationEnd, {
+          once: true,
+        });
+      }
     };
 
     const getNextSlideIndex = () => {
@@ -61,7 +66,9 @@ export default {
       const element = document.querySelector(
         `[data-index="${currentSlideIndex.value}"]`
       );
-      animate(element, "animate__fadeOutLeft");
+      animate(element, "animate__fadeOutLeft", () => {
+        element.classList.add("hidden");
+      });
 
       const nextSlideIndex = getNextSlideIndex();
 
@@ -77,7 +84,9 @@ export default {
       const element = document.querySelector(
         `[data-index="${currentSlideIndex.value}"]`
       );
-      animate(element, "animate__fadeOutRight");
+      animate(element, "animate__fadeOutRight", () => {
+        element.classList.add("hidden");
+      });
 
       const previousSlideIndex = getPreviousSlideIndex();
 
