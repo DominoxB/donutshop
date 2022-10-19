@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <div class="relative">
-      <button class="bg-slate-200 rounded absolute z-20 left-0 top-1/2" @click="onPrevious">&larr;</button>
-      <button class="bg-slate-200 rounded absolute z-20 right-0 top-1/2" @click="onNext">&rarr;</button>
+      <button class="bg-transparent rounded absolute z-20 left-0 top-1/2 ml-2 hover:bg-slate-300 hover:bg-opacity-30" @click="onPrevious">&#x276E;</button>
+      <button class="bg-transparent rounded absolute z-20 right-0 top-1/2 mr-2 hover:bg-slate-300 hover:bg-opacity-30" @click="onNext">&#x276F;</button>
       <div
         v-for="(slide, index) in slides"
         :key="slide"
