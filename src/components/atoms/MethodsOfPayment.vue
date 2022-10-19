@@ -98,7 +98,7 @@
       <div class="flex justify-end mr-2 mt-4">
         <router-link to="/">
           <button
-            class="border border-neutral-900 bg-pink-100 hover:bg-pink-200 rounded p-3 font-pacifico text-2xl"
+            class="border border-neutral-900 bg-purple-200 hover:bg-purple-300 rounded p-3 font-pacifico text-2xl"
           >
             Podsumowanie
           </button>

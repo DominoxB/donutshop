@@ -152,7 +152,7 @@
             </span>
           </div>
           <button
-            class="bg-pink-200 hover:bg-pink-300 border text-gray-800 w-44 h-10 mb-3 font-bold text-base rounded mt-3"
+            class="bg-purple-200 hover:bg-purple-300 border text-gray-800 w-44 h-10 mb-3 font-bold text-base rounded mt-3"
             @click="submitForm"
           >
             Wyślij
