@@ -195,6 +195,7 @@
       </div>
       <div class="lg:grid lg:grid-cols-2">
         <TheSlider :slides="slides" class=""></TheSlider>
+        <div class="google-maps">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9607.638453963564!2d20.079489734036667!3d52.98602709626071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471c4dd538fc70f9%3A0xbbdb5f0b921b7226!2s06-550%20P%C4%85czkowo!5e0!3m2!1spl!2spl!4v1665664662709!5m2!1spl!2spl"
           style="border: 0"
@@ -203,8 +204,9 @@
           height="400"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          class="my-auto mx-auto relative z-30"
+          class="my-auto mx-auto relative z-30 mt-3 lg:mt-0"
         ></iframe>
+      </div>
       </div>
     </div>
   </div>
@@ -303,3 +305,19 @@ export default {
   components: { TheSlider },
 };
 </script>
+
+<style>
+  .google-maps {
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+  }
+  .google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+</style>
