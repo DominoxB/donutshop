@@ -1,23 +1,17 @@
 <template>
-  <div>
-    <div class="relative h-[320px]">
-      <div class="flex justify-between mb-4">
-          <button class="bg-slate-200 rounded" @click="onPrevious">
-            &larr;
-          </button>
-          <button class="bg-slate-200 rounded" @click="onNext">
-            &rarr;
-          </button>
-        </div>
-
+  <div class="container">
+    <div class="relative">
+      <button class="bg-slate-200 rounded absolute z-20 left-0 top-1/2" @click="onPrevious">&larr;</button>
+      <button class="bg-slate-200 rounded absolute z-20 right-0 top-1/2" @click="onNext">&rarr;</button>
       <div
         v-for="(slide, index) in slides"
         :key="slide"
         :data-index="index"
-        class="absolute"
+        class="absolute z-10"
       >
-        <img :src="slide" class="h-[290px]" />
+        <img :src="slide" />
       </div>
+      <img :src="slides[0]" class="opacity-0" />
     </div>
   </div>
 </template>
