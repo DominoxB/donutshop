@@ -5,7 +5,7 @@
     >
       {{ donut.taste }}
     </div>
-    <div class="grid grid-cols-2">
+    <div class="grid md:grid-cols-2">
       <img :src="donut.image" class="w-68 h-72 object-contain mx-auto mt-2" />
       <div class="text-zinc-800 text-xl m-auto">
         <div class="text-center mb-1">1 szt./{{ donut.price }}</div>
@@ -13,7 +13,7 @@
           id="quantity"
           v-model="quantity"
           type="number"
-          class="w-26 h-10 text-center justify-center mb-1 border-4 rounded"
+          class="text-center justify-center mb-1 border-4 rounded"
         />
         <button
           @click="add"
@@ -45,7 +45,7 @@
           <img src="../icons/vegan.jpg" class="w-24 h-18" />
         </div>
       </div>
-      <div class="text-xl mt-4 font-garamond font-semibold">
+      <div class="text-xl mt-4 font-garamond font-semibold px-2">
         {{ donut.describe }}
       </div>
     </div>
