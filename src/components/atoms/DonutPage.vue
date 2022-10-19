@@ -13,12 +13,12 @@
           id="quantity"
           v-model="quantity"
           type="number"
-          class="text-center justify-center mb-1 border-4 rounded"
+          class="text-center justify-center mb-1 border-4 border- rounded"
         />
         <button
           @click="add"
           :disabled="quantity <= 0"
-          class="bg-purple-300 hover:bg-purple-400 text-gray-800 block w-44 h-10 font-bold text-base rounded my-auto mx-auto"
+          class="bg-purple-200 hover:bg-purple-300 text-gray-800 block w-44 h-10 font-bold text-base rounded my-auto mx-auto"
         >
           <span>Do koszyka 🍩</span>
         </button>

@@ -161,10 +161,7 @@
       </div>
       <div class="my-auto">
         <div
-          style="
-            background-image: url('https://us.123rf.com/450wm/saskekun/saskekun1911/saskekun191100275/134556968-r%C3%B3%C5%BCne-rodzaje-kolorowych-donat%C3%B3w-zdobionych-posypk%C4%85-i-lukrem-na-pastelowym-r%C3%B3%C5%BCowym-tle-z-miejscem-na.jpg?ver=6');
-          "
-          class="w-auto font-garamond text-gray-900 text-xl text-center mb-8 p-4 lg:p-10 lg:pt-6 lg:mx-auto bg-no-repeat bg-top bg-cover bg-opacity-0 rounded-2xl"
+          class="w-auto font-garamond text-gray-900 text-xl text-center mb-8 p-4 lg:p-10 lg:pt-6 lg:mx-auto bg-slate-100 rounded-2xl"
         >
           <p class="mt-7">
             Jeżeli macie Państwo pytania o nasze składniki, chcecie nawiązać
@@ -225,9 +222,9 @@ export default {
       yourMessage: "",
     });
     const slides = [
-      "https://www.whitemad.pl/wp-content/uploads/2020/12/Zurawicki-design_AQForm-5.jpg",
       "https://www.whitemad.pl/wp-content/uploads/2020/12/Zurawicki-design_AQForm-2.jpg",
       "https://www.whitemad.pl/wp-content/uploads/2020/12/Zurawicki-design_AQForm-3.jpg",
+      "https://www.whitemad.pl/wp-content/uploads/2020/12/Zurawicki-design_AQForm-5.jpg",
       "https://www.whitemad.pl/wp-content/uploads/2020/12/Zurawicki-design_AQForm-1.jpg"
     ];
     const rules = computed(() => {

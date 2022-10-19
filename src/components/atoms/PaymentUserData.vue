@@ -22,7 +22,7 @@
                   id="name"
                   v-model="state.name"
                   type="text"
-                  class="form-control block px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
+                  class="form-control block px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-100 focus:border-slate-600 focus:outline-none"
                   :class="v$.name.$error ? 'border-red-600' : 'border-gray-300'"
                   placeholder="Wpisz swoje imię"
                   @blur="v$.name.$touch"
