@@ -2,7 +2,7 @@
   <div
     class="container mx-auto min-h-[500px] text-center text-xl text-slate-900 mt-3"
   >
-    <p class="bg-purple-100 py-3 px-4 font-garamond">
+    <p class="bg-fuchsia-50 py-3 px-2 font-garamond">
       {{ $t("message.about") }}
     </p>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-auto">
