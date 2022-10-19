@@ -5,7 +5,7 @@
         Twój koszyk pełen pyszności
       </p>
       <div
-        class="grid grid-cols-5 border-4 text-center text-lg md:text-xl lg:text-2xl font-semibold mt-4"
+        class="grid grid-cols-5 border-4 text-center text-sm md:text-xl lg:text-2xl font-semibold mt-4"
       >
         <div>Donut</div>
         <div>Cena</div>
@@ -13,17 +13,17 @@
         <div>Suma</div>
       </div>
       <div
-        class="grid grid-cols-5 border-t-0 border-b-0 border-2 text-center text-sm md:text-xl lg:text-2xl"
+        class="grid grid-cols-5 border-t-0 border-b-0 border-2 text-center text-xs md:text-xl lg:text-2xl"
         v-for="data in basket"
         :donut="product"
         :key="data.id"
       >
         <div
-          class="font-semibold cursor-pointer border-2 border-white hover:border-slate-300 hover:rounded"
+          class="cursor-pointer border-2 border-white hover:border-slate-300 hover:rounded"
         >
           <router-link :to="`/donut/${data.product.id}`">
             {{ data.product.taste }}
-            <img :src="data.product.image" class="w-20 h-20 m-auto" />
+            <img :src="data.product.image" class="w-auto h-auto md:h-20 m-auto" />
           </router-link>
         </div>
         <div class="m-auto">{{ data.product.price }}</div>
@@ -43,7 +43,7 @@
         </button>
       </div>
       <div
-        class="grid grid-cols-4 border-black border-2 text-center font-bold h-10"
+        class="grid grid-cols-4 border-black border-2 text-center font-bold"
       >
         <div class="col-span-2 my-auto text-sm md:text-xl lg:text-2xl">
           Podsumowanie zakupów:
@@ -57,14 +57,14 @@
     <div class="flex justify-between">
       <router-link to="/DonutShop">
         <button
-          class="border border-neutral-900 bg-purple-200 hover:bg-purple-300 rounded p-3 font-pacifico md:text-2xl ml-2 md:ml-4"
+          class="border border-neutral-900 bg-purple-200 hover:bg-purple-300 rounded p-3 font-pacifico text-sm md:text-2xl ml-2 md:ml-4"
         >
           Kontynuuj zakupy
         </button>
       </router-link>
       <router-link to="/PaymentPage">
         <button
-          class="border border-neutral-900 bg-purple-200 hover:bg-purple-300 rounded p-3 font-pacifico md:text-2xl mr-2 md:mr-4"
+          class="border border-neutral-900 bg-purple-200 hover:bg-purple-300 rounded p-3 font-pacifico text-sm md:text-2xl mr-2 md:mr-4"
           :disabled="result <= 0"
         >
           Przejdź do realizacji zamówienia
