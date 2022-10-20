@@ -1,7 +1,7 @@
 <template>
   <div class="container mx-auto min-h-[500px]">
     <div class="grid lg:grid-cols-2">
-      <div class="block md:w-auto mb-8 border bg-purple-100 rounded-2xl">
+      <div class="block md:w-auto mb-8 border bg-fuchsia-50 rounded-2xl">
         <div>
           <span class="font-medium ml-4 text-2xl">FORMULARZ KONTAKTOWY</span>
         </div>
@@ -152,7 +152,7 @@
             </span>
           </div>
           <button
-            class="bg-purple-300 hover:bg-purple-400 border text-gray-800 w-44 h-10 mb-3 font-bold text-base rounded mt-3"
+            class="bg-purple-200 hover:bg-purple-300 border text-gray-800 w-44 h-10 mb-3 font-bold text-base rounded mt-3"
             @click="submitForm"
           >
             Wyślij
@@ -161,10 +161,7 @@
       </div>
       <div class="my-auto">
         <div
-          style="
-            background-image: url('https://i.pinimg.com/736x/df/3a/b6/df3ab6eee0fdeccc33d4aa70e1ea9d2f.jpg');
-          "
-          class="lg:w-[620px] font-garamond text-gray-900 text-xl text-center mb-8 p-4 lg:p-10 lg:pt-11 lg:mx-auto bg-no-repeat bg-top bg-cover bg-opacity-25 rounded-2xl"
+          class="w-auto font-garamond text-gray-900 text-xl text-center mb-8 p-4 lg:p-10 lg:pt-6 lg:mx-auto bg-slate-100 rounded-2xl"
         >
           <p class="mt-7">
             Jeżeli macie Państwo pytania o nasze składniki, chcecie nawiązać
@@ -180,9 +177,6 @@
             Realizujemy specjalne zamówienia na terenie całej Polski,
             przygotowujemy urodzinowe donutowe torty, obsługujemy słodki
             poczęstunek na weselach, konferencjach i innych wydarzeniach.
-          </p>
-          <p class="mt-7">
-            Serdecznie zapraszamy do naszego donutowego świata!
           </p>
         </div>
       </div>
@@ -228,9 +222,9 @@ export default {
       yourMessage: "",
     });
     const slides = [
-      "https://www.whitemad.pl/wp-content/uploads/2020/12/Zurawicki-design_AQForm-5.jpg",
       "https://www.whitemad.pl/wp-content/uploads/2020/12/Zurawicki-design_AQForm-2.jpg",
       "https://www.whitemad.pl/wp-content/uploads/2020/12/Zurawicki-design_AQForm-3.jpg",
+      "https://www.whitemad.pl/wp-content/uploads/2020/12/Zurawicki-design_AQForm-5.jpg",
       "https://www.whitemad.pl/wp-content/uploads/2020/12/Zurawicki-design_AQForm-1.jpg"
     ];
     const rules = computed(() => {

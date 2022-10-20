@@ -2,7 +2,7 @@
   <button
     v-show="scY > 150"
     @click="scroll"
-    class="fixed z-50 bottom-8 right-2 border-0 w-12 h-12 rounded-full drop-shadow-md bg-indigo-400 opacity-30 hover:bg-indigo-500 text-white text-3xl font-bold scroll-smooth"
+    class="fixed z-50 bottom-8 right-2 border-0 w-12 h-12 rounded drop-shadow-md bg-slate-400 opacity-30 hover:bg-slate-500 text-white text-3xl scroll-smooth"
   >
     &uarr;
   </button>

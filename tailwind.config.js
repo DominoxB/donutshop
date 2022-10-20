@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         pacifico: ['"Pacifico"'],
-        garamond: ['"Garamond"']
+        garamond: ['"EB Garamond"']
       }
     },
   },
