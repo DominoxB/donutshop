@@ -1,14 +1,14 @@
 <template>
   <div class="container mx-auto min-h-[500px] mt-3">
     <div class="block">
-      <div>
+      <div class="">
         <span class="font-garamond font-bold ml-5 text-2xl"
           >Uzupełnij swoje dane</span
         >
       </div>
       <div class="flex mt-4 justify-center">
         <div
-          class="flex bg-purple-100 w-auto font-garamond border border-black rounded"
+          class="flex bg-purple-100 font-garamond border border-black rounded"
         >
           <div class="ml-3 mr-3">
             <!-- imię i nazwisko -->
@@ -149,7 +149,7 @@
               <div class="md:ml-2">
                 <label
                   class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
-                  >Nr budynku</label
+                  >Nr budynku i lokalu</label
                 >
                 <input
                   v-model="state.building"
@@ -169,32 +169,6 @@
                   class="text-xl text-red-600"
                 >
                   {{ v$.building.required.$message }}
-                </span>
-              </div>
-              <!-- nr lokalu -->
-              <div class="md:ml-2">
-                <label
-                  class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
-                  >Nr lokalu</label
-                >
-                <input
-                  v-model="state.local"
-                  type="text"
-                  class="form-control block mr-2 w-24 px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-slate-300 focus:border-blue-600 focus:outline-none"
-                  :class="
-                    v$.local.$error ? 'border-red-600' : 'border-gray-300'
-                  "
-                  placeholder="nr"
-                  @blur="v$.local.$touch"
-                />
-                <span
-                  v-if="
-                    v$.local.$errors[0] &&
-                    v$.local.$errors[0].$validator === 'required'
-                  "
-                  class="text-xl text-red-600"
-                >
-                  {{ v$.local.required.$message }}
                 </span>
               </div>
             </div>
