@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white sticky top-0 z-50 md:relative lg:relative">
     <div
-      class="flex justify-between items-center text-2xl md:text-4xl md:block md:text-center md:pb-4 lg:text-6xl lg:pb-4 text-purple-900"
+      class="flex justify-between items-center text-2xl md:text-4xl md:block md:text-center md:pb-4 lg:text-6xl lg:pb-4 text-[#610e54]"
     >
       <div class="md:invisible">
         <router-link to="/">
@@ -14,7 +14,7 @@
             src="@/images/donutino.png"
             class="invisible md:visible w-24 h-24 mx-auto pb-2"
           />
-          <span class="font-pacifico invisible md:visible">DONUTINO</span>
+          <span class="font-pacifico invisible text-[#610e54] md:visible">DONUTINO</span>
         </router-link>
       </div>
       <NavbarHamburger
