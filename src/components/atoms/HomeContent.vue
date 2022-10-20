@@ -8,7 +8,14 @@
 </template>
 
 <script>
+import { onMounted } from 'vue'
 export default {
-  name: "HomeContent"
+  name: "HomeContent",
+  setup() {
+    onMounted(() => {
+      window.scrollTo(0, 0)
+    }
+ )}
+
 }
 </script>

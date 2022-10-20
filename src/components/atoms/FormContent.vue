@@ -209,11 +209,14 @@
 <script>
 import { useVuelidate } from "@vuelidate/core";
 import { required, email, minLength, helpers } from "@vuelidate/validators";
-import { reactive, computed } from "vue";
+import { reactive, computed, onMounted } from "vue";
 import TheSlider from "./TheSlider.vue";
 export default {
   name: "FormContent",
   setup() {
+    onMounted(() => {
+      window.scrollTo(0, 0)
+    })
     const state = reactive({
       name: "",
       company: "",
