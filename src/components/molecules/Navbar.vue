@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white sticky top-0 z-10 md:relative lg:relative">
+  <div class="bg-white sticky top-0 z-50 md:relative lg:relative">
     <div
       class="flex justify-between items-center text-2xl md:text-4xl md:block md:text-center md:pb-4 lg:text-6xl lg:pb-4 text-amber-600"
     >
@@ -24,7 +24,7 @@
     </div>
   </div>
   <div
-    class="hidden md:sticky md:top-0 z-10 font-pacifico md:block bg-white text-l text-center py-2 md:text-2xl lg:text-4xl items-center justify-center space-x-8"
+    class="hidden md:sticky md:top-0 z-50 font-pacifico md:block bg-white text-l text-center py-2 md:text-2xl lg:text-4xl items-center justify-center space-x-8"
   >
     <CustomLink :name="$t('message.shopping')" url="/DonutShop"></CustomLink>
     <CustomLink

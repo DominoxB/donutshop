@@ -324,7 +324,7 @@
       <div class="flex justify-center lg:justify-start mt-4 lg:ml-5">
         <router-link to="/BasketPage">
           <button
-            class="border border-neutral-900 bg-purple-300 hover:bg-purple-400 rounded p-3 font-pacifico text-2xl"
+            class="border border-neutral-900 bg-pink-100 hover:bg-pink-200 rounded p-3 font-pacifico text-2xl"
           >
             Wróć do koszyka
           </button>
