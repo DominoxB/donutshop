@@ -23,7 +23,10 @@
         >
           <router-link :to="`/donut/${data.product.id}`">
             {{ data.product.taste }}
-            <img :src="data.product.image" class="w-auto h-auto md:h-20 m-auto" />
+            <img
+              :src="data.product.image"
+              class="w-auto h-auto md:h-20 m-auto"
+            />
           </router-link>
         </div>
         <div class="m-auto">{{ data.product.price }}</div>
@@ -42,9 +45,7 @@
           Usuń
         </button>
       </div>
-      <div
-        class="grid grid-cols-4 border-black border-2 text-center font-bold"
-      >
+      <div class="grid grid-cols-4 border-black border-2 text-center font-bold">
         <div class="col-span-2 my-auto text-sm md:text-xl lg:text-2xl">
           Podsumowanie zakupów:
         </div>
@@ -83,7 +84,7 @@
 <script>
 import { useBasketStore } from "@/stores/basket";
 import { useProductStore } from "@/stores/products";
-import { computed, ref } from "vue";
+import { computed, ref, onMounted } from "vue";
 import ModalContent from "@/components/atoms/ModalContent.vue";
 export default {
   name: "BasketContent",
@@ -91,6 +92,9 @@ export default {
     ModalContent,
   },
   setup() {
+    onMounted(() => {
+      window.scrollTo(0, 0);
+    });
     const store = useBasketStore();
     const { basket } = store;
 

@@ -1,7 +1,7 @@
 <template>
   <div class="container mx-auto min-h-[500px]">
     <div class="grid lg:grid-cols-2">
-      <div class="block md:w-auto mb-8 border bg-fuchsia-50 rounded-2xl">
+      <div class="block md:w-auto mb-8 border bg-[#e8cfe1] rounded-2xl">
         <div>
           <span class="font-medium ml-4 text-2xl">FORMULARZ KONTAKTOWY</span>
         </div>
@@ -161,7 +161,7 @@
       </div>
       <div class="my-auto">
         <div
-          class="w-auto font-garamond text-gray-900 text-xl text-center mb-8 p-4 lg:p-10 lg:pt-6 lg:mx-auto bg-slate-100 rounded-2xl"
+          class="w-auto font-garamond text-gray-900 text-xl text-center mb-8 p-4 lg:p-10 lg:pt-6 lg:mx-auto rounded-2xl bg-[#7dafb5] bg-opacity-30"
         >
           <p class="mt-7">
             Jeżeli macie Państwo pytania o nasze składniki, chcecie nawiązać
@@ -198,7 +198,7 @@
           height="400"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          class="my-auto mx-auto relative z-30 mt-3 lg:mt-0"
+          class="my-auto mx-auto relative z-20 mt-3 lg:mt-0"
         ></iframe>
       </div>
       </div>
@@ -209,11 +209,14 @@
 <script>
 import { useVuelidate } from "@vuelidate/core";
 import { required, email, minLength, helpers } from "@vuelidate/validators";
-import { reactive, computed } from "vue";
+import { reactive, computed, onMounted } from "vue";
 import TheSlider from "./TheSlider.vue";
 export default {
   name: "FormContent",
   setup() {
+    onMounted(() => {
+      window.scrollTo(0, 0)
+    })
     const state = reactive({
       name: "",
       company: "",
