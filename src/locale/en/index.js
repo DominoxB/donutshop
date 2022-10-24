@@ -29,7 +29,23 @@ const en = {
     all: "Summary",
     totalprice: "Total price",
     continue: "Continue shopping",
-    gotoorder: "Go to order"
+    gotoorder: "Go to order",
+    userdata: "Complete your details",
+    fname: "First Name",
+    lname: "Last Name",
+    companyname: "Company",
+    identification: "NIP number",
+    street: "Street",
+    building: "Building and local",
+    code: "ZIP code",
+    city: "City",
+    email: "E-mail",
+    phone: "Telephone",
+    back: "Go back to basket"
+
+
+
+
 
   },
 };

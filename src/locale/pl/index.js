@@ -29,7 +29,19 @@ const pl = {
     all: "Posumowanie zakupów: ",
     totalprice: "Razem zł: ",
     continue: "Kontynuuj zakupy",
-    gotoorder: "Przejdź do realizacji zamówienia"
+    gotoorder: "Przejdź do realizacji zamówienia",
+    userdata: "Uzupełnij swoje dane",
+    fname: "Imię",
+    lname: "Nazwisko",
+    companyname: "Nazwa firmy",
+    identification: "NIP",
+    street: "Ulica",
+    building: "Numer budynku/lokalu",
+    code: "Kod pocztowy",
+    city: "Miasto",
+    email: "Adres e-mail",
+    phone: "Telefon",
+    back: "Wróć do koszyka"
 
   },
 };
