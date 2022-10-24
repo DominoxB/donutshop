@@ -35,7 +35,7 @@
     </button>
     <div
       :class="{ '-translate-x-full': !show }"
-      class="fixed h-full w-64 block text-xl text-slate-800 bg-slate-300 top-0 bottom-0 left-0 transition duration-700 z-10"
+      class="fixed h-full w-64 block text-xl text-slate-800 bg-slate-300 top-0 bottom-0 left-0 transition duration-700 z-50"
     >
       <div class="my-4 px-4">
         <span class="font-pacifico text-[#610e54]">DONUTINO</span>
