@@ -20,7 +20,17 @@ const en = {
     formmessage: "Your message",
     formsend: "Send",
     forminfo: "If you have questions about our ingredients, want to cooperate, prepare a sweet table for an important event for you, please contact us. Just send us a message with a short description and we will contact you. We try to answer all messages within 12 hours. We carry out special orders throughout Poland, prepare birthday donut cakes, and serve sweet treats at weddings, conferences and other events.",
-    forminfo2: "You can also talk to us in person, we invite you to our candy shop at ul. Czekoladowa 17 in Pączków."
+    forminfo2: "You can also talk to us in person, we invite you to our candy shop at ul. Czekoladowa 17 in Pączków.",
+    yourbasket: "Your basket full of delicious donuts",
+    donutprice: "Price",
+    donutquantity: "Quantity",
+    donutsum: "Sum",
+    delete: "Delete",
+    all: "Summary",
+    totalprice: "Total price",
+    continue: "Continue shopping",
+    gotoorder: "Go to order"
+
   },
 };
 

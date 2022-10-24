@@ -20,7 +20,17 @@ const pl = {
     formmessage: "Twoja wiadomość",
     formsend: "Wyślij",
     forminfo: "Jeżeli macie Państwo pytania o nasze składniki, chcecie nawiązać współpracę, przygotować słodki stół na ważnej dla Was uroczystości,zapraszamy do kontaktu. Wystarczy wysłać do nas wiadomość, z krótkim opisem, a my skontaktujemy się Wami. Na wszystkie wiadomości staramy się odpowiadać w ciągu 12 godzin. Realizujemy specjalne zamówienia na terenie całej Polski, przygotowujemy urodzinowe donutowe torty, obsługujemy słodki poczęstunek na weselach, konferencjach i innych wydarzeniach.",
-    forminfo2: "Możesz także porozmawiać z nami osobiście, zapraszamy do naszej cukierenki przy ulicy Czekoladowej 17 w Pączkowie."
+    forminfo2: "Możesz także porozmawiać z nami osobiście, zapraszamy do naszej cukierenki przy ulicy Czekoladowej 17 w Pączkowie.",
+    yourbasket: "Twój koszyk pełen pyszności",
+    donutprice: "Cena",
+    donutquantity: "Ilość",
+    donutsum: "Suma",
+    delete: "Usuń",
+    all: "Posumowanie zakupów: ",
+    totalprice: "Razem zł: ",
+    continue: "Kontynuuj zakupy",
+    gotoorder: "Przejdź do realizacji zamówienia"
+
   },
 };
 
