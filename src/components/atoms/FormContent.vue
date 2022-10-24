@@ -3,12 +3,12 @@
     <div class="grid lg:grid-cols-2">
       <div class="block md:w-auto mb-8 border bg-[#e8cfe1] rounded-2xl">
         <div>
-          <span class="font-medium ml-4 text-2xl">FORMULARZ KONTAKTOWY</span>
+          <span class="font-medium ml-4 text-2xl">{{ $t("message.form") }}</span>
         </div>
         <div class="ml-4">
           <label
             class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
-            >Imię i nazwisko</label
+            >{{ $t("message.formname") }}</label
           >
           <input
             id="name"
@@ -39,7 +39,7 @@
           <div>
             <label
               class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
-              >Nazwa firmy</label
+              >{{ $t("message.formcompany") }}</label
             >
             <input
               v-model="state.company"
@@ -51,7 +51,7 @@
           <div>
             <label
               class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
-              >E-mail</label
+              >{{ $t("message.formmail") }}</label
             >
             <input
               v-model="state.emailAdress"
@@ -85,7 +85,7 @@
           <div>
             <label
               class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
-              >Numer telefonu</label
+              >{{ $t("message.formphone") }}</label
             >
             <input
               v-model="state.telephone"
@@ -119,7 +119,7 @@
           <div>
             <label
               class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
-              >Twoja wiadomość</label
+              >{{ $t("message.formmessage") }}</label
             >
             <textarea
               v-model="state.yourMessage"
@@ -155,7 +155,7 @@
             class="bg-purple-200 hover:bg-purple-300 border text-gray-800 w-44 h-10 mb-3 font-bold text-base rounded mt-3"
             @click="submitForm"
           >
-            Wyślij
+          {{ $t("message.formsend") }}
           </button>
         </div>
       </div>
@@ -164,28 +164,14 @@
           class="w-auto font-garamond text-gray-900 text-xl text-center mb-8 p-4 lg:p-10 lg:pt-6 lg:mx-auto rounded-2xl bg-[#7dafb5] bg-opacity-30"
         >
           <p class="mt-7">
-            Jeżeli macie Państwo pytania o nasze składniki, chcecie nawiązać
-            współpracę, przygotować słodki stół na ważnej dla Was uroczystości,
-            zapraszamy do kontaktu.
-          </p>
-          <p class="mt-7">
-            Wystarczy wysłać do nas wiadomość, z krótkim opisem, a my
-            skontaktujemy się Wami. Na wszystkie wiadomości staramy się
-            odpowiadać w ciągu 12 godzin.
-          </p>
-          <p class="mt-7">
-            Realizujemy specjalne zamówienia na terenie całej Polski,
-            przygotowujemy urodzinowe donutowe torty, obsługujemy słodki
-            poczęstunek na weselach, konferencjach i innych wydarzeniach.
+            {{ $t("message.forminfo") }}
           </p>
         </div>
       </div>
     </div>
     <div class="block">
       <div class="font-garamond text-2xl text-center mb-4">
-        <p>Możesz także porozmawiać z nami osobiście,</p>
-        <p>zapraszamy do naszej cukierenki przy</p>
-        <p>ulicy Czekoladowej 17 w Pączkowie.</p>
+        <p> {{ $t("message.forminfo2") }}</p>
       </div>
       <div class="lg:grid lg:grid-cols-2">
         <TheSlider :slides="slides" class=""></TheSlider>

@@ -11,7 +11,16 @@ const en = {
     about:
     "Why our donuts are so delicious? Their secret lies in the invariably unique taste, which was created from a combination of passion and tradition. Our confectionery was established in 1992, when the idea of ​​creating Donutino was born. All thanks to Donata Pączkowska. Her knowledge and experience made that he was, together with his partner - Jan Cukrowski, the originator of the first confectionery in Pączków. Confectioneries use the original recipe for donut production. We look after it like a precious treasure, taking care of every stage of preparation of our sweets, in accordance with proven and established production methods. Fresh, tasty. hand-made on site - we fry thousands of our best-value specialties every day Donutino donuts are distinguished by something more than fluffy, delicate dough, perfect shape, bright wedding ring and richly stuffed interior. We are proud that we can give you our treasure - unique the taste hidden in our donuts! ",
     footer: "DONUTINO - we have been creating our baked goods with passion for 30 years ",
-    socials: "Look for us on: "
+    socials: "Look for us on: ",
+    form: "CONTACT FORM",
+    formname: "First and last name",
+    formcompany: "Company",
+    formmail: "E-mail adress",
+    formphone: "Telephone",
+    formmessage: "Your message",
+    formsend: "Send",
+    forminfo: "If you have questions about our ingredients, want to cooperate, prepare a sweet table for an important event for you, please contact us. Just send us a message with a short description and we will contact you. We try to answer all messages within 12 hours. We carry out special orders throughout Poland, prepare birthday donut cakes, and serve sweet treats at weddings, conferences and other events.",
+    forminfo2: "You can also talk to us in person, we invite you to our candy shop at ul. Czekoladowa 17 in Pączków."
   },
 };
 
