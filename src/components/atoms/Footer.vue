@@ -2,7 +2,7 @@
   <footer>
     <div class="grid grid-cols-1 bg-gray-100 border-t-zinc-400 border-t-2 h-46 mt-10 items-end font-thin text-slate-800">
       <div class="flex text-base font-pacifico justify-center text-center mt-3 px-2">
-        <span>DONUTINO - nasze wypieki tworzymy z pasją już od 30 lat!</span>
+        <span>{{ $t("message.footer") }}</span>
       </div>
       <div class="text-center font-garamond text-sm mt-2">
         <p>Donata Pączkowska</p>
@@ -10,7 +10,7 @@
         <p>06-550 Pączkowo</p>
       </div>
       <div class="flex justify-center text-lg font-garamond my-auto mt-2">
-          <span class="font-semibold my-auto">Szukaj nas na: </span>
+          <span class="font-semibold my-auto">{{ $t("message.socials") }} </span>
           <a href="https://pl-pl.facebook.com" target="_blank">
             <img src="@/images/fb.png" class="w-5 h-5 md:w-7 md:h-7 mt-2 ml-3" />
           </a>
