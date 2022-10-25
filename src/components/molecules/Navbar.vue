@@ -8,18 +8,18 @@
           <span class="font-pacifico ml-4">DONUTINO</span>
         </router-link>
       </div>
-      <div>
+      <div class="invisible md:visible">
         <div class="w-24 h-24 mx-auto">
           <router-link to="/">
             <img
               src="@/images/donutino.png"
-              class="invisible md:visible w-24 h-24 pb-2"
+              class="w-24 h-24 pb-2"
             />
           </router-link>
         </div>
         <div>
           <router-link to="/">
-            <span class="font-pacifico invisible text-[#610e54] md:visible"
+            <span class="font-pacifico text-[#610e54]"
               >DONUTINO</span
             >
           </router-link>
