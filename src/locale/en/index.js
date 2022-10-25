@@ -41,7 +41,23 @@ const en = {
     city: "City",
     email: "E-mail",
     phone: "Telephone",
-    back: "Go back to basket"
+    back: "Go back to basket",
+    payment: "Choose payment method: ",
+    cash: "Cash on delivery",
+    card: "Credit card",
+    online: "Transfer 24 (fast online transfer)",
+    blik: "Blik",
+    yourmethod: "Selected payment method: ",
+    delivery: "Choose delivery method: ",
+    courier: "DPD courier (12.99)",
+    inpost: "Parcel locker InPost Fresh (10.99)",
+    self: "Pickup in person in Pączków (0.00)",
+    yourdelivery: "Selected delivery method: ",
+    check: "Check your order",
+
+
+
+
 
 
 

@@ -41,7 +41,20 @@ const pl = {
     city: "Miasto",
     email: "Adres e-mail",
     phone: "Telefon",
-    back: "Wróć do koszyka"
+    back: "Wróć do koszyka",
+    payment: "Wybierz metodę płatności: ",
+    cash: "Gotówka przy odbiorze",
+    card: "Karta płatnicza",
+    online: "Przelew 24 (szybki przelew online)",
+    blik: "Blik",
+    yourmethod: "Wybrany sposób płatności: ",
+    delivery: "Wybierz sposób dostawy",
+    courier: "Kurier DPD (12.99)",
+    inpost: "Paczkomat InPost Fresh (10.99)",
+    self: "Odbiór osobisty w Pączkowie (0.00)",
+    yourdelivery: "Wybrany sposób dostawy: ",
+    check: "Podsumowanie"
+
 
   },
 };

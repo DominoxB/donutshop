@@ -4,7 +4,7 @@
       class="bg-purple-100 w-3/4 font-garamond border border-black rounded block mt-12 ml-auto mr-auto p-4"
     >
       <!-- SPOSÓB PŁATNOŚCI -->
-      <p class="text-xl font-semibold mb-2">Wybierz metodę płatności:</p>
+      <p class="text-xl font-semibold mb-2">{{ $t("message.payment") }}</p>
       <div class="flex text-lg mb-2">
         <input
           type="radio"
@@ -13,7 +13,7 @@
           name="selected"
           v-model="selected"
         />
-        <label>Gotówka przy odbiorze</label>
+        <label>{{ $t("message.cash") }}</label>
         <img src="@/images/cash.png" class="w-10 h-8 ml-2" />
       </div>
       <div class="flex text-lg mb-2">
@@ -24,7 +24,7 @@
           name="selected"
           v-model="selected"
         />
-        <label>Karta płatnicza</label>
+        <label>{{ $t("message.card") }}</label>
         <img src="@/images/karta.png" class="w-20 h-6 ml-2" />
       </div>
       <div class="flex text-lg mb-2">
@@ -35,7 +35,7 @@
           name="selected"
           v-model="selected"
         />
-        <label>Przelewy24 (szybki przelew online)</label>
+        <label>{{ $t("message.online") }}</label>
         <img src="@/images/przelewy.png" class="w-12 h-6 ml-2" />
       </div>
       <div class="flex text-lg mb-2">
@@ -46,18 +46,18 @@
           name="selected"
           v-model="selected"
         />
-        <label>Blik</label>
+        <label>{{ $t("message.blik") }}</label>
         <img src="@/images/blik.png" class="w-8 h-8 ml-2" />
       </div>
       <div class="mt-2 bg-purple-200">
         <h1 class="p-2">
-          Wybrany sposób płatności:
+          {{ $t("message.yourmethod") }}
           <span class="font-semibold">{{ selected }}</span>
         </h1>
       </div>
       <!-- DOSTAWA -->
       <div class="mt-8 border-t-2 border-black">
-        <p class="text-xl font-semibold mt-4 mb-2">Wybierz sposób dostawy:</p>
+        <p class="text-xl font-semibold mt-4 mb-2">{{ $t("message.delivery") }}</p>
         <div class="flex text-lg mb-2">
           <input
             type="radio"
@@ -66,7 +66,7 @@
             name="delivery"
             v-model="delivery"
           />
-          <label>Kurier DPD (12,99)</label>
+          <label>{{ $t("message.courier") }}</label>
         </div>
         <div class="flex text-lg mb-2">
           <input
@@ -76,7 +76,7 @@
             name="delivery"
             v-model="delivery"
           />
-          <label>Paczkomat InPost Fresh (9,99)</label>
+          <label>{{ $t("message.inpost") }}</label>
         </div>
         <div class="flex text-lg mb-2">
           <input
@@ -86,11 +86,11 @@
             name="delivery"
             v-model="delivery"
           />
-          <label>Odbiór osobisty w Pączkosławicach (0,00)</label>
+          <label>{{ $t("message.self") }}</label>
         </div>
         <div class="mt-2 bg-purple-200">
           <h1 class="p-2">
-            Wybrany sposób dostawy:
+            {{ $t("message.yourdelivery") }}
             <span class="font-semibold">{{ delivery }}</span>
           </h1>
         </div>
@@ -100,7 +100,7 @@
           <button
             class="border border-neutral-900 bg-purple-200 hover:bg-purple-300 rounded p-3 font-pacifico text-2xl"
           >
-            Podsumowanie
+          {{ $t("message.check") }}
           </button>
         </router-link>
       </div>
