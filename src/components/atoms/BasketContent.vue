@@ -2,15 +2,15 @@
   <div class="container mx-auto min-h-[500px]">
     <div class="block p-4 m-4 text-2xl">
       <p class="mb-6 mt-6 text-center text-3xl font-pacifico text-neutral-700">
-        Twój koszyk pełen pyszności
+        {{ $t("message.yourbasket") }}
       </p>
       <div
         class="grid grid-cols-5 border-4 text-center text-sm md:text-xl lg:text-2xl font-semibold mt-4"
       >
         <div>Donut</div>
-        <div>Cena</div>
-        <div>Ilość</div>
-        <div>Suma</div>
+        <div>{{ $t("message.donutprice") }}</div>
+        <div>{{ $t("message.donutquantity") }}</div>
+        <div>{{ $t("message.donutsum") }}</div>
       </div>
       <div
         class="grid grid-cols-5 border-t-0 border-b-0 border-2 text-center text-xs md:text-xl lg:text-2xl"
@@ -42,16 +42,16 @@
           @click="removeDonut(data.id)"
           class="text-sm md:text-xl border rounded border-neutral-900 hover:bg-red-500 w-14 h-8 md:w-24 md:h-10 m-auto font-pacifico"
         >
-          Usuń
+        {{ $t("message.delete") }}
         </button>
       </div>
       <div class="grid grid-cols-4 border-black border-2 text-center font-bold">
         <div class="col-span-2 my-auto text-sm md:text-xl lg:text-2xl">
-          Podsumowanie zakupów:
+          {{ $t("message.all") }}
         </div>
         <div class="my-auto text-sm md:text-xl lg:text-2xl">{{ result }}</div>
         <div class="my-auto text-sm md:text-xl lg:text-2xl">
-          Razem zł: {{ total.toFixed(2) }}
+          {{ $t("message.totalprice") }} {{ total.toFixed(2) }}
         </div>
       </div>
     </div>
@@ -60,7 +60,7 @@
         <button
           class="border border-neutral-900 bg-purple-200 hover:bg-purple-300 rounded p-3 font-pacifico text-sm md:text-2xl ml-2 md:ml-4"
         >
-          Kontynuuj zakupy
+        {{ $t("message.continue") }}
         </button>
       </router-link>
       <router-link to="/PaymentPage">
@@ -68,7 +68,7 @@
           class="border border-neutral-900 bg-purple-200 hover:bg-purple-300 rounded p-3 font-pacifico text-sm md:text-2xl mr-2 md:mr-4"
           :disabled="result <= 0"
         >
-          Przejdź do realizacji zamówienia
+        {{ $t("message.gotoorder") }}
         </button>
       </router-link>
     </div>
