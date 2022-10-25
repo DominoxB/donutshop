@@ -9,15 +9,21 @@
         </router-link>
       </div>
       <div>
-        <router-link to="/">
-          <img
-            src="@/images/donutino.png"
-            class="invisible md:visible w-24 h-24 mx-auto pb-2"
-          />
-          <span class="font-pacifico invisible text-[#610e54] md:visible"
-            >DONUTINO</span
-          >
-        </router-link>
+        <div class="w-24 h-24 mx-auto">
+          <router-link to="/">
+            <img
+              src="@/images/donutino.png"
+              class="invisible md:visible w-24 h-24 pb-2"
+            />
+          </router-link>
+        </div>
+        <div>
+          <router-link to="/">
+            <span class="font-pacifico invisible text-[#610e54] md:visible"
+              >DONUTINO</span
+            >
+          </router-link>
+        </div>
       </div>
       <NavbarHamburger
         @mobileMenu="showMenu($event)"
