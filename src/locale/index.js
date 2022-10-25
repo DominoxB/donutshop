@@ -10,11 +10,9 @@ const messages = {
 };
 
 const i18n = createI18n({
-  locale: "pl", // set locale
-  fallbackLocale: "en", // set fallback locale
-  messages, // set locale messages
-
-  // something vue-i18n options here ...
+  locale: "pl",
+  fallbackLocale: "en",
+  messages
 });
 
 export default i18n;

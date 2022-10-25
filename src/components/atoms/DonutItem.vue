@@ -1,25 +1,25 @@
 <template>
   <router-link :to="`/donut/${donut.id}`">
-  <div
-    class="grid items-center justify-center group transition ease-in-out delay-100  hover:scale-110 cursor-pointer z-0"
-  >
-    <img :src="donut.image" class="w-52 h-72 object-contain"/>
     <div
-      class="text-xl text-center text-[#610e54] font-garamond font-semibold"
+      class="grid items-center justify-center group transition ease-in-out delay-100 hover:scale-110 cursor-pointer z-0"
     >
-      <div>{{ donut.taste }}</div>
+      <img :src="donut.image" class="w-52 h-72 object-contain" />
+      <div
+        class="text-xl text-center text-[#610e54] font-garamond font-semibold"
+      >
+        <div>{{ donut.taste }}</div>
+      </div>
     </div>
-  </div>
-</router-link>
+  </router-link>
 </template>
 
 <script>
 export default {
-  name: 'DonutItem',
+  name: "DonutItem",
   props: {
     donut: {
-      type: Object
-    }
+      type: Object,
+    },
   },
 };
 </script>

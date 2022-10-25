@@ -3,7 +3,9 @@
     <div class="grid lg:grid-cols-2">
       <div class="block md:w-auto mb-8 border bg-[#e8cfe1] rounded-2xl">
         <div>
-          <span class="font-medium ml-4 text-2xl">{{ $t("message.form") }}</span>
+          <span class="font-medium ml-4 text-2xl">{{
+            $t("message.form")
+          }}</span>
         </div>
         <div class="ml-4">
           <label
@@ -155,7 +157,7 @@
             class="bg-purple-200 hover:bg-purple-300 border text-gray-800 w-44 h-10 mb-3 font-bold text-base rounded mt-3"
             @click="submitForm"
           >
-          {{ $t("message.formsend") }}
+            {{ $t("message.formsend") }}
           </button>
         </div>
       </div>
@@ -171,22 +173,22 @@
     </div>
     <div class="block">
       <div class="font-garamond text-2xl text-center mb-4">
-        <p> {{ $t("message.forminfo2") }}</p>
+        <p>{{ $t("message.forminfo2") }}</p>
       </div>
       <div class="lg:grid lg:grid-cols-2">
         <TheSlider :slides="slides" class=""></TheSlider>
         <div class="google-maps">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9607.638453963564!2d20.079489734036667!3d52.98602709626071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471c4dd538fc70f9%3A0xbbdb5f0b921b7226!2s06-550%20P%C4%85czkowo!5e0!3m2!1spl!2spl!4v1665664662709!5m2!1spl!2spl"
-          style="border: 0"
-          allowfullscreen=""
-          width="600"
-          height="400"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          class="my-auto mx-auto relative z-20 mt-3 lg:mt-0"
-        ></iframe>
-      </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9607.638453963564!2d20.079489734036667!3d52.98602709626071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471c4dd538fc70f9%3A0xbbdb5f0b921b7226!2s06-550%20P%C4%85czkowo!5e0!3m2!1spl!2spl!4v1665664662709!5m2!1spl!2spl"
+            style="border: 0"
+            allowfullscreen=""
+            width="600"
+            height="400"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            class="my-auto mx-auto relative z-20 mt-3 lg:mt-0"
+          ></iframe>
+        </div>
       </div>
     </div>
   </div>
@@ -199,10 +201,11 @@ import { reactive, computed, onMounted } from "vue";
 import TheSlider from "./TheSlider.vue";
 export default {
   name: "FormContent",
+  components: { TheSlider },
   setup() {
     onMounted(() => {
-      window.scrollTo(0, 0)
-    })
+      window.scrollTo(0, 0);
+    });
     const state = reactive({
       name: "",
       company: "",
@@ -214,7 +217,7 @@ export default {
       "https://www.whitemad.pl/wp-content/uploads/2020/12/Zurawicki-design_AQForm-2.jpg",
       "https://www.whitemad.pl/wp-content/uploads/2020/12/Zurawicki-design_AQForm-3.jpg",
       "https://www.whitemad.pl/wp-content/uploads/2020/12/Zurawicki-design_AQForm-5.jpg",
-      "https://www.whitemad.pl/wp-content/uploads/2020/12/Zurawicki-design_AQForm-1.jpg"
+      "https://www.whitemad.pl/wp-content/uploads/2020/12/Zurawicki-design_AQForm-1.jpg",
     ];
     const rules = computed(() => {
       return {
@@ -272,7 +275,7 @@ export default {
     return {
       state,
       v$,
-      slides
+      slides,
     };
   },
   methods: {
@@ -285,22 +288,21 @@ export default {
       }
     },
   },
-  components: { TheSlider },
 };
 </script>
 
 <style>
-  .google-maps {
-    position: relative;
-    padding-bottom: 75%;
-    height: 0;
-    overflow: hidden;
-  }
-  .google-maps iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    height: 100% !important;
-  }
+.google-maps {
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+  overflow: hidden;
+}
+.google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
 </style>

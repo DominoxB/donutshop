@@ -11,5 +11,5 @@ import BtnScrollToTop from "@/components/atoms/BtnScrollToTop.vue";
 export default {
   name: "BasketPage",
   components: { Footer, BasketContent, BtnScrollToTop },
-}; 
+};
 </script>

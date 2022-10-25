@@ -42,7 +42,7 @@
           @click="removeDonut(data.id)"
           class="text-sm md:text-xl border rounded border-neutral-900 hover:bg-red-500 w-14 h-8 md:w-24 md:h-10 m-auto font-pacifico"
         >
-        {{ $t("message.delete") }}
+          {{ $t("message.delete") }}
         </button>
       </div>
       <div class="grid grid-cols-4 border-black border-2 text-center font-bold">
@@ -60,7 +60,7 @@
         <button
           class="border border-neutral-900 bg-purple-200 hover:bg-purple-300 rounded p-3 font-pacifico text-sm md:text-2xl ml-2 md:ml-4"
         >
-        {{ $t("message.continue") }}
+          {{ $t("message.continue") }}
         </button>
       </router-link>
       <router-link to="/PaymentPage">
@@ -68,7 +68,7 @@
           class="border border-neutral-900 bg-purple-200 hover:bg-purple-300 rounded p-3 font-pacifico text-sm md:text-2xl mr-2 md:mr-4"
           :disabled="result <= 0"
         >
-        {{ $t("message.gotoorder") }}
+          {{ $t("message.gotoorder") }}
         </button>
       </router-link>
     </div>

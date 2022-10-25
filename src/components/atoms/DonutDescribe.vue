@@ -7,15 +7,13 @@
   </div>
 </template>
 
-
 <script>
-  export default {
-    name: 'DonutDescribe',
-    props: {
-      donut: {
-        type: Object
-      }
+export default {
+  name: "DonutDescribe",
+  props: {
+    donut: {
+      type: Object,
     },
-  };
-  </script>
-  
+  },
+};
+</script>

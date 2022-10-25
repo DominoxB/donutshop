@@ -15,13 +15,13 @@
 </template>
 
 <script>
-import { onMounted } from 'vue'
+import { onMounted } from "vue";
 export default {
   name: "AboutUsContent",
   setup() {
     onMounted(() => {
-      window.scrollTo(0, 0)
-    }
- )}
+      window.scrollTo(0, 0);
+    });
+  },
 };
 </script>

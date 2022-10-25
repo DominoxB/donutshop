@@ -15,7 +15,7 @@ export default {
   setup() {
     const scY = ref(0);
     const scroll = () => {
-      const charger = document.getElementById("charger"); // chwytamy element po id
+      const charger = document.getElementById("charger");
       charger.scrollIntoView({ behavior: "smooth", block: "start" });
     };
     onMounted(() => {

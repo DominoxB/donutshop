@@ -17,7 +17,6 @@
             :class="{ 'translate-x-10': show }"
             class="bg-zinc-800 h-[3px] w-7 origin-left"
           ></div>
-
           <div
             class="absolute items-center justify-between transform transition-all top-2.5 flex"
           >

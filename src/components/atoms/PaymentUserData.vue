@@ -2,9 +2,9 @@
   <div class="container mx-auto min-h-[500px] mt-3">
     <div class="block">
       <div class="">
-        <span class="font-garamond font-bold ml-5 text-2xl"
-          >{{ $t("message.userdata") }}</span
-        >
+        <span class="font-garamond font-bold ml-5 text-2xl">{{
+          $t("message.userdata")
+        }}</span>
       </div>
       <div class="flex mt-4 justify-center">
         <div
@@ -81,7 +81,6 @@
                 </span>
               </div>
             </div>
-
             <!-- firma i nip -->
             <div class="md:flex">
               <div>
@@ -300,7 +299,7 @@
           <button
             class="border border-neutral-900 bg-purple-200 hover:bg-purple-300 rounded p-3 font-pacifico text-2xl"
           >
-          {{ $t("message.back") }}
+            {{ $t("message.back") }}
           </button>
         </router-link>
       </div>

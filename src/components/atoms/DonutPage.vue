@@ -55,7 +55,6 @@
 <script>
 import { ref, onMounted, nextTick } from "vue";
 import { useBasketStore } from "@/stores/basket";
-
 export default {
   name: "DonutPage",
   props: {

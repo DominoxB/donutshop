@@ -13,7 +13,7 @@ export const useProductStore = defineStore("ProductStore", {
         vegan: true,
         lactoseFree: false,
         describe:
-          "Czekoladowe ciasto zatopione w polewie z gorzkiej czekolady i posypane orzechami laskowymi. Donut wegański, bez dodatku cukru."
+          "Czekoladowe ciasto zatopione w polewie z gorzkiej czekolady i posypane orzechami laskowymi. Donut wegański, bez dodatku cukru.",
       },
       {
         id: "1",
@@ -25,7 +25,8 @@ export const useProductStore = defineStore("ProductStore", {
         sugarFree: true,
         lactoseFree: true,
         vegan: true,
-        describe: "Donut z nadzieniem kokosowym, oblany mleczną czekoladą i posypany wiórkami kokosowymi. Odpowiedni dla wegan oraz osób na diecie bezglutenowej, bezcukrowej i bez laktozy.",
+        describe:
+          "Donut z nadzieniem kokosowym, oblany mleczną czekoladą i posypany wiórkami kokosowymi. Odpowiedni dla wegan oraz osób na diecie bezglutenowej, bezcukrowej i bez laktozy.",
       },
       {
         id: "2",
@@ -37,7 +38,8 @@ export const useProductStore = defineStore("ProductStore", {
         sugarFree: true,
         lactoseFree: false,
         vegan: true,
-        describe: "Donut w polewie truskawkowej, nadziewany truskawkową konfiturą home made. Posypany wiórkami z białej czekolady. Odpowiedni dla wegan, diety bez cukru i bez glutenu."
+        describe:
+          "Donut w polewie truskawkowej, nadziewany truskawkową konfiturą home made. Posypany wiórkami z białej czekolady. Odpowiedni dla wegan, diety bez cukru i bez glutenu.",
       },
       {
         id: "3",
@@ -49,7 +51,8 @@ export const useProductStore = defineStore("ProductStore", {
         sugarFree: true,
         lactoseFree: false,
         vegan: true,
-        describe: "Donut o smaku waniliowym z waniliowym lukrem i posypką z czekoladowych wiórek. Odpowiedni dla wegan oraz osób na diecie bezcukrowej."
+        describe:
+          "Donut o smaku waniliowym z waniliowym lukrem i posypką z czekoladowych wiórek. Odpowiedni dla wegan oraz osób na diecie bezcukrowej.",
       },
       {
         id: "4",
@@ -61,7 +64,8 @@ export const useProductStore = defineStore("ProductStore", {
         sugarFree: true,
         lactoseFree: false,
         vegan: true,
-        describe: "Donut oblany mleczna czekoladą i karmelem z nadzieniem o smaku słonego karmelu. Wegański, nie zawiera cukru i glutenu."
+        describe:
+          "Donut oblany mleczna czekoladą i karmelem z nadzieniem o smaku słonego karmelu. Wegański, nie zawiera cukru i glutenu.",
       },
       {
         id: "5",
@@ -73,7 +77,8 @@ export const useProductStore = defineStore("ProductStore", {
         sugarFree: false,
         lactoseFree: false,
         vegan: true,
-        describe: "Puszysty donut bezglutenowy posypany cukrem pudrem. Bezglutenowy i wegański."
+        describe:
+          "Puszysty donut bezglutenowy posypany cukrem pudrem. Bezglutenowy i wegański.",
       },
       {
         id: "6",
@@ -85,7 +90,8 @@ export const useProductStore = defineStore("ProductStore", {
         sugarFree: true,
         lactoseFree: false,
         vegan: true,
-        describe: "Donut w polewie z kremowego lukru posypany liofilizowana maliną, nadziewany domową konfiturą malinową. Wegański, bez glutenu i cukru."
+        describe:
+          "Donut w polewie z kremowego lukru posypany liofilizowana maliną, nadziewany domową konfiturą malinową. Wegański, bez glutenu i cukru.",
       },
       {
         id: "7",
@@ -97,16 +103,14 @@ export const useProductStore = defineStore("ProductStore", {
         sugarFree: true,
         lactoseFree: false,
         vegan: true,
-        describe: "Donut z nadzieniem o smaku szarlotki - jabłka prażone z cynamonem, z posypką z cynamonowego ksylitolu."
+        describe:
+          "Donut z nadzieniem o smaku szarlotki - jabłka prażone z cynamonem, z posypką z cynamonowego ksylitolu.",
       },
-    ]
+    ],
   }),
   actions: {
     getId(id) {
-      return this.donuts[id]
-    }
+      return this.donuts[id];
     },
   },
-);
-
-
+});

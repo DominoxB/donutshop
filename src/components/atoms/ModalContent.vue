@@ -11,7 +11,7 @@
       >
       <div class="flex justify-center mt-10 font-pacifico">
         <button
-         @click="clickYes"
+          @click="clickYes"
           class="border border-black hover:bg-slate-200 rounded text-center text-lg p-1 mr-10"
         >
           Tak, usuń donuta
@@ -29,18 +29,18 @@
 
 <script>
 export default {
-  name: "ModalContent",  
+  name: "ModalContent",
   setup(props, context) {
     const clickYes = () => {
-      context.emit("delete-donut")
-    }
+      context.emit("delete-donut");
+    };
     const clickCancel = () => {
-      context.emit("cancel-action")
-    }
+      context.emit("cancel-action");
+    };
     return {
       clickYes,
-      clickCancel
-    }
-  }
+      clickCancel,
+    };
+  },
 };
 </script>

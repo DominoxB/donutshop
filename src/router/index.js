@@ -2,12 +2,11 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import DonutShop from "../views/DonutShop.vue";
 import AboutDonuts from "../views/AboutDonuts.vue";
-import AboutUs from '../views/AboutUs.vue';
-import SingleDonut from '../views/SingleDonut.vue';
-import ContactPage from '../views/ContactPage.vue';
-import BasketPage from '../views/BasketPage.vue';
-import PaymentPage from '../views/PaymentPage.vue'
-
+import AboutUs from "../views/AboutUs.vue";
+import SingleDonut from "../views/SingleDonut.vue";
+import ContactPage from "../views/ContactPage.vue";
+import BasketPage from "../views/BasketPage.vue";
+import PaymentPage from "../views/PaymentPage.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -19,7 +18,7 @@ const router = createRouter({
     { path: "/donut/:id", component: SingleDonut },
     { path: "/Contact", component: ContactPage },
     { path: "/BasketPage", component: BasketPage },
-    { path: "/PaymentPage", component: PaymentPage}
+    { path: "/PaymentPage", component: PaymentPage },
   ],
 });
 

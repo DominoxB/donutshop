@@ -5,8 +5,8 @@
     >
       <div class="md:invisible">
         <router-link to="/">
-        <span class="font-pacifico ml-4">DONUTINO</span>
-      </router-link>
+          <span class="font-pacifico ml-4">DONUTINO</span>
+        </router-link>
       </div>
       <div>
         <router-link to="/">
@@ -14,7 +14,9 @@
             src="@/images/donutino.png"
             class="invisible md:visible w-24 h-24 mx-auto pb-2"
           />
-          <span class="font-pacifico invisible text-[#610e54] md:visible">DONUTINO</span>
+          <span class="font-pacifico invisible text-[#610e54] md:visible"
+            >DONUTINO</span
+          >
         </router-link>
       </div>
       <NavbarHamburger

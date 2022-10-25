@@ -57,7 +57,9 @@
       </div>
       <!-- DOSTAWA -->
       <div class="mt-8 border-t-2 border-black">
-        <p class="text-xl font-semibold mt-4 mb-2">{{ $t("message.delivery") }}</p>
+        <p class="text-xl font-semibold mt-4 mb-2">
+          {{ $t("message.delivery") }}
+        </p>
         <div class="flex text-lg mb-2">
           <input
             type="radio"
@@ -100,7 +102,7 @@
           <button
             class="border border-neutral-900 bg-purple-200 hover:bg-purple-300 rounded p-3 font-pacifico text-2xl"
           >
-          {{ $t("message.check") }}
+            {{ $t("message.check") }}
           </button>
         </router-link>
       </div>
