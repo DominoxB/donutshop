@@ -34,7 +34,7 @@
   <div
     class="hidden md:sticky md:top-0 z-50 font-pacifico md:block bg-white text-l text-center py-2 md:text-2xl lg:text-4xl items-center justify-center space-x-8"
   >
-    <CustomLink :name="$t('message.shopping')" url="/DonutShop"></CustomLink>
+    <CustomLink :name="$t('message.shopping')" url="/DonutStore"></CustomLink>
     <CustomLink
       :name="$t('message.aboutdonuts')"
       url="/AboutDonuts"

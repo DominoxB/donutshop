@@ -57,7 +57,7 @@
       </div>
     </div>
     <div class="flex justify-between">
-      <router-link to="/DonutShop">
+      <router-link to="/DonutStore">
         <button
           class="border border-neutral-900 bg-purple-200 hover:bg-purple-300 rounded p-3 font-pacifico text-sm md:text-2xl ml-2 md:ml-4"
         >

@@ -47,7 +47,7 @@
         Strona główna
       </p>
       <p
-        @click="clickLink('/DonutShop')"
+        @click="clickLink('/DonutStore')"
         class="hover:bg-slate-400 py-2 px-4 font-pacifico cursor-pointer"
       >
         Zakupy
