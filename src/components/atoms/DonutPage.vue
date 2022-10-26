@@ -13,6 +13,7 @@
           id="quantity"
           v-model="quantity"
           type="number"
+          min="1"
           class="text-center justify-center mb-1 border-4 border- rounded"
         />
         <button
