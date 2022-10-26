@@ -41,7 +41,7 @@
         </div>
         <button
           @click="removeDonut(data.id)"
-          class="text-sm md:text-xl border rounded border-neutral-900 hover:bg-red-500 w-14 h-8 md:w-24 md:h-10 m-auto font-pacifico"
+          class="text-sm md:text-xl border rounded border-neutral-900 hover:bg-red-500 p-2 m-auto font-pacifico"
         >
           {{ $t("message.delete") }}
         </button>
