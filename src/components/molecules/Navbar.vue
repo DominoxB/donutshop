@@ -26,7 +26,7 @@
         </div>
       </div>
       <NavbarHamburger
-        @mobileMenu="showMenu($event)"
+        @mobile-menu="showMenu($event)"
         class="flex my-auto md:hidden"
       ></NavbarHamburger>
     </div>

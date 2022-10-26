@@ -84,7 +84,7 @@ export default {
     const show = ref(false);
     const clickHamburger = () => {
       show.value = !show.value;
-      context.emit("mobileMenu", show.value);
+      context.emit("mobile-menu", show.value);
     };
     const clickLink = (url) => {
       show.value = false;
