@@ -34,7 +34,7 @@
     </button>
     <div
       :class="{ '-translate-x-full': !show }"
-      class="fixed h-full w-64 block text-xl text-slate-800 bg-slate-300 top-0 bottom-0 left-0 transition duration-700 z-50"
+      class="fixed h-full w-48 block text-xl text-slate-800 bg-slate-300 top-0 bottom-0 left-0 transition duration-700 z-50"
     >
       <div class="my-4 px-4">
         <span class="font-pacifico text-[#610e54]">DONUTINO</span>
@@ -44,31 +44,31 @@
         @click="clickLink('/Donutshop')"
         class="hover:bg-slate-400 py-2 px-4 font-pacifico cursor-pointer"
       >
-      {{ $t("message.home") }}
+      {{ $t("home") }}
       </p>
       <p
         @click="clickLink('/DonutStore')"
         class="hover:bg-slate-400 py-2 px-4 font-pacifico cursor-pointer"
       >
-      {{ $t("message.shopping") }}
+      {{ $t("shopping") }}
       </p>
       <p
         @click="clickLink('/AboutDonuts')"
         class="hover:bg-slate-400 py-2 px-4 font-pacifico cursor-pointer"
       >
-      {{ $t("message.aboutdonuts") }}
+      {{ $t("aboutdonuts") }}
       </p>
       <p
         @click="clickLink('/AboutUs')"
         class="hover:bg-slate-400 py-2 px-4 font-pacifico cursor-pointer"
       >
-      {{ $t("message.company") }}
+      {{ $t("company") }}
       </p>
       <p
         @click="clickLink('/Contact')"
         class="hover:bg-slate-400 py-2 px-4 font-pacifico cursor-pointer"
       >
-      {{ $t("message.contact") }}
+      {{ $t("contact") }}
       </p>
     </div>
   </div>

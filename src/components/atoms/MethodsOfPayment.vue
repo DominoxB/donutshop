@@ -4,7 +4,7 @@
       class="bg-purple-100 w-3/4 font-garamond border border-black rounded block mt-12 ml-auto mr-auto p-4"
     >
       <!-- SPOSÓB PŁATNOŚCI -->
-      <p class="text-xl font-semibold mb-2">{{ $t("message.payment") }}</p>
+      <p class="text-xl font-semibold mb-2">{{ $t("payment") }}</p>
       <div class="flex text-lg mb-2">
         <input
           type="radio"
@@ -13,7 +13,7 @@
           name="selected"
           v-model="selected"
         />
-        <label>{{ $t("message.cash") }}</label>
+        <label>{{ $t("cash") }}</label>
         <img src="@/images/cash.png" class="w-10 h-8 ml-2" />
       </div>
       <div class="flex text-lg mb-2">
@@ -24,7 +24,7 @@
           name="selected"
           v-model="selected"
         />
-        <label>{{ $t("message.card") }}</label>
+        <label>{{ $t("card") }}</label>
         <img src="@/images/karta.png" class="w-20 h-6 ml-2" />
       </div>
       <div class="flex text-lg mb-2">
@@ -35,7 +35,7 @@
           name="selected"
           v-model="selected"
         />
-        <label>{{ $t("message.online") }}</label>
+        <label>{{ $t("online") }}</label>
         <img src="@/images/przelewy.png" class="w-12 h-6 ml-2" />
       </div>
       <div class="flex text-lg mb-2">
@@ -46,19 +46,19 @@
           name="selected"
           v-model="selected"
         />
-        <label>{{ $t("message.blik") }}</label>
+        <label>{{ $t("blik") }}</label>
         <img src="@/images/blik.png" class="w-8 h-8 ml-2" />
       </div>
       <div class="mt-2 bg-purple-200">
         <h1 class="p-2">
-          {{ $t("message.yourmethod") }}
+          {{ $t("yourmethod") }}
           <span class="font-semibold">{{ selected }}</span>
         </h1>
       </div>
       <!-- DOSTAWA -->
       <div class="mt-8 border-t-2 border-black">
         <p class="text-xl font-semibold mt-4 mb-2">
-          {{ $t("message.delivery") }}
+          {{ $t("delivery") }}
         </p>
         <div class="flex text-lg mb-2">
           <input
@@ -68,7 +68,7 @@
             name="delivery"
             v-model="delivery"
           />
-          <label>{{ $t("message.courier") }}</label>
+          <label>{{ $t("courier") }}</label>
         </div>
         <div class="flex text-lg mb-2">
           <input
@@ -78,7 +78,7 @@
             name="delivery"
             v-model="delivery"
           />
-          <label>{{ $t("message.inpost") }}</label>
+          <label>{{ $t("inpost") }}</label>
         </div>
         <div class="flex text-lg mb-2">
           <input
@@ -88,11 +88,11 @@
             name="delivery"
             v-model="delivery"
           />
-          <label>{{ $t("message.self") }}</label>
+          <label>{{ $t("self") }}</label>
         </div>
         <div class="mt-2 bg-purple-200">
           <h1 class="p-2">
-            {{ $t("message.yourdelivery") }}
+            {{ $t("yourdelivery") }}
             <span class="font-semibold">{{ delivery }}</span>
           </h1>
         </div>
@@ -102,7 +102,7 @@
           <button
             class="border border-neutral-900 bg-purple-200 hover:bg-purple-300 rounded p-3 font-pacifico text-2xl"
           >
-            {{ $t("message.check") }}
+            {{ $t("check") }}
           </button>
         </router-link>
       </div>

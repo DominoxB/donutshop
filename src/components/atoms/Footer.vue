@@ -6,7 +6,7 @@
       <div
         class="flex text-base font-pacifico justify-center text-center mt-3 px-2"
       >
-        <span>{{ $t("message.footer") }}</span>
+        <span>{{ $t("footer") }}</span>
       </div>
       <div class="text-center font-garamond text-sm mt-2">
         <p>Donata Pączkowska</p>
@@ -14,7 +14,7 @@
         <p>06-550 Pączkowo</p>
       </div>
       <div class="flex justify-center text-lg font-garamond my-auto mt-2">
-        <span class="font-semibold my-auto">{{ $t("message.socials") }} </span>
+        <span class="font-semibold my-auto">{{ $t("socials") }} </span>
         <a href="https://pl-pl.facebook.com" target="_blank">
           <img src="@/images/fb.png" class="w-5 h-5 md:w-7 md:h-7 mt-2 ml-3" />
         </a>

@@ -7,7 +7,7 @@
       <p
         class="text-2xl font-garamond text-zinc-800 text-center leading-loose pl-4 pr-4"
       >
-        {{ $t("message.header") }}
+        {{ $t("header") }}
       </p>
     </div>
   </div>

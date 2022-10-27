@@ -4,7 +4,7 @@
     class="sticky top-12 md:absolute h-0 flex justify-end mr-14 md:mr-0 md:block md:top-0 md:right-0 z-40"
   >
     <div id="charger" class="mr-2 md:mr-0 mt-1 md:mt-4 text-xl font-sans">
-      <select v-model="$i18n.locale" class="cursor-pointer">
+      <select v-model="$i18n.locale" class="cursor-pointer bg-transparent">
         <option
           v-for="locale in $i18n.availableLocales"
           :key="`locale-${locale}`"
@@ -25,7 +25,7 @@
     </router-link>
   </div>
   <Navbar></Navbar>
-  <router-view class="text-3xl mt-5"></router-view>
+  <router-view></router-view>
 </template>
 
 <script>

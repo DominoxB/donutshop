@@ -1,5 +1,4 @@
 const pl = {
-  message: {
     home: "Główna",
     shopping: "Zakupy",
     aboutdonuts: "Nasze donuty",
@@ -58,7 +57,6 @@ const pl = {
     self: "Odbiór osobisty w Pączkowie (0.00)",
     yourdelivery: "Wybrany sposób dostawy: ",
     check: "Podsumowanie",
-  },
-};
+  }
 
 export default pl;

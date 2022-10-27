@@ -3,7 +3,7 @@
     <div class="block">
       <div class="">
         <span class="font-garamond font-bold ml-5 text-2xl">{{
-          $t("message.userdata")
+          $t("userdata")
         }}</span>
       </div>
       <div class="flex mt-4 justify-center">
@@ -16,7 +16,7 @@
               <div>
                 <label
                   class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
-                  >{{ $t("message.fname") }}</label
+                  >{{ $t("fname") }}</label
                 >
                 <input
                   id="name"
@@ -49,7 +49,7 @@
               <div>
                 <label
                   class="form-label inline-block md:ml-2 mb-2 text-gray-700 text-xl font-semibold"
-                  >{{ $t("message.lname") }}</label
+                  >{{ $t("lname") }}</label
                 >
                 <input
                   v-model="state.surname"
@@ -86,7 +86,7 @@
               <div>
                 <label
                   class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
-                  >{{ $t("message.companyname") }}</label
+                  >{{ $t("companyname") }}</label
                 >
                 <input
                   v-model="state.company"
@@ -98,7 +98,7 @@
               <div>
                 <label
                   class="form-label inline-block md:ml-2 mb-2 text-gray-700 text-xl font-semibold"
-                  >{{ $t("message.identification") }}</label
+                  >{{ $t("identification") }}</label
                 >
                 <input
                   v-model="state.identification"
@@ -113,7 +113,7 @@
               <div>
                 <label
                   class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
-                  >{{ $t("message.street") }}</label
+                  >{{ $t("street") }}</label
                 >
                 <input
                   v-model="state.street"
@@ -148,7 +148,7 @@
               <div class="md:ml-2">
                 <label
                   class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
-                  >{{ $t("message.building") }}</label
+                  >{{ $t("building") }}</label
                 >
                 <input
                   v-model="state.building"
@@ -176,7 +176,7 @@
               <div class="mb-3">
                 <label
                   class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
-                  >{{ $t("message.code") }}</label
+                  >{{ $t("code") }}</label
                 >
                 <input
                   v-model="state.code"
@@ -200,7 +200,7 @@
               <div>
                 <label
                   class="form-label inline-block md:ml-2 mb-2 text-gray-700 text-xl font-semibold"
-                  >{{ $t("message.city") }}</label
+                  >{{ $t("city") }}</label
                 >
                 <input
                   v-model="state.town"
@@ -225,7 +225,7 @@
             <div>
               <label
                 class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
-                >{{ $t("message.email") }}</label
+                >{{ $t("email") }}</label
               >
               <input
                 v-model="state.emailAdress"
@@ -260,7 +260,7 @@
             <div class="mb-3">
               <label
                 class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
-                >{{ $t("message.phone") }}</label
+                >{{ $t("phone") }}</label
               >
               <input
                 v-model="state.telephone"
@@ -299,7 +299,7 @@
           <button
             class="border border-neutral-900 bg-purple-200 hover:bg-purple-300 rounded p-3 font-pacifico text-2xl"
           >
-            {{ $t("message.back") }}
+            {{ $t("back") }}
           </button>
         </router-link>
       </div>

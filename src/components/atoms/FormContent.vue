@@ -1,16 +1,16 @@
 <template>
   <div class="container mx-auto min-h-[500px]">
     <div class="grid lg:grid-cols-2">
-      <div class="block md:w-auto mb-8 border bg-[#e8cfe1] rounded-2xl">
+      <div class="block md:w-auto mb-8 border bg-[#e8cfe1] mt-2 rounded-2xl">
         <div>
           <span class="font-medium ml-4 text-2xl">{{
-            $t("message.form")
+            $t("form")
           }}</span>
         </div>
         <div class="ml-4">
           <label
             class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
-            >{{ $t("message.formname") }}</label
+            >{{ $t("formname") }}</label
           >
           <input
             id="name"
@@ -41,7 +41,7 @@
           <div>
             <label
               class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
-              >{{ $t("message.formcompany") }}</label
+              >{{ $t("formcompany") }}</label
             >
             <input
               v-model="state.company"
@@ -53,7 +53,7 @@
           <div>
             <label
               class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
-              >{{ $t("message.formmail") }}</label
+              >{{ $t("formmail") }}</label
             >
             <input
               v-model="state.emailAdress"
@@ -87,7 +87,7 @@
           <div>
             <label
               class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
-              >{{ $t("message.formphone") }}</label
+              >{{ $t("formphone") }}</label
             >
             <input
               v-model="state.telephone"
@@ -121,7 +121,7 @@
           <div>
             <label
               class="form-label inline-block mb-2 text-gray-700 text-xl font-semibold"
-              >{{ $t("message.formmessage") }}</label
+              >{{ $t("formmessage") }}</label
             >
             <textarea
               v-model="state.yourMessage"
@@ -157,7 +157,7 @@
             class="bg-purple-200 hover:bg-purple-300 border text-gray-800 w-44 h-10 mb-3 font-bold text-base rounded mt-3"
             @click="submitForm"
           >
-            {{ $t("message.formsend") }}
+            {{ $t("formsend") }}
           </button>
         </div>
       </div>
@@ -166,14 +166,14 @@
           class="w-auto font-garamond text-gray-900 text-xl text-center mb-8 p-4 lg:p-10 lg:pt-6 lg:mx-auto rounded-2xl bg-[#7dafb5] bg-opacity-30"
         >
           <p class="mt-7">
-            {{ $t("message.forminfo") }}
+            {{ $t("forminfo") }}
           </p>
         </div>
       </div>
     </div>
     <div class="block">
       <div class="font-garamond text-2xl text-center mb-4">
-        <p>{{ $t("message.forminfo2") }}</p>
+        <p>{{ $t("forminfo2") }}</p>
       </div>
       <div class="lg:grid lg:grid-cols-2">
         <TheSlider :slides="slides" class=""></TheSlider>

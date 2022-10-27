@@ -1,5 +1,4 @@
 const ru = {
-  message: {
     home: "Главная",
     shopping: "Покупки",
     aboutdonuts: "Наши донаты",
@@ -58,7 +57,6 @@ const ru = {
     self: "Самовывоз в Почкуве",
     yourdelivery: "Выбранный способ доставки: ",
     check: "Проверьте свой заказ",
-  },
-};
+  }
 
 export default ru;

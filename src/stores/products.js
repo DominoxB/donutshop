@@ -6,7 +6,7 @@ export const useProductStore = defineStore("ProductStore", {
         id: "0",
         image:
           "https://www.carrefour.pl/images/product/org/donut-z-polewa-czekoladowa-55-g-5927s4.jpg",
-        taste: "CZEKOLADOWY",
+        taste: 'CZEKOLADOWY',
         price: "5.00",
         glutenFree: false,
         sugarFree: true,

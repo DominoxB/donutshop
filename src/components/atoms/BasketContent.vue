@@ -2,15 +2,15 @@
   <div class="container mx-auto min-h-[500px]">
     <div class="block p-4 m-4 text-2xl">
       <p class="mb-6 mt-6 text-center text-3xl font-pacifico text-neutral-700">
-        {{ $t("message.yourbasket") }}
+        {{ $t("yourbasket") }}
       </p>
       <div
         class="grid grid-cols-5 border-4 text-center text-sm md:text-xl lg:text-2xl font-semibold mt-4"
       >
         <div>Donut</div>
-        <div>{{ $t("message.donutprice") }}</div>
-        <div>{{ $t("message.donutquantity") }}</div>
-        <div>{{ $t("message.donutsum") }}</div>
+        <div>{{ $t("donutprice") }}</div>
+        <div>{{ $t("donutquantity") }}</div>
+        <div>{{ $t("donutsum") }}</div>
       </div>
       <div
         class="grid grid-cols-5 border-t-0 border-b-0 border-2 text-center text-xs md:text-xl lg:text-2xl"
@@ -43,16 +43,16 @@
           @click="removeDonut(data.id)"
           class="text-sm md:text-xl border rounded border-neutral-900 hover:bg-red-500 p-2 m-auto font-pacifico"
         >
-          {{ $t("message.delete") }}
+          {{ $t("delete") }}
         </button>
       </div>
       <div class="grid grid-cols-4 border-black border-2 text-center font-bold">
         <div class="col-span-2 my-auto text-sm md:text-xl lg:text-2xl">
-          {{ $t("message.all") }}
+          {{ $t("all") }}
         </div>
         <div class="my-auto text-sm md:text-xl lg:text-2xl">{{ result }}</div>
         <div class="my-auto text-sm md:text-xl lg:text-2xl">
-          {{ $t("message.totalprice") }} {{ total.toFixed(2) }}
+          {{ $t("totalprice") }} {{ total.toFixed(2) }}
         </div>
       </div>
     </div>
@@ -61,7 +61,7 @@
         <button
           class="border border-neutral-900 bg-purple-200 hover:bg-purple-300 rounded p-3 font-pacifico text-sm md:text-2xl ml-2 md:ml-4"
         >
-          {{ $t("message.continue") }}
+          {{ $t("continue") }}
         </button>
       </router-link>
       <router-link to="/PaymentPage">
@@ -69,7 +69,7 @@
           class="border border-neutral-900 bg-purple-200 hover:bg-purple-300 rounded p-3 font-pacifico text-sm md:text-2xl mr-2 md:mr-4"
           :disabled="result <= 0"
         >
-          {{ $t("message.gotoorder") }}
+          {{ $t("gotoorder") }}
         </button>
       </router-link>
     </div>
