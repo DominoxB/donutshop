@@ -44,31 +44,31 @@
         @click="clickLink('/Donutshop')"
         class="hover:bg-slate-400 py-2 px-4 font-pacifico cursor-pointer"
       >
-        Strona główna
+      {{ $t("message.home") }}
       </p>
       <p
         @click="clickLink('/DonutStore')"
         class="hover:bg-slate-400 py-2 px-4 font-pacifico cursor-pointer"
       >
-        Zakupy
+      {{ $t("message.shopping") }}
       </p>
       <p
         @click="clickLink('/AboutDonuts')"
         class="hover:bg-slate-400 py-2 px-4 font-pacifico cursor-pointer"
       >
-        Nasze donuty
+      {{ $t("message.aboutdonuts") }}
       </p>
       <p
         @click="clickLink('/AboutUs')"
         class="hover:bg-slate-400 py-2 px-4 font-pacifico cursor-pointer"
       >
-        O firmie
+      {{ $t("message.company") }}
       </p>
       <p
         @click="clickLink('/Contact')"
         class="hover:bg-slate-400 py-2 px-4 font-pacifico cursor-pointer"
       >
-        Kontakt
+      {{ $t("message.contact") }}
       </p>
     </div>
   </div>
