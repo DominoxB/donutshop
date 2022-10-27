@@ -4,13 +4,13 @@
       class="flex justify-between items-center text-2xl md:text-4xl md:block md:text-center md:pb-4 lg:text-6xl lg:pb-4 text-[#610e54]"
     >
       <div class="md:invisible">
-        <router-link to="/">
+        <router-link to="/Home">
           <span class="font-pacifico ml-4">DONUTINO</span>
         </router-link>
       </div>
       <div class="invisible md:visible">
         <div class="w-24 h-24 mx-auto">
-          <router-link to="/">
+          <router-link to="/Home">
             <img
               src="@/images/donutino.png"
               class="w-24 h-24 pb-2"
@@ -18,7 +18,7 @@
           </router-link>
         </div>
         <div>
-          <router-link to="/">
+          <router-link to="/Home">
             <span class="font-pacifico text-[#610e54]"
               >DONUTINO</span
             >
