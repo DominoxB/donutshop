@@ -41,7 +41,7 @@
         <img src="@/images/donutino.png" class="w-16 h-16 mt-2" />
       </div>
       <p
-        @click="clickLink('/Home')"
+        @click="clickLink('/Donutshop')"
         class="hover:bg-slate-400 py-2 px-4 font-pacifico cursor-pointer"
       >
         Strona główna

@@ -11,7 +11,7 @@ import PaymentPage from "../views/PaymentPage.vue";
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: "/Home", component: Home },
+    { path: "/Donutshop", component: Home },
     { path: "/DonutStore", component: DonutShop },
     { path: "/AboutDonuts", component: AboutDonuts },
     { path: "/AboutUs", component: AboutUs },
