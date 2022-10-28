@@ -58,6 +58,9 @@ const en = {
     self: "Pickup in person in Pączków (0.00)",
     yourdelivery: "Selected delivery method: ",
     check: "Check your order",
+    question: "Are you sure you want to delete this item?",
+    yes: "Yes, delete donut",
+    cancel: "Cancel"
   }
 
 export default en;

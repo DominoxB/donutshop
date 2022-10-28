@@ -3,9 +3,7 @@
     <div class="grid lg:grid-cols-2">
       <div class="block md:w-auto mb-8 border bg-[#e8cfe1] mt-2 rounded-2xl">
         <div>
-          <span class="font-medium ml-4 text-2xl">{{
-            $t("form")
-          }}</span>
+          <span class="font-medium ml-4 text-2xl">{{ $t("form") }}</span>
         </div>
         <div class="ml-4">
           <label

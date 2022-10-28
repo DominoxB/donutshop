@@ -57,6 +57,9 @@ const pl = {
     self: "Odbiór osobisty w Pączkowie (0.00)",
     yourdelivery: "Wybrany sposób dostawy: ",
     check: "Podsumowanie",
+    question: "Czy na pewno chcesz usunąć tę pozycję?",
+    yes: "Tak, usuń donuta",
+    cancel: "Anuluj"
   }
 
 export default pl;
