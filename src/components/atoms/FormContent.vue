@@ -195,7 +195,7 @@
 <script>
 import { useVuelidate } from "@vuelidate/core";
 import { required, email, minLength, helpers } from "@vuelidate/validators";
-import { reactive, computed, onMounted } from "vue";
+import { reactive, computed, onMounted} from "vue";
 import TheSlider from "./TheSlider.vue";
 export default {
   name: "FormContent",
@@ -262,13 +262,6 @@ export default {
         },
       };
     });
-    // onMounted(async () => {
-    //   const hasAutofocus = document.getElementById("name");
-    //   hasAutofocus.focus();
-    //   await nextTick();
-    //   hasAutofocus.scrollIntoView({ block: "end", behavior: "smooth" });
-    //   console.log(hasAutofocus);
-    // });
     const v$ = useVuelidate(rules, state);
     return {
       state,
