@@ -1,7 +1,7 @@
 <template>
   <div class="container mx-auto min-h-[500px]">
     <div class="block p-4 m-4 text-2xl">
-      <p class="mb-6 mt-6 text-center text-3xl font-pacifico text-neutral-700">
+      <p class="my-6 text-center text-3xl font-pacifico text-neutral-700">
         {{ $t("yourbasket") }}
       </p>
       <div

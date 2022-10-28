@@ -5,7 +5,7 @@
     >
       <img src="@/images/don.jpg" class="md:h-[624px] object-fill" />
       <p
-        class="text-2xl font-garamond text-zinc-800 text-center leading-loose pl-4 pr-4"
+        class="text-2xl font-garamond text-zinc-800 text-center leading-loose px-4"
       >
         {{ $t("header") }}
       </p>

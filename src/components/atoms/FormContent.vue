@@ -163,7 +163,7 @@
         <div
           class="w-auto font-garamond text-gray-900 text-xl text-center mb-8 p-4 lg:p-10 lg:pt-6 lg:mx-auto rounded-2xl bg-[#7dafb5] bg-opacity-30"
         >
-          <p class="mt-7">
+          <p class="my-auto">
             {{ $t("forminfo") }}
           </p>
         </div>
