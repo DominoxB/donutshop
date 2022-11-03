@@ -81,7 +81,7 @@
   >
   </ModalContent>
 </template>
-
+<!-- todo console.logi do usuniecia, przeniesienie do molekuł-->
 <script>
 import { useBasketStore } from "@/stores/basket";
 import { useProductStore } from "@/stores/products";

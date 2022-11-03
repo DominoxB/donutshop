@@ -191,7 +191,7 @@
     </div>
   </div>
 </template>
-
+<!-- todo move to molecules -->
 <script>
 import { useVuelidate } from "@vuelidate/core";
 import { required, email, minLength, helpers } from "@vuelidate/validators";
