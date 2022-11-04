@@ -10,10 +10,6 @@ import HomeContent from "@/components/atoms/HomeContent.vue";
 import BtnScrollToTop from "@/components/atoms/BtnScrollToTop.vue";
 export default {
   name: "HomePage",
-  components: {
-    Footer,
-    HomeContent,
-    BtnScrollToTop,
-  },
+  components: { Footer, HomeContent, BtnScrollToTop },
 };
 </script>

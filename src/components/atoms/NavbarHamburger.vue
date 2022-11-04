@@ -82,14 +82,17 @@ export default {
   setup(props, context) {
     const router = useRouter();
     const show = ref(false);
+
     const clickHamburger = () => {
       show.value = !show.value;
       context.emit("mobile-menu", show.value);
     };
+
     const clickLink = (url) => {
       show.value = false;
       router.push({ path: url });
     };
+    
     return {
       clickHamburger,
       clickLink,

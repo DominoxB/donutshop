@@ -18,11 +18,13 @@ export default {
       const myScroll = document.getElementById("myScroll");
       myScroll.scrollIntoView({ behavior: "smooth", block: "start" });
     };
+
     onMounted(() => {
       document.addEventListener("scroll", () => {
         scY.value = window.scrollY;
       });
     });
+    
     return {
       scroll,
       scY,

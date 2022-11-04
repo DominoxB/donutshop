@@ -117,6 +117,7 @@ export default {
   setup() {
     const selected = ref(null);
     const delivery = ref(null);
+    
     return {
       selected,
       delivery,

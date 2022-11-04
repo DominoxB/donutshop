@@ -34,16 +34,16 @@
     <div class="text-zinc-800 text-center mt-6">
       <div class="flex justify-center items-center">
         <div v-if="donut.glutenFree">
-          <img src="../icons/gluten.png" class="w-24 h-18" />
+          <img src="@/icons/gluten.png" class="w-24 h-18" />
         </div>
         <div v-if="donut.sugarFree">
-          <img src="../icons/sugar.png" class="w-24 h-18" />
+          <img src="@/icons/sugar.png" class="w-24 h-18" />
         </div>
         <div v-if="donut.lactoseFree">
-          <img src="../icons/lactose.png" class="w-24 h-18" />
+          <img src="@/icons/lactose.png" class="w-24 h-18" />
         </div>
         <div v-if="donut.vegan">
-          <img src="../icons/vegan.jpg" class="w-24 h-18" />
+          <img src="@/icons/vegan.jpg" class="w-24 h-18" />
         </div>
       </div>
       <div class="text-xl mt-4 font-garamond font-semibold px-2">

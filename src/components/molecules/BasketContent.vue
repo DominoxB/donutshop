@@ -35,7 +35,7 @@
           type="number"
           min="1"
           class="w-12 h-12 m-auto text-center border border-slate-400 rounded cursor-pointer focus:bg-slate-200"
-        />
+        />        
         <div class="m-auto">
           {{ (data.product.price * data.quantity).toFixed(2) }}
         </div>
@@ -76,12 +76,12 @@
   </div>
   <ModalContent
     v-if="showModal"
-    @delete-donut="agree($event)"
+    @delete-donut="agree"
     @cancel-action="cancel($event)"
   >
   </ModalContent>
 </template>
-<!-- todo console.logi do usuniecia, przeniesienie do molekuł-->
+
 <script>
 import { useBasketStore } from "@/stores/basket";
 import { useProductStore } from "@/stores/products";
@@ -96,6 +96,7 @@ export default {
     onMounted(() => {
       window.scrollTo(0, 0);
     });
+
     const store = useBasketStore();
     const { basket } = store;
 
@@ -118,20 +119,19 @@ export default {
       showModal.value = true;
     };
 
-    const agree = (event) => {
-      console.log(event);
+    const agree = () => {
       store.deleteProduct(activeId.value);
       showModal.value = false;
     };
 
-    const cancel = (event) => {
-      console.log(event);
+    const cancel = () => {
       showModal.value = false;
     };
 
     basket.map((el) => {
       el.product = donuts[el.id];
     });
+    
     return {
       basket,
       donuts,

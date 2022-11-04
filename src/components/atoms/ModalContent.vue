@@ -35,6 +35,7 @@ export default {
     const clickCancel = () => {
       context.emit("cancel-action");
     };
+    
     return {
       clickYes,
       clickCancel,

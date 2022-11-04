@@ -20,6 +20,7 @@ export default {
     const route = useRoute();
     const id = route.params.id;
     const single = store.getId(id);
+    
     return {
       id,
       single,

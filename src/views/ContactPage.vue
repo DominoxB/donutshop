@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import FormContent from "@/components/atoms/FormContent.vue";
+import FormContent from "@/components/molecules/FormContent.vue";
 import Footer from "@/components/atoms/Footer.vue";
 import BtnScrollToTop from "@/components/atoms/BtnScrollToTop.vue";
 export default {

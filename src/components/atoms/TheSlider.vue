@@ -28,7 +28,6 @@
 
 <script>
 import { onMounted, ref } from "vue";
-
 export default {
   name: "TheSlider",
   props: {
@@ -110,6 +109,7 @@ export default {
         }
       });
     });
+    
     return {
       currentSlideIndex,
       onNext,

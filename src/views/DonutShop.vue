@@ -10,10 +10,6 @@ import Footer from "@/components/atoms/Footer.vue";
 import BtnScrollToTop from "@/components/atoms/BtnScrollToTop.vue";
 export default {
   name: "DonutShop",
-  components: {
-    DonutList,
-    Footer,
-    BtnScrollToTop,
-  },
+  components: { DonutList, Footer, BtnScrollToTop },
 };
 </script>

@@ -1,7 +1,0 @@
-- [] przenieść ikony poza components
-- [] uporządkowanie komponentów wg zasad atomic design https://bradfrost.com/blog/post/atomic-web-design/
-- [] w koszyku i widoku pojedynczego donuta można wpisać ujemną ilosć
-- [] w kontakt musi być przerwa między kolumnami
-- [] pliki tlumaczen mają nadmiarowy tabulator
-- [] na mobilce hover produktow wywoluje scroll-x (pasek przewijania poziomy)
-- [] usunąć ten plik po odhaczeniu całej listy

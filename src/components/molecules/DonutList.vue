@@ -25,8 +25,10 @@ export default {
     onMounted(() => {
       window.scrollTo(0, 0);
     });
+
     const store = useProductStore();
     const { donuts } = store;
+    
     return {
       donuts,
     };

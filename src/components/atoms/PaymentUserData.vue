@@ -320,6 +320,7 @@ export default {
       await nextTick();
       hasAutofocus.scrollIntoView({ block: "end", behavior: "smooth" });
     });
+    
     const state = reactive({
       name: "",
       surname: "",

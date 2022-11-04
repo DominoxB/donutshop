@@ -6,7 +6,7 @@
 
 <script>
 import Footer from "@/components/atoms/Footer.vue";
-import BasketContent from "@/components/atoms/BasketContent.vue";
+import BasketContent from "@/components/molecules/BasketContent.vue";
 import BtnScrollToTop from "@/components/atoms/BtnScrollToTop.vue";
 export default {
   name: "BasketPage",

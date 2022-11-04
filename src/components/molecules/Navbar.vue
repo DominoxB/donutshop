@@ -57,6 +57,7 @@ export default {
     const showMenu = (event) => {
       console.log(event);
     };
+    
     return {
       showMenu,
     };

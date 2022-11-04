@@ -1,7 +1,7 @@
 <template>
   <router-link :to="`/donut/${donut.id}`">
     <div
-      class="grid items-center justify-center group transition ease-in-out delay-100 hover:scale-110 cursor-pointer z-0"
+      class="grid items-center justify-center group lg:transition lg:ease-in-out lg:delay-100 lg:hover:scale-110 cursor-pointer z-0"
     >
       <img :src="donut.image" class="w-52 h-72 object-contain" />
       <div

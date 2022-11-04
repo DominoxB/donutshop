@@ -40,9 +40,11 @@ export default {
   setup() {
     const store = useBasketStore();
     const { basket } = store;
+
     const result = computed(() => {
       return store.getDonutsQuantity;
     });
+    
     return {
       basket,
       result,
