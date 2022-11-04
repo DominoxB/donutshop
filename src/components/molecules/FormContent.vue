@@ -195,7 +195,7 @@
 <script>
 import { useVuelidate } from "@vuelidate/core";
 import { required, email, minLength, helpers } from "@vuelidate/validators";
-import { reactive, computed, onMounted} from "vue";
+import { reactive, computed, onMounted } from "vue";
 import TheSlider from "../atoms/TheSlider.vue";
 export default {
   name: "FormContent",
@@ -274,7 +274,7 @@ export default {
       slides,
     };
   },
-  
+
   methods: {
     submitForm() {
       this.v$.$validate();
