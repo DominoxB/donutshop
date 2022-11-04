@@ -14,6 +14,7 @@
           v-model="quantity"
           type="number"
           min="1"
+          onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
           class="text-center justify-center mb-1 border-4 border- rounded"
         />
         <button

@@ -34,6 +34,7 @@
           v-model="data.quantity"
           type="number"
           min="1"
+          onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
           class="w-12 h-12 m-auto text-center border border-slate-400 rounded cursor-pointer focus:bg-slate-200"
         />        
         <div class="m-auto">
