@@ -13,8 +13,10 @@
           name="selected"
           v-model="selected"
         />
-        <label>{{ $t("cash") }}</label>
-        <img src="@/images/cash.png" class="w-10 h-8 ml-2" />
+        <label class="flex" for="cash"
+          >{{ $t("cash") }}
+          <img src="@/images/cash.png" class="w-10 h-8 ml-2" />
+        </label>
       </div>
       <div class="flex text-lg mb-2">
         <input
@@ -24,8 +26,10 @@
           name="selected"
           v-model="selected"
         />
-        <label>{{ $t("card") }}</label>
-        <img src="@/images/karta.png" class="w-20 h-6 ml-2" />
+        <label class="flex" for="card"
+          >{{ $t("card") }}
+          <img src="@/images/karta.png" class="w-20 h-6 ml-2" />
+        </label>
       </div>
       <div class="flex text-lg mb-2">
         <input
@@ -35,8 +39,10 @@
           name="selected"
           v-model="selected"
         />
-        <label>{{ $t("online") }}</label>
-        <img src="@/images/przelewy.png" class="w-12 h-6 ml-2" />
+        <label class="flex" for="transfer"
+          >{{ $t("online") }}
+          <img src="@/images/przelewy.png" class="w-12 h-6 ml-2" />
+        </label>
       </div>
       <div class="flex text-lg mb-2">
         <input
@@ -46,8 +52,10 @@
           name="selected"
           v-model="selected"
         />
-        <label>{{ $t("blik") }}</label>
-        <img src="@/images/blik.png" class="w-8 h-8 ml-2" />
+        <label class="flex" for="blik"
+          >{{ $t("blik") }}
+          <img src="@/images/blik.png" class="w-8 h-8 ml-2" />
+        </label>
       </div>
       <div class="mt-2 bg-purple-200">
         <h1 class="p-2">
@@ -68,7 +76,7 @@
             name="delivery"
             v-model="delivery"
           />
-          <label>{{ $t("courier") }}</label>
+          <label for="courier">{{ $t("courier") }}</label>
         </div>
         <div class="flex text-lg mb-2">
           <input
@@ -78,7 +86,7 @@
             name="delivery"
             v-model="delivery"
           />
-          <label>{{ $t("inpost") }}</label>
+          <label for="inpost">{{ $t("inpost") }}</label>
         </div>
         <div class="flex text-lg mb-2">
           <input
@@ -88,7 +96,7 @@
             name="delivery"
             v-model="delivery"
           />
-          <label>{{ $t("self") }}</label>
+          <label for="self">{{ $t("self") }}</label>
         </div>
         <div class="mt-2 bg-purple-200">
           <h1 class="p-2">
@@ -117,7 +125,7 @@ export default {
   setup() {
     const selected = ref(null);
     const delivery = ref(null);
-    
+
     return {
       selected,
       delivery,
